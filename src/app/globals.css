@@ -1,0 +1,72 @@
+@import "tailwindcss";
+@import 'pretendard/dist/web/static/pretendard.css';
+
+:root {
+  --color-brand-cream: #FFFDF8;
+  --color-brand-warm: #FBF8F3;
+  --color-brand-gold: #C8A97E;
+  --color-brand-gold-dark: #B8956A;
+  --color-brand-wine: #5D0E0E;
+  --color-text-dark: #2C2C2C;
+  --color-text-medium: #5A5A5A;
+  --color-text-light: #8A8A8A;
+
+  --font-pretendard: "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+  --glass-bg: rgba(255, 255, 255, 0.45);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --glass-shadow: 0 12px 48px 0 rgba(0, 0, 0, 0.05);
+
+  --background: var(--color-brand-cream);
+  --foreground: var(--color-text-dark);
+}
+
+body {
+  background: var(--color-brand-cream);
+  color: var(--color-text-dark);
+  font-family: var(--font-pretendard);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-pretendard);
+  font-weight: 700;
+  color: var(--color-text-dark);
+  letter-spacing: -0.02em;
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(40px) saturate(180%);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+@keyframes liquid-move {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+
+  33% {
+    transform: translate(50px, -80px) scale(1.2) rotate(10deg);
+  }
+
+  66% {
+    transform: translate(-40px, 40px) scale(0.8) rotate(-10deg);
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+}
+
+.animate-liquid {
+  animation: liquid-move 30s infinite ease-in-out;
+}
