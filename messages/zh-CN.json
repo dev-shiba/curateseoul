@@ -1,0 +1,364 @@
+{
+  "common": {
+    "brand": "Curate Seoul",
+    "contact": "咨询",
+    "learnMore": "了解更多"
+  },
+  "header": {
+    "verification": "行程认证",
+    "benefits": "会员权益",
+    "experience": "真实体验",
+    "reviews": "用户评价",
+    "cta": "立即咨询"
+  },
+  "hero": {
+    "eyebrow": "首尔旅行者专属福利",
+    "title": "旅行开支减半",
+    "titleHighlight": "体验翻倍",
+    "description": {
+      "combined": "只需认证<highlight>机票或酒店行程</highlight><br></br>即可享受地道美食、K-Beauty及热门打卡点<br></br>的<highlight>会员专属优惠价</highlight>"
+    },
+    "stats": {
+      "partners": "合作商家",
+      "value": "福利价值",
+      "monthly": "每月限额"
+    },
+    "features": {
+      "beauty": "K-Beauty折扣",
+      "popups": "快闪优先入场",
+      "guide": "福利指南"
+    }
+  },
+  "contactCard": {
+    "badge": "🔥 本月仅剩12个名额",
+    "title": "添加微信咨询",
+    "subtitle": "发送\"体验官\"获取福利指南",
+    "kakaoButton": "添加微信咨询",
+    "idLabel": "微信号",
+    "idValue": "CurateSeoul",
+    "copyButton": "复制",
+    "divider": "或留下你的联系方式",
+    "formPlaceholder": "您的微信号",
+    "formButton": "申请",
+    "note": "2시간 이내 답변 · 스팸 없음"
+  },
+  "verification": {
+    "icon": "✈️",
+    "title": "验证机票或酒店行程",
+    "subtitle": "只需验证您的行程<br></br>即可获得<strong>地道信息</strong>和<strong>会员专属福利</strong>",
+    "steps": {
+      "step1": {
+        "value": "截图机票/酒店"
+      },
+      "step2": {
+        "value": "发送至微信"
+      },
+      "step3": {
+        "value": "获取定制福利"
+      }
+    },
+    "benefits": {
+      "food": {
+        "title": "地道美食",
+        "description": "游客不知道的宝藏餐厅"
+      },
+      "beauty": {
+        "title": "K-Beauty",
+        "description": "皮肤管理·美发·化妆"
+      },
+      "medical": {
+        "title": "医疗·诊所",
+        "description": "认证的医疗服务"
+      },
+      "popups": {
+        "title": "体验·快闪",
+        "description": "热门点优先入场"
+      }
+    }
+  },
+  "trust": {
+    "eyebrow": "TRUST & PROMISE",
+    "title": "我们的承诺",
+    "description": "提供值得信赖的信息是我们的使命",
+    "items": {
+      "verification": {
+        "title": "严格审核",
+        "description": "仅推荐亲自访问并验证过的场所。<br></br>保证服务品质。"
+      },
+      "consultation": {
+        "title": "实时咨询",
+        "description": "微信实时沟通，<br></br>平均2小时内回复."
+      },
+      "transparency": {
+        "title": "透明引导",
+        "description": "没有任何隐藏费用，<br></br>所有价格公开透明。"
+      }
+    }
+  },
+  "finalCTA": {
+    "eyebrow": "BECOME A MEMBER",
+    "title": "立即成为 <highlight>首尔的主角</highlight>",
+    "description": "一次认证，开启高端本地福利，<br></br>让您的首尔之旅与众不同。",
+    "button": "立即微信咨询",
+    "note": "发送\"旅行者\"即可获取福利指南"
+  },
+  "footer": {
+    "description": "我们提供只有本地人才知道的高端信息<br></br>以及经过验证的 K-Beauty 专属福利。",
+    "quickLinks": {
+      "title": "快速链接",
+      "verify": "行程验证",
+      "benefits": "会员权益指南",
+      "reviews": "会员真实评价",
+      "membership": "K-Beauty 会员资格"
+    },
+    "contact": {
+      "title": "联系我们",
+      "address": {
+        "label": "地址",
+        "value": "首尔市江南区永东大路602, 6楼"
+      },
+      "info": {
+        "label": "邮箱及电话"
+      }
+    },
+    "newsletter": {
+      "title": "新闻资讯",
+      "description": "获取最新的本地动态和隐藏福利信息。",
+      "placeholder": "您的电子邮箱",
+      "button": "加入"
+    },
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "© 2024 CURATE SEOUL. 版权所有。"
+  },
+  "benefitsPage": {
+    "valueSection": {
+      "eyebrow": "MEMBERSHIP BENEFIT",
+      "title": "会员权益价值",
+      "subtitle": "提供比单独支付更具优势的价格方案",
+      "totalEstimatedValueLabel": "Total Estimated Value",
+      "totalEstimatedValue": "¥2300 + 权益",
+      "footerTitle": "总权益价值 ¥2300+",
+      "footerSubtitle": "立即开启您的专属之旅",
+      "footerNote": "每月仅限30名会员",
+      "items": {
+        "dining": {
+          "title": "高端美食/Omakase",
+          "value": "价值 ¥800",
+          "description": "预约制的本地特色餐厅体验"
+        },
+        "cafe": {
+          "title": "热门网红咖啡馆",
+          "value": "价值 ¥250",
+          "description": "无需排队的尊享服务"
+        },
+        "popup": {
+          "title": "品牌快闪/展览",
+          "value": "价值 ¥500",
+          "description": "VIP快速通道入场权限"
+        },
+        "beauty": {
+          "title": "K-Beauty 护理折扣",
+          "value": "价值 ¥750+",
+          "description": "会员专享的内部优惠价"
+        }
+      }
+    },
+    "membershipSection": {
+      "eyebrow": "EXCLUSIVE ACCESS",
+      "title": "K-Beauty 会员计划",
+      "subtitle": "选择最适合您的权益方案",
+      "tiers": {
+        "essential": {
+          "name": "基础型 (Essential)",
+          "price": "轻取悦己",
+          "benefits": [
+            "造型设计",
+            "妆容体验",
+            "基础皮肤管理",
+            "头皮护理"
+          ],
+          "cta": "立即咨询"
+        },
+        "signature": {
+          "name": "标准型 (Signature)",
+          "price": "进阶之选",
+          "benefits": [
+            "个人定制咨询",
+            "K-Beauty 摄影棚",
+            "行程及预约支助",
+            "专属推荐"
+          ],
+          "cta": "申请咨询 →"
+        },
+        "premium": {
+          "name": "尊享型 (Premium)",
+          "price": "高端定制",
+          "benefits": [
+            "私密专家咨询",
+            "最高优先级预约",
+            "专属行程管家",
+            "额外 VIP 礼遇"
+          ],
+          "cta": "立即预约"
+        }
+      },
+      "badge": "人气推荐",
+      "learnMore": "了解更多"
+    },
+    "proceduresSection": {
+      "title": "首尔之光",
+      "titleHighlight": "一日美容计划",
+      "description": "在首尔以合理的价格享受专业护肤。从皮肤增强剂到激光治疗，体验在一天内完成的最佳美容方案。",
+      "items": {
+        "skinBooster": {
+          "title": "水光针/皮肤增强",
+          "description": "由内而外的补水与光泽"
+        },
+        "miniLifting": {
+          "title": "迷你提升",
+          "description": "即刻恢复紧致与活力"
+        },
+        "petiteSurgery": {
+          "title": "微整形",
+          "description": "自然且有效的改变"
+        }
+      },
+      "cta": "查看详细诊疗项目"
+    },
+    "clinicsSection": {
+      "title": "我们的合作诊所",
+      "subtitle": "拥有专业医疗团队的信赖之选",
+      "browseAll": "浏览所有诊所",
+      "more": "了解更多"
+    }
+  },
+  "experiencePage": {
+    "videosSection": {
+      "eyebrow": "REAL REVIEW",
+      "title": "会员的首尔旅行后记",
+      "subtitle": "真实会员体验并留下的短视频分享",
+      "vlogs": {
+        "vlog1": {
+          "tag": "美食/咖啡",
+          "title": "圣水洞 潮流地标巡礼"
+        },
+        "vlog2": {
+          "tag": "K-Beauty",
+          "title": "江南皮肤管理 真实后记"
+        },
+        "vlog3": {
+          "tag": "打卡点",
+          "title": "弘大街头 现场演出"
+        },
+        "vlog4": {
+          "tag": "购物",
+          "title": "汉南洞 奢华买手店"
+        }
+      }
+    },
+    "reviewsSection": {
+      "eyebrow": "REAL REVIEW",
+      "title": "会员的真实后记",
+      "subtitle": "CURATE SEOUL 带来的特别体验",
+      "items": {
+        "review1": {
+          "text": "第一次来首尔旅行，有很多担心，多亏了 Curate Seoul，我们才能只去地道的本地热门打卡点。特别是 Omakase 的预约优惠太棒了！",
+          "tags": [
+            "美食体验",
+            "Omakase",
+            "本地感性"
+          ]
+        },
+        "review2": {
+          "text": "多亏了帮我预约皮肤管理，我才能舒心地享受韩国的高端服务。合作的咖啡馆氛围也非常好，拍到了很多人生成图。",
+          "tags": [
+            "K-Beauty",
+            "皮肤管理",
+            "咖啡馆巡礼"
+          ]
+        }
+      }
+    },
+    "howItWorksSection": {
+      "eyebrow": "使用流程",
+      "title": "简单的4步曲",
+      "subtitle": "认证 → K-Beauty 预约 → 获取通行证 → 体验",
+      "steps": {
+        "step1": {
+          "title": "行程认证",
+          "description": "将机票或酒店预订截图发送至微信"
+        },
+        "step2": {
+          "title": "K-Beauty 预约",
+          "description": "选择您心仪的皮肤管理、美发等服务"
+        },
+        "step3": {
+          "title": "Reviewer Pass",
+          "description": "获取美食、咖啡馆、快闪店的体验权限"
+        },
+        "step4": {
+          "title": "体验与分享",
+          "description": "尽情享受并分享您的真实后记"
+        }
+      },
+      "badge": "推荐"
+    },
+    "rulesSection": {
+      "eyebrow": "IMPORTANT RULES",
+      "title": "请务必遵守",
+      "subtitle": "为了建立安全且诚实的社区所需的最低限度规则",
+      "participateEyebrow": "参与方式如下",
+      "rules": {
+        "verification": {
+          "label": "行程认证",
+          "text": "将机票 or 酒店预订截图通过微信发送"
+        },
+        "booking": {
+          "label": "K-Beauty",
+          "text": "通过 Curate Seoul 预约至少 1 项 K-Beauty 体验"
+        },
+        "pass": {
+          "label": "Pass 发放",
+          "text": "预约确认后，通过 Reviewer Pass 获取体验优惠"
+        },
+        "sharing": {
+          "label": "分享后记",
+          "text": "体验结束后在社交平台分享真实后记（可选，非常欢迎！）"
+        }
+      },
+      "note": "分享后记将使您获得下一次优惠的优先权。请留下您的真实意见！"
+    },
+    "faqSection": {
+      "eyebrow": "FREQUENTLY ASKED",
+      "title": "您有疑问吗？",
+      "subtitle": "关于 Curate Seoul 的常见问题解答",
+      "items": {
+        "q1": {
+          "question": "为什么需要提供机票/酒店认证？",
+          "answer": "我们的服务是专门为真实的首尔旅行者提供。通过认证，我们能确保这些优质优惠提供给真正来访的游客。您的个人信息仅用于身份核实。"
+        },
+        "q2": {
+          "question": "为什么要预约 K-Beauty 项目？",
+          "answer": "预约 K-Beauty 项目是激活会员资格的必要条件。只有这样，我们才能为合作商家争取到专属的体验名额。在享受首尔旅行亮点 K-Beauty 的同时，还能解锁更多额外礼遇！"
+        },
+        "q3": {
+          "question": "如何获取体验优惠？",
+          "answer": "当您的 K-Beauty 预约确认后，我们将为您发放 Reviewer Pass。凭此卡，您可以以会员身份体验当地的美食和咖啡馆，总价值约 45 万韩元！"
+        },
+        "q4": {
+          "question": "我可以获得多少次体验机会？",
+          "answer": "这取决于您的 K-Beauty 等级和旅行时长。通常会提供 2~4 次美食/咖啡馆体验机会。行程越长，您可以享受的累积福利就越多。"
+        },
+        "q5": {
+          "question": "必须撰写后记吗？",
+          "answer": "分享后记是自愿的。不过，我们会为分享后记的会员提供下一次活动的优先参与权。您可以在 Instagram 或小红书上留下您的真实体验心得。"
+        },
+        "q6": {
+          "question": "这是医疗中介服务吗？",
+          "answer": "不是。我们是一家旅行体验策划服务商。我们仅提供 K-Beauty 预约协助和本地体验推荐，不提供任何医疗咨询或建议。"
+        }
+      }
+    }
+  }
+}

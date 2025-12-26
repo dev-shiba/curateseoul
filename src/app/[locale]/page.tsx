@@ -20,14 +20,7 @@ export default function Home() {
       <Header />
       <Hero />
       <VerificationFlow />
-      <BenefitsValue />
-      <MemberVideos />
-      <MemberReviews />
-      <HowItWorks />
-      <KBeautyMembership />
       <TrustSection />
-      <RulesSection />
-      <FAQ />
       <FinalCTA />
       <Footer />
     </main>
