@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curate Seoul｜来首尔旅行，更聪明地玩</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --bg-cream: #FFFDF8;
+      --bg-warm: #FBF8F3;
+      --bg-card: #FFFFFF;
+      --bg-soft: #F7F4EE;
+      --accent: #C8A97E;
+      --accent-dark: #B8956A;
+      --accent-light: #E8D5BC;
+      --accent-soft: rgba(200, 169, 126, 0.12);
+      --green: #2D5A4A;
+      --green-soft: rgba(45, 90, 74, 0.08);
+      --text-dark: #2C2C2C;
+      --text-medium: #5A5A5A;
+      --text-light: #8A8A8A;
+      --text-muted: #ABABAB;
+      --border: rgba(0, 0, 0, 0.08);
+      --wechat: #07c160;
+      --red: #D64545;
+      --shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.08);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Noto Sans SC', 'Inter', -apple-system, sans-serif;
+      background: var(--bg-cream);
+      color: var(--text-dark);
+      line-height: 1.7;
+    }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 16px 0;
+      background: rgba(255, 253, 248, 0.9);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .header-inner { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 800; color: var(--text-dark); text-decoration: none; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: none; gap: 28px; font-size: 14px; }
+    @media (min-width: 900px) { .nav-links { display: flex; } }
+    .nav-links a { color: var(--text-medium); text-decoration: none; font-weight: 500; }
+    .nav-links a:hover { color: var(--accent-dark); }
+    .header-cta {
+      background: var(--wechat); color: white;
+      padding: 12px 24px; border-radius: 50px;
+      font-size: 14px; font-weight: 700;
+      text-decoration: none; display: flex; align-items: center; gap: 8px;
+    }
+    .header-cta:hover { box-shadow: 0 4px 20px rgba(7, 193, 96, 0.3); transform: translateY(-2px); }
+    .hero {
+      min-height: 100vh; display: flex; align-items: center;
+      padding: 120px 20px 80px;
+      background: linear-gradient(180deg, var(--bg-cream) 0%, var(--bg-warm) 100%);
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: -20%; right: -10%; width: 60%; height: 80%;
+      background: radial-gradient(circle, var(--accent-soft) 0%, transparent 70%);
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1fr 400px; gap: 60px;
+      align-items: center; max-width: 1000px; margin: 0 auto; position: relative; z-index: 1;
+    }
+    @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; gap: 48px; text-align: center; } }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--accent-soft); border: 1px solid var(--accent-light);
+      padding: 10px 20px; border-radius: 50px;
+      font-size: 13px; font-weight: 700; color: var(--accent-dark); margin-bottom: 24px;
+    }
+    .hero h1 { font-size: clamp(36px, 6vw, 54px); font-weight: 900; line-height: 1.2; margin-bottom: 24px; color: var(--text-dark); }
+    .hero h1 .highlight {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--green) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .hero-desc { font-size: 18px; color: var(--text-medium); line-height: 1.9; margin-bottom: 32px; }
+    .hero-desc strong { color: var(--text-dark); }
+    .hero-desc .underline { border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
+    .hero-stats { display: flex; gap: 40px; margin-bottom: 32px; }
+    @media (max-width: 900px) { .hero-stats { justify-content: center; gap: 32px; } }
+    .stat-item { text-align: left; }
+    @media (max-width: 900px) { .stat-item { text-align: center; } }
+    .stat-number { font-family: 'Inter', sans-serif; font-size: 36px; font-weight: 800; color: var(--accent-dark); }
+    .stat-label { font-size: 13px; color: var(--text-light); margin-top: 2px; }
+    .hero-features { display: flex; flex-wrap: wrap; gap: 10px; }
+    @media (max-width: 900px) { .hero-features { justify-content: center; } }
+    .hero-feature {
+      display: flex; align-items: center; gap: 6px;
+      background: var(--bg-card); border: 1px solid var(--border);
+      padding: 10px 16px; border-radius: 50px; font-size: 13px; color: var(--text-medium); box-shadow: var(--shadow);
+    }
+    .hero-feature i { color: var(--accent); }
+    .wechat-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 24px; padding: 36px 32px; text-align: center;
+      box-shadow: var(--shadow-lg); position: relative;
+    }
+    .card-badge {
+      position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+      background: var(--red); color: white; padding: 8px 20px; border-radius: 50px;
+      font-size: 12px; font-weight: 700; white-space: nowrap;
+      box-shadow: 0 4px 12px rgba(214, 69, 69, 0.3);
+    }
+    .wechat-card h2 { font-size: 22px; font-weight: 700; margin: 16px 0 8px; color: var(--text-dark); }
+    .wechat-card .subtitle { font-size: 14px; color: var(--text-light); margin-bottom: 24px; }
+    .qr-box { background: var(--bg-soft); border-radius: 20px; padding: 20px; display: inline-block; margin-bottom: 20px; }
+    .qr-placeholder {
+      width: 140px; height: 140px; background: white; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px;
+      font-size: 12px; color: var(--text-muted); border: 1px solid var(--border);
+    }
+    .qr-placeholder i { font-size: 32px; color: var(--wechat); }
+    .wechat-id-row {
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+      background: var(--bg-soft); padding: 14px 20px; border-radius: 12px; margin-bottom: 20px;
+    }
+    .wechat-id-row .label { font-size: 13px; color: var(--text-light); }
+    .wechat-id-row .value { font-family: 'Inter', monospace; font-size: 16px; font-weight: 700; color: var(--wechat); }
+    .copy-btn {
+      background: var(--wechat); color: white; border: none;
+      padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer;
+    }
+    .copy-btn:hover { filter: brightness(1.1); }
+    .copy-btn.copied { background: var(--accent); }
+    .divider {
+      display: flex; align-items: center; gap: 16px; margin: 20px 0;
+      font-size: 13px; color: var(--text-muted);
+    }
+    .divider::before, .divider::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .mini-form { display: flex; gap: 10px; }
+    .mini-form input {
+      flex: 1; padding: 14px 18px; background: var(--bg-soft);
+      border: 1px solid var(--border); border-radius: 12px;
+      color: var(--text-dark); font-size: 15px; font-family: inherit;
+    }
+    .mini-form input::placeholder { color: var(--text-muted); }
+    .mini-form input:focus { outline: none; border-color: var(--accent); background: white; }
+    .mini-form button {
+      background: var(--wechat); color: white; border: none;
+      padding: 14px 24px; border-radius: 12px; font-size: 15px; font-weight: 700; cursor: pointer;
+    }
+    .mini-form button:hover { filter: brightness(1.1); }
+    .card-note { font-size: 12px; color: var(--text-muted); margin-top: 16px; }
+    .section { padding: 100px 0; }
+    .section.alt { background: var(--bg-warm); }
+    .section-header { text-align: center; margin-bottom: 56px; }
+    .section-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12px; font-weight: 700; color: var(--accent-dark);
+      background: var(--accent-soft); padding: 8px 18px; border-radius: 50px; margin-bottom: 16px;
+    }
+    .section-title { font-size: clamp(28px, 5vw, 40px); font-weight: 800; margin-bottom: 12px; }
+    .section-desc { font-size: 16px; color: var(--text-medium); max-width: 550px; margin: 0 auto; }
+    .verify-section { padding: 100px 0; background: var(--bg-warm); }
+    .verify-box {
+      background: var(--bg-card); border: 2px solid var(--accent);
+      border-radius: 28px; padding: 56px 48px; max-width: 900px; margin: 0 auto;
+      text-align: center; box-shadow: var(--shadow-lg); position: relative;
+    }
+    .verify-box::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-dark), var(--accent));
+      border-radius: 28px 28px 0 0;
+    }
+    .verify-icon {
+      width: 80px; height: 80px; background: var(--accent-soft);
+      border: 2px solid var(--accent); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 36px; margin: 0 auto 24px;
+    }
+    .verify-title { font-size: 32px; font-weight: 800; margin-bottom: 16px; color: var(--text-dark); }
+    .verify-subtitle { font-size: 18px; color: var(--text-medium); margin-bottom: 40px; line-height: 1.7; }
+    .verify-subtitle strong { color: var(--accent-dark); }
+    .verify-steps { display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 40px; flex-wrap: wrap; }
+    .verify-step {
+      display: flex; align-items: center; gap: 12px;
+      background: var(--bg-soft); border: 1px solid var(--border);
+      padding: 16px 24px; border-radius: 16px; box-shadow: var(--shadow);
+    }
+    .verify-step-icon { font-size: 28px; }
+    .verify-step-text { text-align: left; }
+    .verify-step-text .label { font-size: 11px; color: var(--text-muted); margin-bottom: 2px; text-transform: uppercase; }
+    .verify-step-text .value { font-size: 15px; font-weight: 700; color: var(--text-dark); }
+    .verify-arrow { font-size: 24px; color: var(--accent); }
+    @media (max-width: 700px) { .verify-arrow { display: none; } .verify-steps { flex-direction: column; } .verify-box { padding: 40px 24px; } }
+    .verify-benefits { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    @media (max-width: 800px) { .verify-benefits { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 500px) { .verify-benefits { grid-template-columns: 1fr; } }
+    .verify-benefit {
+      background: var(--bg-soft); border: 1px solid var(--border);
+      border-radius: 16px; padding: 24px 16px; text-align: center; transition: all 0.3s;
+    }
+    .verify-benefit:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: var(--shadow); }
+    .verify-benefit-icon { font-size: 32px; margin-bottom: 12px; }
+    .verify-benefit h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; color: var(--text-dark); }
+    .verify-benefit p { font-size: 12px; color: var(--text-light); }
+    /* Timeline */
+    .timeline-section {
+      padding: 100px 0;
+      background: linear-gradient(180deg, var(--bg-cream) 0%, var(--bg-warm) 100%);
+      position: relative;
+    }
+    .timeline-section::before {
+      content: ''; position: absolute; top: 200px; left: 50%; transform: translateX(-50%);
+      width: 2px; height: calc(100% - 400px);
+      background: linear-gradient(180deg, transparent 0%, var(--accent-light) 10%, var(--accent-light) 90%, transparent 100%);
+    }
+    .timeline-container { max-width: 900px; margin: 0 auto; position: relative; }
+    .timeline-item { display: flex; align-items: flex-start; margin-bottom: 48px; position: relative; }
+    .timeline-item:last-child { margin-bottom: 0; }
+    .timeline-item:nth-child(odd) { flex-direction: row; }
+    .timeline-item:nth-child(even) { flex-direction: row-reverse; }
+    .timeline-content {
+      width: calc(50% - 40px); background: var(--bg-card);
+      border: 1px solid var(--border); border-radius: 24px;
+      overflow: hidden; box-shadow: var(--shadow); transition: all 0.3s;
+    }
+    .timeline-content:hover { border-color: var(--accent); transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    @media (max-width: 768px) {
+      .timeline-section::before { left: 30px; }
+      .timeline-item { flex-direction: row !important; padding-left: 60px; }
+      .timeline-content { width: 100%; }
+      .timeline-dot { left: 30px !important; }
+    }
+    .timeline-dot {
+      position: absolute; left: 50%; transform: translateX(-50%);
+      width: 24px; height: 24px; background: var(--accent);
+      border: 4px solid var(--bg-cream); border-radius: 50%; z-index: 2;
+      box-shadow: 0 0 0 4px var(--accent-soft);
+    }
+    .timeline-image { width: 100%; height: 180px; object-fit: cover; }
+    .timeline-body { padding: 24px; }
+    .timeline-time {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--accent); color: white;
+      padding: 6px 14px; border-radius: 50px; font-size: 13px; font-weight: 700; margin-bottom: 12px;
+    }
+    .timeline-body h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; color: var(--text-dark); }
+    .timeline-body p { font-size: 14px; color: var(--text-medium); line-height: 1.6; margin-bottom: 12px; }
+    .timeline-tag {
+      display: inline-block; background: var(--accent-soft); color: var(--accent-dark);
+      padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;
+    }
+    .timeline-value {
+      display: inline-block; background: var(--green-soft); color: var(--green);
+      padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-left: 8px;
+    }
+    .benefits-value { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 950px; margin: 0 auto; }
+    @media (max-width: 900px) { .benefits-value { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 500px) { .benefits-value { grid-template-columns: 1fr; max-width: 360px; } }
+    .benefit-value-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 24px; padding: 32px 24px; text-align: center;
+      position: relative; box-shadow: var(--shadow); transition: all 0.3s;
+    }
+    .benefit-value-card:hover { border-color: var(--accent); transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+    .benefit-value-card.featured {
+      border: 2px solid var(--accent);
+      background: linear-gradient(180deg, rgba(200, 169, 126, 0.08) 0%, var(--bg-card) 100%);
+    }
+    .benefit-value-card.featured::before {
+      content: '热门'; position: absolute; top: 12px; right: 12px;
+      background: var(--accent); color: white;
+      padding: 4px 10px; border-radius: 20px; font-size: 10px; font-weight: 700;
+    }
+    .benefit-icon {
+      width: 64px; height: 64px; background: var(--accent-soft);
+      border-radius: 20px; display: flex; align-items: center; justify-content: center;
+      font-size: 32px; margin: 0 auto 20px;
+    }
+    .benefit-value-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; color: var(--text-dark); }
+    .benefit-value-card p { font-size: 13px; color: var(--text-light); margin-bottom: 16px; line-height: 1.6; }
+    .benefit-price { background: var(--bg-soft); border-radius: 12px; padding: 14px; }
+    .benefit-price .label { font-size: 11px; color: var(--text-muted); margin-bottom: 4px; }
+    .benefit-price .amount { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 800; color: var(--accent-dark); }
+    .benefit-price .unit { font-size: 14px; color: var(--text-medium); }
+    .total-value-banner {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+      padding: 28px; text-align: center; margin-top: 48px; border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(200, 169, 126, 0.3);
+    }
+    .total-value-banner h3 { color: white; font-size: 14px; font-weight: 600; margin-bottom: 8px; opacity: 0.9; }
+    .total-value-banner .amount { color: white; font-family: 'Inter', sans-serif; font-size: 42px; font-weight: 900; }
+    .shortform-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 950px; margin: 0 auto; }
+    @media (max-width: 900px) { .shortform-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 500px) { .shortform-grid { grid-template-columns: 1fr; max-width: 280px; } }
+    .shortform-card {
+      position: relative; aspect-ratio: 9/16; border-radius: 24px; overflow: hidden;
+      background: var(--bg-card); border: 1px solid var(--border);
+      cursor: pointer; box-shadow: var(--shadow); transition: all 0.3s;
+    }
+    .shortform-card:hover { transform: scale(1.03); box-shadow: var(--shadow-lg); }
+    .shortform-thumbnail { width: 100%; height: 100%; object-fit: cover; }
+    .shortform-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 0%, transparent 50%, rgba(0,0,0,0.7) 100%);
+      display: flex; flex-direction: column; justify-content: flex-end; padding: 20px;
+    }
+    .shortform-play {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 56px; height: 56px; background: rgba(255, 255, 255, 0.95);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      opacity: 0; transition: all 0.3s;
+    }
+    .shortform-card:hover .shortform-play { opacity: 1; }
+    .shortform-play i { color: var(--accent-dark); font-size: 22px; margin-left: 4px; }
+    .shortform-info h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; color: white; }
+    .shortform-info p { font-size: 12px; color: rgba(255, 255, 255, 0.8); }
+    .shortform-tag {
+      position: absolute; top: 12px; left: 12px;
+      background: var(--accent); color: white;
+      padding: 6px 12px; border-radius: 20px; font-size: 11px; font-weight: 700;
+    }
+    .shortform-views {
+      position: absolute; top: 12px; right: 12px;
+      background: rgba(0, 0, 0, 0.5); color: white;
+      padding: 4px 10px; border-radius: 20px; font-size: 11px;
+      display: flex; align-items: center; gap: 4px;
+    }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 950px; margin: 0 auto; }
+    @media (max-width: 900px) { .reviews-grid { grid-template-columns: 1fr; max-width: 450px; } }
+    .review-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); transition: all 0.3s;
+    }
+    .review-card:hover { border-color: var(--accent); transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+    .review-images { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; height: 120px; }
+    .review-images img { width: 100%; height: 100%; object-fit: cover; }
+    .review-content { padding: 24px; }
+    .review-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .review-avatar {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--accent-soft); border: 2px solid var(--accent-light);
+      display: flex; align-items: center; justify-content: center; font-size: 20px;
+    }
+    .review-meta h4 { font-size: 15px; font-weight: 700; margin-bottom: 2px; color: var(--text-dark); }
+    .review-meta p { font-size: 12px; color: var(--text-muted); }
+    .review-rating { display: flex; gap: 2px; margin-bottom: 12px; }
+    .review-rating i { color: var(--accent); font-size: 14px; }
+    .review-text { font-size: 14px; color: var(--text-medium); line-height: 1.7; margin-bottom: 16px; }
+    .review-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .review-tag {
+      background: var(--accent-soft); color: var(--accent-dark);
+      padding: 6px 12px; border-radius: 20px; font-size: 11px; font-weight: 600;
+    }
+    .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 950px; margin: 0 auto; }
+    @media (max-width: 900px) { .steps-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 500px) { .steps-grid { grid-template-columns: 1fr; max-width: 320px; } }
+    .step-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 24px; padding: 32px 24px; text-align: center;
+      position: relative; box-shadow: var(--shadow); transition: all 0.3s;
+    }
+    .step-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+    .step-card.featured {
+      border: 2px solid var(--accent);
+      background: linear-gradient(180deg, rgba(200, 169, 126, 0.08) 0%, var(--bg-card) 100%);
+    }
+    .step-badge {
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--red); color: white;
+      padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 700;
+    }
+    .step-num {
+      position: absolute; top: 16px; right: 20px;
+      font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 800; color: var(--accent);
+    }
+    .step-icon {
+      width: 64px; height: 64px; background: var(--accent-soft);
+      border-radius: 20px; display: flex; align-items: center; justify-content: center;
+      font-size: 28px; margin: 0 auto 18px;
+    }
+    .step-card.featured .step-icon { background: var(--accent); }
+    .step-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; color: var(--text-dark); }
+    .step-card p { font-size: 13px; color: var(--text-medium); line-height: 1.6; }
+    .membership-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 900px; margin: 0 auto; }
+    @media (max-width: 800px) { .membership-grid { grid-template-columns: 1fr; max-width: 380px; } }
+    .membership-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 24px; padding: 36px 28px; text-align: center;
+      position: relative; box-shadow: var(--shadow); transition: all 0.3s;
+    }
+    .membership-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+    .membership-card.featured {
+      border: 2px solid var(--accent);
+      background: linear-gradient(180deg, rgba(200, 169, 126, 0.1) 0%, var(--bg-card) 100%);
+      transform: scale(1.02);
+    }
+    .membership-card.featured:hover { transform: scale(1.02) translateY(-8px); }
+    .membership-badge {
+      position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+      color: white; padding: 8px 20px; border-radius: 50px;
+      font-size: 12px; font-weight: 700;
+    }
+    .membership-name { font-size: 22px; font-weight: 800; margin-bottom: 8px; margin-top: 8px; color: var(--text-dark); }
+    .membership-price { font-size: 14px; color: var(--text-light); margin-bottom: 24px; }
+    .membership-benefits { text-align: left; margin-bottom: 28px; }
+    .membership-benefits li {
+      font-size: 14px; color: var(--text-medium);
+      padding: 10px 0; padding-left: 28px; position: relative;
+      list-style: none; border-bottom: 1px solid var(--border);
+    }
+    .membership-benefits li:last-child { border-bottom: none; }
+    .membership-benefits li::before { content: '✓'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+    .membership-cta {
+      display: block; padding: 16px 28px; border-radius: 14px;
+      font-size: 15px; font-weight: 700; text-decoration: none; text-align: center;
+    }
+    .membership-cta.primary { background: var(--wechat); color: white; }
+    .membership-cta.primary:hover { box-shadow: 0 6px 25px rgba(7, 193, 96, 0.3); }
+    .membership-cta.secondary { background: transparent; border: 1px solid var(--border); color: var(--text-dark); }
+    .membership-cta.secondary:hover { border-color: var(--accent); color: var(--accent-dark); }
+    .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 850px; margin: 0 auto; }
+    @media (max-width: 700px) { .trust-grid { grid-template-columns: 1fr; } }
+    .trust-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 24px; padding: 36px 28px; text-align: center;
+      box-shadow: var(--shadow); transition: all 0.3s;
+    }
+    .trust-card:hover { border-color: var(--accent); transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .trust-icon {
+      width: 64px; height: 64px; background: var(--accent-soft);
+      border-radius: 20px; display: flex; align-items: center; justify-content: center;
+      font-size: 28px; margin: 0 auto 20px;
+    }
+    .trust-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 10px; color: var(--text-dark); }
+    .trust-card p { font-size: 14px; color: var(--text-medium); line-height: 1.6; }
+    .rules-box {
+      background: var(--bg-card); border: 2px solid var(--accent);
+      border-radius: 24px; padding: 40px; max-width: 700px; margin: 0 auto 32px;
+      box-shadow: var(--shadow); position: relative;
+    }
+    .rules-box::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-dark), var(--accent));
+      border-radius: 24px 24px 0 0;
+    }
+    .rules-title {
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+      font-size: 18px; font-weight: 700; margin-bottom: 28px; color: var(--accent-dark);
+    }
+    .rules-list { display: flex; flex-direction: column; gap: 16px; }
+    .rule-item { display: flex; gap: 16px; align-items: flex-start; }
+    .rule-label {
+      flex-shrink: 0; background: var(--accent-soft); color: var(--accent-dark);
+      padding: 6px 14px; border-radius: 8px; font-size: 12px; font-weight: 700;
+      min-width: 85px; text-align: center;
+    }
+    .rule-text { font-size: 14px; color: var(--text-medium); line-height: 1.6; }
+    .rule-text strong { color: var(--text-dark); }
+    .info-box {
+      background: var(--green-soft); border: 1px solid rgba(45, 90, 74, 0.2);
+      border-radius: 16px; padding: 20px 24px; max-width: 700px; margin: 0 auto;
+      font-size: 14px; color: var(--green); text-align: center;
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+    }
+    .info-box i { font-size: 20px; }
+    .faq-list { max-width: 700px; margin: 0 auto; }
+    .faq-item {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 16px; margin-bottom: 12px; overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .faq-item:hover { border-color: var(--accent-light); }
+    .faq-item summary {
+      padding: 22px 24px; font-size: 15px; font-weight: 600;
+      cursor: pointer; list-style: none;
+      display: flex; justify-content: space-between; align-items: center;
+      color: var(--text-dark);
+    }
+    .faq-item summary::after { content: '+'; font-size: 22px; color: var(--accent); }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-answer { padding: 0 24px 22px; font-size: 14px; color: var(--text-medium); line-height: 1.8; }
+    .faq-answer strong { color: var(--text-dark); }
+    .final-cta {
+      padding: 100px 0 140px;
+      background: linear-gradient(180deg, var(--bg-warm) 0%, var(--bg-cream) 100%);
+      text-align: center;
+    }
+    .final-cta h2 { font-size: clamp(28px, 5vw, 40px); font-weight: 800; margin-bottom: 12px; color: var(--text-dark); }
+    .final-cta .subtitle { font-size: 17px; color: var(--accent-dark); margin-bottom: 40px; }
+    .final-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--red); color: white;
+      padding: 10px 24px; border-radius: 50px; font-size: 14px; font-weight: 700; margin-bottom: 28px;
+    }
+    .final-card {
+      background: var(--bg-card); border: 2px solid var(--accent);
+      border-radius: 28px; padding: 48px 40px; max-width: 440px; margin: 0 auto;
+      box-shadow: var(--shadow-lg);
+    }
+    .final-qr { background: var(--bg-soft); border-radius: 20px; padding: 20px; display: inline-block; margin-bottom: 20px; }
+    .final-qr-placeholder {
+      width: 160px; height: 160px; background: white; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px;
+      border: 1px solid var(--border);
+    }
+    .final-qr-placeholder i { font-size: 40px; color: var(--wechat); }
+    .final-qr-placeholder span { font-size: 12px; color: var(--text-muted); }
+    .final-wechat-id { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 20px; font-size: 16px; }
+    .final-wechat-id .label { color: var(--text-light); }
+    .final-wechat-id .value { color: var(--wechat); font-weight: 700; }
+    .final-note { font-size: 13px; color: var(--text-muted); }
+    footer { padding: 48px 0; background: var(--bg-soft); border-top: 1px solid var(--border); text-align: center; }
+    .footer-logo { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 800; margin-bottom: 20px; color: var(--text-dark); }
+    .footer-logo span { color: var(--accent); }
+    .footer-links { display: flex; justify-content: center; gap: 28px; margin-bottom: 20px; }
+    .footer-links a { font-size: 13px; color: var(--text-light); text-decoration: none; }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-copy { font-size: 12px; color: var(--text-muted); }
+    .floating-bar {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      background: rgba(255, 253, 248, 0.95); backdrop-filter: blur(20px);
+      border-top: 1px solid var(--border); padding: 16px 20px; z-index: 90;
+    }
+    .floating-inner { max-width: 700px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .floating-text { font-size: 14px; color: var(--text-medium); }
+    .floating-text strong { color: var(--accent-dark); }
+    .floating-cta {
+      background: var(--wechat); color: white;
+      padding: 14px 28px; border-radius: 50px; font-size: 15px; font-weight: 700;
+      text-decoration: none; display: flex; align-items: center; gap: 8px;
+    }
+    .floating-cta:hover { box-shadow: 0 4px 20px rgba(7, 193, 96, 0.3); }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <a href="#" class="logo">Curate<span>Seoul</span></a>
+      <nav class="nav-links">
+        <a href="#verify">行程认证</a>
+        <a href="#timeline">完美一天</a>
+        <a href="#benefits">福利</a>
+        <a href="#reviews">评价</a>
+      </nav>
+      <a href="#wechat" class="header-cta"><i class="fa-brands fa-weixin"></i> 咨询入会</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-content">
+      <div class="hero-eyebrow"><i class="fa-solid fa-plane"></i> 首尔旅行者专属福利</div>
+      <h1>省下旅行费<br><span class="highlight">体验翻倍享</span></h1>
+      <p class="hero-desc">
+        只需<strong>验证机票或酒店</strong><br>
+        即可解锁<span class="underline">本地人私藏美食、K-Beauty、热门打卡点</span><br>
+        享受<strong>会员专属价</strong>
+      </p>
+      <div class="hero-stats">
+        <div class="stat-item"><div class="stat-number">50+</div><div class="stat-label">合作商家</div></div>
+        <div class="stat-item"><div class="stat-number">¥3000+</div><div class="stat-label">福利价值</div></div>
+        <div class="stat-item"><div class="stat-number">30名</div><div class="stat-label">每月限额</div></div>
+      </div>
+      <div class="hero-features">
+        <div class="hero-feature"><i class="fa-solid fa-check"></i> 本地美食体验</div>
+        <div class="hero-feature"><i class="fa-solid fa-check"></i> K-Beauty折扣</div>
+        <div class="hero-feature"><i class="fa-solid fa-check"></i> 快闪优先入场</div>
+      </div>
+    </div>
+    <div class="wechat-card" id="wechat">
+      <div class="card-badge">🔥 本月仅剩12个名额</div>
+      <h2>添加微信咨询</h2>
+      <p class="subtitle">发送"体验官"获取福利指南</p>
+      <div class="qr-box"><div class="qr-placeholder"><i class="fa-brands fa-weixin"></i><span>扫码添加</span></div></div>
+      <div class="wechat-id-row">
+        <span class="label">微信号</span>
+        <span class="value">CurateSeoul</span>
+        <button class="copy-btn" onclick="copyId(this, 'CurateSeoul')">复制</button>
+      </div>
+      <div class="divider">或留下你的微信</div>
+      <form class="mini-form" id="miniForm">
+        <input type="text" placeholder="你的微信号" required>
+        <button type="submit">申请</button>
+      </form>
+      <p class="card-note">2小时内回复 · 不打扰</p>
+    </div>
+  </div>
+</section>
+
+<section class="verify-section" id="verify">
+  <div class="container">
+    <div class="verify-box">
+      <div class="verify-icon">✈️</div>
+      <h2 class="verify-title">验证机票或酒店后</h2>
+      <p class="verify-subtitle">验证你的行程后<br>即可获得<strong>本地人私藏攻略</strong>和<strong>会员专属福利</strong></p>
+      <div class="verify-steps">
+        <div class="verify-step"><div class="verify-step-icon">📱</div><div class="verify-step-text"><div class="label">STEP 1</div><div class="value">截图机票/酒店</div></div></div>
+        <div class="verify-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="verify-step"><div class="verify-step-icon">💬</div><div class="verify-step-text"><div class="label">STEP 2</div><div class="value">微信发送</div></div></div>
+        <div class="verify-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="verify-step"><div class="verify-step-icon">🎁</div><div class="verify-step-text"><div class="label">STEP 3</div><div class="value">获取定制福利</div></div></div>
+      </div>
+      <div class="verify-benefits">
+        <div class="verify-benefit"><div class="verify-benefit-icon">🍖</div><h4>本地美食</h4><p>游客不知道的宝藏店</p></div>
+        <div class="verify-benefit"><div class="verify-benefit-icon">💆</div><h4>K-Beauty</h4><p>皮肤管理·美发·化妆</p></div>
+        <div class="verify-benefit"><div class="verify-benefit-icon">🏥</div><h4>医院·诊所</h4><p>认证医疗服务</p></div>
+        <div class="verify-benefit"><div class="verify-benefit-icon">🎪</div><h4>体验·快闪</h4><p>热门打卡优先入场</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="timeline-section" id="timeline">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag"><i class="fa-solid fa-sun"></i> 首尔完美一天</div>
+      <h2 class="section-title">会员的真实一天</h2>
+      <p class="section-desc">跟着我们的会员，看看首尔完美的一天是什么样</p>
+    </div>
+    <div class="timeline-container">
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&h=200&fit=crop" alt="咖啡" class="timeline-image">
+          <div class="timeline-body">
+            <div class="timeline-time"><i class="fa-regular fa-clock"></i> 09:00</div>
+            <h3>圣水洞网红咖啡 ☕</h3>
+            <p>在首尔最火的咖啡街开启一天，免排队入座，享受会员专属甜点</p>
+            <span class="timeline-tag">咖啡体验</span><span class="timeline-value">省 ¥80</span>
+          </div>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=500&h=200&fit=crop" alt="皮肤管理" class="timeline-image">
+          <div class="timeline-body">
+            <div class="timeline-time"><i class="fa-regular fa-clock"></i> 11:00</div>
+            <h3>江南皮肤管理 💆</h3>
+            <p>在江南顶级皮肤科享受专业护理，会员价比官网便宜40%</p>
+            <span class="timeline-tag">K-Beauty</span><span class="timeline-value">省 ¥800</span>
+          </div>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=500&h=200&fit=crop" alt="韩牛" class="timeline-image">
+          <div class="timeline-body">
+            <div class="timeline-time"><i class="fa-regular fa-clock"></i> 13:30</div>
+            <h3>隐藏韩牛店 🥩</h3>
+            <p>本地人私藏的韩牛烤肉店，不在任何攻略上，会员专属预约</p>
+            <span class="timeline-tag">美食体验</span><span class="timeline-value">省 ¥500</span>
+          </div>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=500&h=200&fit=crop" alt="快闪" class="timeline-image">
+          <div class="timeline-body">
+            <div class="timeline-time"><i class="fa-regular fa-clock"></i> 16:00</div>
+            <h3>品牌快闪店 🎪</h3>
+            <p>跳过2小时排队，直接入场体验当季最火快闪，还有会员专属礼品</p>
+            <span class="timeline-tag">快闪体验</span><span class="timeline-value">省 ¥200</span>
+          </div>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?w=500&h=200&fit=crop" alt="晚餐" class="timeline-image">
+          <div class="timeline-body">
+            <div class="timeline-time"><i class="fa-regular fa-clock"></i> 19:00</div>
+            <h3>预约制Omakase 🍣</h3>
+            <p>需要提前3个月预约的寿司店，会员专属通道，当天即可入座</p>
+            <span class="timeline-tag">高端美食</span><span class="timeline-value">省 ¥600</span>
+          </div>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=500&h=200&fit=crop" alt="酒吧" class="timeline-image">
+          <div class="timeline-body">
+            <div class="timeline-time"><i class="fa-regular fa-clock"></i> 21:00</div>
+            <h3>汉南洞隐藏酒吧 🍸</h3>
+            <p>需要暗号才能进入的speakeasy酒吧，会员专属入场+免费迎宾酒</p>
+            <span class="timeline-tag">夜生活</span><span class="timeline-value">省 ¥150</span>
+          </div>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+    </div>
+    <div class="total-value-banner" style="max-width: 500px; margin: 48px auto 0;">
+      <h3>一天总共节省</h3>
+      <div class="amount">¥2,330+</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="benefits">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag"><i class="fa-solid fa-gift"></i> 会员专属福利</div>
+      <h2 class="section-title">你能获得这些</h2>
+      <p class="section-desc">预订K-Beauty时附赠的体验福利</p>
+    </div>
+    <div class="benefits-value">
+      <div class="benefit-value-card featured">
+        <div class="benefit-icon">🍖</div>
+        <h3>高端美食</h3>
+        <p>韩牛Omakase、米其林级、预约困难的热门店</p>
+        <div class="benefit-price"><div class="label">福利价值</div><div class="amount">¥1000<span class="unit">+</span></div></div>
+      </div>
+      <div class="benefit-value-card">
+        <div class="benefit-icon">☕</div>
+        <h3>网红咖啡探店</h3>
+        <p>圣水洞咖啡、伦敦贝果、Onion等</p>
+        <div class="benefit-price"><div class="label">福利价值</div><div class="amount">¥300<span class="unit">+</span></div></div>
+      </div>
+      <div class="benefit-value-card">
+        <div class="benefit-icon">🎪</div>
+        <h3>品牌快闪/展览</h3>
+        <p>限时活动优先入场，跳过排队</p>
+        <div class="benefit-price"><div class="label">福利价值</div><div class="amount">¥600<span class="unit">+</span></div></div>
+      </div>
+      <div class="benefit-value-card">
+        <div class="benefit-icon">💆</div>
+        <h3>K-Beauty折扣</h3>
+        <p>皮肤管理、美发、化妆会员价</p>
+        <div class="benefit-price"><div class="label">福利价值</div><div class="amount">¥1000<span class="unit">+</span></div></div>
+      </div>
+    </div>
+    <div class="total-value-banner">
+      <h3>总福利价值</h3>
+      <div class="amount">¥3000+</div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag"><i class="fa-solid fa-play"></i> 真实体验视频</div>
+      <h2 class="section-title">会员们的首尔Vlog</h2>
+      <p class="section-desc">看看会员们的真实体验短视频</p>
+    </div>
+    <div class="shortform-grid">
+      <div class="shortform-card">
+        <img src="https://images.unsplash.com/photo-1590301157890-4810ed352733?w=400&h=700&fit=crop" alt="美食体验" class="shortform-thumbnail">
+        <div class="shortform-tag">美食</div>
+        <div class="shortform-views"><i class="fa-solid fa-play"></i> 12.3K</div>
+        <div class="shortform-overlay"><div class="shortform-play"><i class="fa-solid fa-play"></i></div><div class="shortform-info"><h4>韩牛Omakase体验</h4><p>@小红书达人</p></div></div>
+      </div>
+      <div class="shortform-card">
+        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&h=700&fit=crop" alt="K-Beauty" class="shortform-thumbnail">
+        <div class="shortform-tag">K-Beauty</div>
+        <div class="shortform-views"><i class="fa-solid fa-play"></i> 8.7K</div>
+        <div class="shortform-overlay"><div class="shortform-play"><i class="fa-solid fa-play"></i></div><div class="shortform-info"><h4>江南皮肤管理后记</h4><p>@美妆博主</p></div></div>
+      </div>
+      <div class="shortform-card">
+        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=400&h=700&fit=crop" alt="咖啡探店" class="shortform-thumbnail">
+        <div class="shortform-tag">咖啡</div>
+        <div class="shortform-views"><i class="fa-solid fa-play"></i> 15.2K</div>
+        <div class="shortform-overlay"><div class="shortform-play"><i class="fa-solid fa-play"></i></div><div class="shortform-info"><h4>圣水洞咖啡之旅</h4><p>@旅行vlogger</p></div></div>
+      </div>
+      <div class="shortform-card">
+        <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=400&h=700&fit=crop" alt="快闪体验" class="shortform-thumbnail">
+        <div class="shortform-tag">快闪</div>
+        <div class="shortform-views"><i class="fa-solid fa-play"></i> 9.4K</div>
+        <div class="shortform-overlay"><div class="shortform-play"><i class="fa-solid fa-play"></i></div><div class="shortform-info"><h4>跳过排队直接入场</h4><p>@时尚达人</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="reviews">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag"><i class="fa-solid fa-star"></i> 真实评价</div>
+      <h2 class="section-title">会员们的真实反馈</h2>
+      <p class="section-desc">看看真正体验过的人怎么说</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-images">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=200&h=120&fit=crop" alt="美食">
+          <img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?w=200&h=120&fit=crop" alt="餐厅">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=200&h=120&fit=crop" alt="甜点">
+        </div>
+        <div class="review-content">
+          <div class="review-header"><div class="review-avatar">🇨🇳</div><div class="review-meta"><h4>小红薯@美食探店</h4><p>上海 · 3天前</p></div></div>
+          <div class="review-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="review-text">"自己绝对找不到的本地美食！感觉像有韩国朋友带着玩一样。韩牛Omakase真的太绝了 🥩"</p>
+          <div class="review-tags"><span class="review-tag">美食体验</span><span class="review-tag">K-Beauty</span></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-images">
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=200&h=120&fit=crop" alt="spa">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=200&h=120&fit=crop" alt="美容">
+          <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200&h=120&fit=crop" alt="化妆">
+        </div>
+        <div class="review-content">
+          <div class="review-header"><div class="review-avatar">🇨🇳</div><div class="review-meta"><h4>小红薯@护肤控</h4><p>北京 · 1周前</p></div></div>
+          <div class="review-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="review-text">"做完皮肤管理又去圣水洞打卡！拍照效果完全不一样了。下次还来 💕"</p>
+          <div class="review-tags"><span class="review-tag">皮肤管理</span><span class="review-tag">咖啡探店</span></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-images">
+          <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=200&h=120&fit=crop" alt="快闪">
+          <img src="https://images.unsplash.com/photo-1536924940846-227afb31e2a5?w=200&h=120&fit=crop" alt="展览">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=120&fit=crop" alt="活动">
+        </div>
+        <div class="review-content">
+          <div class="review-header"><div class="review-avatar">🇨🇳</div><div class="review-meta"><h4>小红薯@韩国通</h4><p>广州 · 2周前</p></div></div>
+          <div class="review-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+          <p class="review-text">"要排2小时的快闪直接进！省下的时间又逛了好多地方，性价比超高 👍"</p>
+          <div class="review-tags"><span class="review-tag">快闪优先入场</span><span class="review-tag">美食</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag"><i class="fa-solid fa-route"></i> 使用方法</div>
+      <h2 class="section-title">简单4步</h2>
+      <p class="section-desc">认证 → 预订K-Beauty → 获得Pass → 体验</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card featured"><div class="step-badge">关键</div><div class="step-num">01</div><div class="step-icon">✈️</div><h3>行程认证</h3><p>将机票或酒店截图发送到微信</p></div>
+      <div class="step-card"><div class="step-num">02</div><div class="step-icon">💆</div><h3>预订K-Beauty</h3><p>选择皮肤管理·美发等服务</p></div>
+      <div class="step-card"><div class="step-num">03</div><div class="step-icon">🎫</div><h3>获得Pass</h3><p>解锁美食·咖啡·快闪体验权限</p></div>
+      <div class="step-card"><div class="step-num">04</div><div class="step-icon">🎁</div><h3>体验 & 分享</h3><p>享受后发布真实点评</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag"><i class="fa-solid fa-spa"></i> K-Beauty</div>
+      <h2 class="section-title">选择你想要的服务</h2>
+      <p class="section-desc">预订任意1个即可激活体验官Pass！</p>
+    </div>
+    <div class="membership-grid">
+      <div class="membership-card featured">
+        <div class="membership-badge">🔥 热门</div>
+        <div class="membership-name">Essential</div>
+        <div class="membership-price">轻松入门</div>
+        <ul class="membership-benefits"><li>美发造型</li><li>化妆体验</li><li>基础皮肤管理</li><li>头皮护理</li></ul>
+        <a href="#wechat" class="membership-cta primary">咨询预约 →</a>
+      </div>
+      <div class="membership-card">
+        <div class="membership-name">Signature</div>
+        <div class="membership-price">升级体验</div>
+        <ul class="membership-benefits"><li>私人定制咨询</li><li>K-Beauty工作室</li><li>行程&预约支持</li><li>个性化推荐</li></ul>
+        <a href="#wechat" class="membership-cta secondary">了解详情</a>
+      </div>
+      <div class="membership-card">
+        <div class="membership-name">Premium</div>
+        <div class="membership-price">尊享定制</div>
+        <ul class="membership-benefits"><li>私密咨询</li><li>最优先预约</li><li>专属管家</li><li>额外VIP福利</li></ul>
+        <a href="#wechat" class="membership-cta secondary">限量申请</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag"><i class="fa-solid fa-shield-check"></i> 信任保障</div>
+      <h2 class="section-title">Curate Seoul的承诺</h2>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-card"><div class="trust-icon">✅</div><h3>严格筛选</h3><p>每家店都亲自体验验证，只推荐品质有保障的商家</p></div>
+      <div class="trust-card"><div class="trust-icon">💬</div><h3>实时沟通</h3><p>微信实时回复，平均2小时内响应你的问题</p></div>
+      <div class="trust-card"><div class="trust-icon">🛡️</div><h3>价格透明</h3><p>没有隐藏费用，所有价格提前说明</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag"><i class="fa-solid fa-list-check"></i> 参与指南</div>
+      <h2 class="section-title">如何参与</h2>
+    </div>
+    <div class="rules-box">
+      <div class="rules-title"><i class="fa-solid fa-sparkles"></i> 参与流程</div>
+      <div class="rules-list">
+        <div class="rule-item"><span class="rule-label">行程认证</span><span class="rule-text">将机票或酒店预订截图发到微信</span></div>
+        <div class="rule-item"><span class="rule-label">K-Beauty</span><span class="rule-text">通过Curate Seoul预订任意1个K-Beauty体验</span></div>
+        <div class="rule-item"><span class="rule-label">获得Pass</span><span class="rule-text">预订确认后，获得体验官Pass解锁福利</span></div>
+        <div class="rule-item"><span class="rule-label">分享点评</span><span class="rule-text">体验后在社交媒体分享真实感受 <strong>(自愿，欢迎分享!)</strong></span></div>
+      </div>
+    </div>
+    <div class="info-box"><i class="fa-solid fa-circle-info"></i> 分享点评的会员可获得下次福利优先权，期待你的真实反馈！</div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <div class="section-header"><h2 class="section-title">常见问题</h2></div>
+    <div class="faq-list">
+      <details class="faq-item"><summary>为什么需要验证机票/酒店？</summary><div class="faq-answer">我们的服务是为<strong>真正来首尔旅行的人</strong>准备的。通过验证，我们可以为真正的旅行者提供最好的福利。个人信息仅用于验证目的。</div></details>
+      <details class="faq-item"><summary>为什么要预订K-Beauty？</summary><div class="faq-answer">预订K-Beauty是<strong>激活会员资格的条件</strong>。这样我们才能在合作商家为你提供体验福利。来首尔旅行怎能错过K-Beauty？顺便还能获得额外福利！</div></details>
+      <details class="faq-item"><summary>如何获得体验福利？</summary><div class="faq-answer">K-Beauty预订确认后会发放体验官Pass。有了Pass就可以<strong>以会员价享受美食·咖啡体验</strong>。总福利价值超过3000元！</div></details>
+      <details class="faq-item"><summary>能获得多少次体验？</summary><div class="faq-answer">根据K-Beauty等级和行程长度有所不同。一般可以获得<strong>2-4次美食/咖啡体验</strong>机会。行程越长，福利越多。</div></details>
+      <details class="faq-item"><summary>必须发点评吗？</summary><div class="faq-answer">分享点评是<strong>自愿的</strong>。但分享点评的会员可以获得下次福利优先权。在小红书或其他平台分享真实感受即可。</div></details>
+      <details class="faq-item"><summary>这是医疗中介服务吗？</summary><div class="faq-answer">不是。我们是<strong>旅行体验策划服务</strong>。帮助预订K-Beauty和推荐本地体验，不提供任何医疗建议。</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container">
+    <div class="final-badge"><i class="fa-solid fa-fire"></i> 本月仅限30名</div>
+    <h2>首尔旅行，更聪明地玩</h2>
+    <p class="subtitle">验证机票/酒店，解锁¥3000+会员福利</p>
+    <div class="final-card">
+      <div class="final-qr"><div class="final-qr-placeholder"><i class="fa-brands fa-weixin"></i><span>扫码添加</span></div></div>
+      <div class="final-wechat-id">
+        <span class="label">微信号</span>
+        <span class="value">CurateSeoul</span>
+        <button class="copy-btn" onclick="copyId(this, 'CurateSeoul')">复制</button>
+      </div>
+      <p class="final-note">发送"体验官"获取福利指南</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-logo">Curate<span>Seoul</span></div>
+    <div class="footer-links">
+      <a href="#">关于我们</a>
+      <a href="#">服务条款</a>
+      <a href="#">隐私政策</a>
+      <a href="mailto:hello@curateseoul.com">联系我们</a>
+    </div>
+    <p class="footer-copy">© 2024 Curate Seoul. All rights reserved.</p>
+  </div>
+</footer>
+
+<div class="floating-bar">
+  <div class="floating-inner">
+    <div class="floating-text"><strong>本月仅限30名</strong> · 总福利价值¥3000+</div>
+    <a href="#wechat" class="floating-cta"><i class="fa-brands fa-weixin"></i> 微信咨询</a>
+  </div>
+</div>
+
+<script>
+function copyId(btn, id) {
+  navigator.clipboard.writeText(id).then(() => {
+    const originalText = btn.textContent;
+    btn.textContent = '✓ 已复制!';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = originalText; btn.classList.remove('copied'); }, 2000);
+  });
+}
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) { window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 80, behavior: 'smooth' }); }
+  });
+});
+document.getElementById('miniForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('🎉 申请已提交！我们会尽快联系你。');
+  this.reset();
+});
+</script>
+</body>
+</html>
