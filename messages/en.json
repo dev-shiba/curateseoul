@@ -46,8 +46,11 @@
         },
         "stats": {
             "partners": "Partners",
+            "partnersAmount": "50+",
             "value": "Benefit Value",
-            "monthly": "Monthly Limit"
+            "valueAmount": "$2,200+",
+            "monthly": "Monthly Limit",
+            "limitAmount": "30 Slots"
         },
         "features": {
             "food": "Local Dining Experience",
@@ -200,6 +203,7 @@
             "totalEstimatedValue": "Up to ₩500,000 + Benefits",
             "footerTitle": "Total Benefit Value Up to ₩500,000+",
             "footerSubtitle": "Start today and enjoy the benefits",
+            "popularBadge": "POPULAR",
             "footerNote": "LIMITED TO 30 MEMBERS MONTHLY",
             "disclosureNote": "Based on experience group benefits / Varies by schedule/reservation status / Not cash payment",
             "valueLabel": "Benefit Value",
@@ -326,6 +330,7 @@
             "subtitle": "Stories of those who enjoyed Seoul properly",
             "items": {
                 "review1": {
+                    "from": "Visited from Tokyo · 3 days ago",
                     "text": "Restaurants I would never have found on my own! It felt like being guided by a Korean friend. Hanwoo Omakase was really the best 🥩",
                     "tags": [
                         "Dining Experience",
@@ -333,6 +338,7 @@
                     ]
                 },
                 "review2": {
+                    "from": "Visited from Osaka · 1 week ago",
                     "text": "From skincare to Seongsu-dong cafe tour! My Instagram photo quality has completely changed. I'll come back next time 💕",
                     "tags": [
                         "Skincare",
@@ -340,6 +346,7 @@
                     ]
                 },
                 "review3": {
+                    "from": "Visited from Fukuoka · 2 weeks ago",
                     "text": "Priority entry to a pop-up store that usually has a 2-hour wait! Saved time and enjoyed more. Best value for money 👍",
                     "tags": [
                         "Pop-up Priority Entry",

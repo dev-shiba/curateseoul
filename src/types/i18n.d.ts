@@ -1,4 +1,4 @@
-export type Locale = 'ko' | 'zh-CN';
+export type Locale = 'zh-CN' | 'ja' | 'en';
 
 // Augment next-intl types
 declare module 'next-intl' {

@@ -100,7 +100,7 @@ export default function VerificationFlow() {
                         ))}
                     </div>
 
-                    <div className="bg-[#F5F5F0] rounded-[24px] p-6 flex flex-col items-center justify-center gap-4 text-center border border-[#E5E0D8] max-w-3xl mx-auto shadow-sm">
+                    <div className="bg-[#F5F5F0] rounded-[24px] p-6 flex flex-col items-center justify-center gap-4 text-center border border-[#E5E0D8] max-w-3xl mx-auto shadow-sm mt-12">
                         <div className="flex flex-col md:flex-row items-center gap-3">
                             <div className="bg-[#8C8170] text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold shrink-0">
                                 i

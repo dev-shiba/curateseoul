@@ -9,7 +9,7 @@ export default function MemberReviews() {
         {
             avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80",
             name: "Yuki S.",
-            from: "도쿄에서 방문 · 3일 전",
+            from: t("items.review1.from"),
             flag: "🇯🇵",
             rating: 5,
             text: t("items.review1.text"),
@@ -23,7 +23,7 @@ export default function MemberReviews() {
         {
             avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80",
             name: "Sakura M.",
-            from: "오사카에서 방문 · 1주 전",
+            from: t("items.review2.from"),
             flag: "🇯🇵",
             rating: 5,
             text: t("items.review2.text"),
@@ -37,7 +37,7 @@ export default function MemberReviews() {
         {
             avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80",
             name: "Hana K.",
-            from: "후쿠오카에서 방문 · 2주 전",
+            from: t("items.review3.from"),
             flag: "🇯🇵",
             rating: 4.5, // Visual variety? Or just 5. Reference shows 4.5.
             text: t("items.review3.text"),

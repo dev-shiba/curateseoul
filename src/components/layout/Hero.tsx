@@ -61,7 +61,7 @@ export default function Hero() {
                     {/* Stats Section */}
                     <div className="flex flex-row justify-center items-center gap-8 lg:gap-12 w-full py-2">
                         <div className="space-y-2">
-                            <div className="text-4xl lg:text-5xl font-black text-brand-gold-dark font-inter tracking-tight">50+</div>
+                            <div className="text-4xl lg:text-5xl font-black text-brand-gold-dark font-inter tracking-tight">{t("stats.valueAmount")}</div>
                             <div className="text-xs font-bold text-zinc-400 uppercase tracking-wider">{t("stats.partners")}</div>
                         </div>
 
@@ -69,7 +69,7 @@ export default function Hero() {
                         <div className="w-px h-12 bg-black/10" />
 
                         <div className="space-y-2">
-                            <div className="text-4xl lg:text-5xl font-black text-brand-gold-dark font-inter tracking-tight">{isChinese ? "¥3000+" : "₩45만+"}</div>
+                            <div className="text-4xl lg:text-5xl font-black text-brand-gold-dark font-inter tracking-tight">{t("stats.valueAmount")}</div>
                             <div className="text-xs font-bold text-zinc-400 uppercase tracking-wider">{t("stats.value")}</div>
                         </div>
 
@@ -77,7 +77,7 @@ export default function Hero() {
                         <div className="w-px h-12 bg-black/10" />
 
                         <div className="space-y-2">
-                            <div className="text-4xl lg:text-5xl font-black text-brand-gold-dark font-inter tracking-tight">30명</div>
+                            <div className="text-4xl lg:text-5xl font-black text-brand-gold-dark font-inter tracking-tight">{t("stats.limitAmount")}</div>
                             <div className="text-xs font-bold text-zinc-400 uppercase tracking-wider">{t("stats.monthly")}</div>
                         </div>
                     </div>

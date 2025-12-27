@@ -47,8 +47,11 @@
     },
     "stats": {
       "partners": "合作商家",
+      "partnersAmount": "50+",
       "value": "福利价值",
-      "monthly": "每月限额"
+      "valueAmount": "¥3000+",
+      "monthly": "每月限额",
+      "limitAmount": "30名"
     },
     "features": {
       "beauty": "K-Beauty折扣",
@@ -182,6 +185,7 @@
       "totalEstimatedValue": "最高 ¥2600 + 权益",
       "footerTitle": "总权益价值 最高 ¥2600+",
       "footerSubtitle": "立即开启您的专属之旅",
+      "popularBadge": "人气",
       "footerNote": "每月仅限30名会员",
       "disclosureNote": "体验团福利合计标准 / 根据日程·预约情况而异 / 非现金发放",
       "valueLabel": "权益价值",
@@ -308,6 +312,7 @@
       "subtitle": "CURATE SEOUL 带来的特别体验",
       "items": {
         "review1": {
+          "from": "来自东京 · 3天前",
           "text": "第一次来首尔旅行，有很多担心，多亏了 Curate Seoul，我们才能只去地道的本地热门打卡点。特别是 Omakase 的预约优惠太棒了！",
           "tags": [
             "美食体验",
@@ -316,6 +321,7 @@
           ]
         },
         "review2": {
+          "from": "来自大阪 · 1周前",
           "text": "多亏了帮我预约皮肤管理，我才能舒心地享受韩国的高端服务。合作的咖啡馆氛围也非常好，拍到了很多人生成图。",
           "tags": [
             "K-Beauty",
@@ -324,6 +330,7 @@
           ]
         },
         "review3": {
+          "from": "来自福冈 · 2周前",
           "text": "原本需要排队2小时的快闪店，直接优先入场！节省时间，体验更多。性价比超高 👍",
           "tags": [
             "快闪优先入场",
