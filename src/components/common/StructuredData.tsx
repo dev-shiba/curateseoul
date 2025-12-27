@@ -1,46 +1,30 @@
-import { useLocale, useTranslations } from "next-intl";
+"use client";
+
+import { useLocale, useMessages, useTranslations } from 'next-intl';
 
 export default function StructuredData() {
   const locale = useLocale();
   const t = useTranslations("metadata");
+  const messages = useMessages() as any;
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://curateseoul.com";
 
+  // Business Schema
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Curate Seoul",
-    "image": `${baseUrl}/logo.png`, // Update with actual logo path
-    "@id": baseUrl,
-    "url": baseUrl,
-    "telephone": "", // Add if available
+    "image": `${baseUrl}/logo.png`,
+    "description": t("description"),
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "602, 6F, Yeongdong-daero",
-      "addressLocality": "Gangnam-gu",
-      "addressRegion": "Seoul",
-      "postalCode": "06075",
+      "addressLocality": "Seoul",
       "addressCountry": "KR"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 37.5173,
-      "longitude": 127.0591
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday"
-      ],
-      "opens": "10:00",
-      "closes": "19:00"
-    },
-    "description": t("description")
+    "url": baseUrl,
+    "telephone": "+82-10-2557-1506"
   };
 
+  // Breadcrumb Schema
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -54,6 +38,26 @@ export default function StructuredData() {
     ]
   };
 
+  // FAQ Schema
+  const faqItems = messages.experiencePage?.faqSection?.items;
+  let faqSchema = null;
+  if (faqItems) {
+    const mainEntity = Object.keys(faqItems).map(key => ({
+      "@type": "Question",
+      "name": faqItems[key].question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faqItems[key].answer
+      }
+    }));
+
+    faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": mainEntity
+    };
+  }
+
   return (
     <>
       <script
@@ -64,6 +68,12 @@ export default function StructuredData() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
     </>
   );
 }

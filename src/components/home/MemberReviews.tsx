@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import MotionSection from "../common/MotionSection";
+import Image from "next/image";
 
 export default function MemberReviews() {
     const t = useTranslations("experiencePage.reviewsSection");
@@ -14,7 +15,7 @@ export default function MemberReviews() {
             text: t("items.review1.text"),
             tags: t.raw("items.review1.tags"),
             images: [
-                "https://images.unsplash.com/photo-1467003909585-2f8a7270028d?auto=format&fit=crop&w=300&q=80", // Salmon/Food
+                "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80", // Food/Dining
                 "https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=300&q=80", // Terrace/View
                 "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=300&q=80", // Restaurant Interior
             ],
@@ -29,7 +30,7 @@ export default function MemberReviews() {
             tags: t.raw("items.review2.tags"),
             images: [
                 "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=300&q=80", // Hot stone Spa
-                "https://images.unsplash.com/photo-1507643179173-61bba6959c51?auto=format&fit=crop&w=300&q=80", // Modern Interior/Gallery
+                "https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=600&q=80", // Modern Interior/Gallery
                 "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=300&q=80", // Cafe/Coffee
             ],
         },
@@ -72,10 +73,11 @@ export default function MemberReviews() {
                             <div className="grid grid-cols-3 gap-0.5 h-48">
                                 {review.images.map((img, i) => (
                                     <div key={i} className="relative overflow-hidden h-full">
-                                        <img
+                                        <Image
                                             src={img}
-                                            alt="review"
-                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                            alt={`${review.name}'s review photo ${i + 1}`}
+                                            fill
+                                            className="object-cover transition-transform duration-700 group-hover:scale-110"
                                         />
                                     </div>
                                 ))}
@@ -86,10 +88,12 @@ export default function MemberReviews() {
                                 {/* User Profile */}
                                 <div className="flex items-center gap-4 mb-6">
                                     <div className="relative">
-                                        <img
+                                        <Image
                                             src={review.avatar}
                                             alt={review.name}
-                                            className="w-12 h-12 rounded-full border border-zinc-100 object-cover"
+                                            width={48}
+                                            height={48}
+                                            className="rounded-full border border-zinc-100 object-cover"
                                         />
                                         <span className="absolute -bottom-1 -right-1 text-sm drop-shadow-sm">{review.flag}</span>
                                     </div>

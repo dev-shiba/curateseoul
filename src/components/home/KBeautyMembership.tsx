@@ -28,7 +28,7 @@ export default function KBeautyMembership() {
     ];
 
     return (
-        <section id="membership" className="py-32 bg-white font-pretendard relative overflow-hidden">
+        <section id="membership" className="py-32 bg-brand-cream font-pretendard relative overflow-hidden">
             <div className="container mx-auto px-6 max-w-6xl relative z-10">
                 <MotionSection>
                     <div className="text-center mb-20">

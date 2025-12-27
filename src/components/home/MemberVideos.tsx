@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import MotionSection from "../common/MotionSection";
+import Image from "next/image";
 
 export default function MemberVideos() {
     const t = useTranslations("experiencePage.videosSection");
@@ -54,10 +55,11 @@ export default function MemberVideos() {
                             key={index}
                             className="relative group aspect-[10/16] overflow-hidden bg-zinc-100 rounded-[40px] cursor-pointer shadow-lg border border-black/[0.03]"
                         >
-                            <img
+                            <Image
                                 src={video.thumbnail}
                                 alt={video.title}
-                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                                fill
+                                className="object-cover transition-transform duration-1000 group-hover:scale-110"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/90 via-zinc-900/10 to-transparent" />
 

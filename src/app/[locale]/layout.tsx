@@ -27,11 +27,20 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       locale: locale,
       type: 'website',
       siteName: 'Curate Seoul',
+      images: [
+        {
+          url: '/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: 'Curate Seoul - Premium K-Beauty & Seoul Travel'
+        }
+      ]
     },
     twitter: {
       card: 'summary_large_image',
       title: t('ogTitle'),
       description: t('ogDescription'),
+      images: ['/og-image.png'],
     },
     alternates: {
       canonical: `/${locale}`,
@@ -67,10 +76,10 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <head>
-        <StructuredData />
       </head>
       <body className="antialiased bg-brand-cream">
         <NextIntlClientProvider messages={messages}>
+          <StructuredData />
           <ScrollToTop />
           <Header />
           {children}
