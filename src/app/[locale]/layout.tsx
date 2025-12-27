@@ -10,20 +10,21 @@ import Footer from "@/components/layout/Footer";
 import StructuredData from "@/components/common/StructuredData";
 
 import { getTranslations } from "next-intl/server";
+import { Locale } from "@/i18n/routing";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale: locale as any, namespace: 'metadata' });
+  const t = await getTranslations({ locale, namespace: 'metadata' });
 
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://curateseoul.com";
 
   return {
-    title: t('title'),
-    description: t('description'),
+    title: t('home.title'),
+    description: t('home.description'),
     metadataBase: new URL(baseUrl),
     openGraph: {
-      title: t('ogTitle'),
-      description: t('ogDescription'),
+      title: t('home.ogTitle'),
+      description: t('home.ogDescription'),
       locale: locale,
       type: 'website',
       siteName: 'Curate Seoul',
@@ -38,8 +39,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     },
     twitter: {
       card: 'summary_large_image',
-      title: t('ogTitle'),
-      description: t('ogDescription'),
+      title: t('home.ogTitle'),
+      description: t('home.ogDescription'),
       images: ['/og-image.png'],
     },
     alternates: {
