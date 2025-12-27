@@ -1,49 +1,51 @@
-"use client";
-
+import { useTranslations } from "next-intl";
 import MotionSection from "../common/MotionSection";
-
-const videos = [
-    {
-        thumbnail: "/images/vlogs/vlog1.png",
-        tag: "맛집/카페",
-        views: "1.2k",
-        title: "성수동 힙플레이스 투어",
-        user: "@SeoulSearcher",
-    },
-    {
-        thumbnail: "/images/vlogs/vlog2.png",
-        tag: "K-Beauty",
-        views: "3.5k",
-        title: "강남 피부관리 찐후기",
-        user: "@GlowGuide",
-    },
-    {
-        thumbnail: "/images/vlogs/vlog3.png",
-        tag: "핫플",
-        views: "2.8k",
-        title: "홍대 밤거리 버스킹",
-        user: "@UrbanVibe",
-    },
-    {
-        thumbnail: "/images/vlogs/vlog4.png",
-        tag: "쇼핑",
-        views: "1.9k",
-        title: "한남동 럭셔리 부티크",
-        user: "@StyleSeoul",
-    },
-];
+import Image from "next/image";
 
 export default function MemberVideos() {
+    const t = useTranslations("experiencePage.videosSection");
+
+    const videos = [
+        {
+            thumbnail: "/images/vlogs/vlog1.png",
+            tag: t("vlogs.vlog1.tag"),
+            views: "1.2k",
+            title: t("vlogs.vlog1.title"),
+            user: "@SeoulSearcher",
+        },
+        {
+            thumbnail: "/images/vlogs/vlog2.png",
+            tag: t("vlogs.vlog2.tag"),
+            views: "3.5k",
+            title: t("vlogs.vlog2.title"),
+            user: "@GlowGuide",
+        },
+        {
+            thumbnail: "/images/vlogs/vlog3.png",
+            tag: t("vlogs.vlog3.tag"),
+            views: "2.8k",
+            title: t("vlogs.vlog3.title"),
+            user: "@UrbanVibe",
+        },
+        {
+            thumbnail: "/images/vlogs/vlog4.png",
+            tag: t("vlogs.vlog4.tag"),
+            views: "1.9k",
+            title: t("vlogs.vlog4.title"),
+            user: "@StyleSeoul",
+        },
+    ];
+
     return (
-        <section id="videos" className="py-24 bg-white font-pretendard">
+        <section id="videos" className="py-24 bg-brand-cream font-pretendard">
             <div className="container mx-auto px-6 max-w-6xl">
                 <MotionSection>
-                    <div className="text-center mb-16">
-                        <div className="inline-flex items-center gap-2 text-brand-gold font-bold text-sm uppercase tracking-[0.2em] mb-6">
-                            <span>🎬</span> REAL REVIEW
+                    <div className="text-center mb-20">
+                        <div className="inline-flex items-center gap-2 bg-brand-gold-soft text-brand-gold-dark font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full mb-6">
+                            <span>🎬</span> {t("eyebrow")}
                         </div>
-                        <h2 className="text-3xl lg:text-5xl font-black mb-6 text-zinc-900 tracking-tighter">회원들의 서울 여행 후기</h2>
-                        <p className="text-zinc-600 text-lg lg:text-xl font-medium opacity-70 italic underline-offset-8 decoration-zinc-100">실제 회원들이 체험하고 남긴 숏폼 영상</p>
+                        <h2 className="text-3xl lg:text-4xl font-extrabold mb-6 text-zinc-900 tracking-tight">{t("title")}</h2>
+                        <p className="text-zinc-500 text-lg lg:text-xl font-medium max-w-xl mx-auto italic border-b-2 border-brand-gold/10 inline-block pb-1">{t("subtitle")}</p>
                     </div>
                 </MotionSection>
 
@@ -51,33 +53,34 @@ export default function MemberVideos() {
                     {videos.map((video, index) => (
                         <div
                             key={index}
-                            className="relative group aspect-[9/16] overflow-hidden glass-card rounded-[32px] cursor-pointer"
+                            className="relative group aspect-[10/16] overflow-hidden bg-zinc-100 rounded-[40px] cursor-pointer shadow-lg border border-black/[0.03]"
                         >
-                            <img
+                            <Image
                                 src={video.thumbnail}
                                 alt={video.title}
-                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                fill
+                                className="object-cover transition-transform duration-1000 group-hover:scale-110"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/90 via-zinc-900/10 to-transparent" />
 
                             <div className="absolute top-5 left-5">
-                                <span className="bg-brand-gold text-white text-xs font-black px-4 py-2 rounded-full uppercase tracking-widest shadow-lg">
+                                <span className="bg-brand-gold text-white text-[10px] font-bold px-4 py-2 rounded-full uppercase tracking-widest shadow-lg">
                                     {video.tag}
                                 </span>
                             </div>
 
-                            <div className="absolute top-5 right-5 bg-black/40 backdrop-blur-md text-white text-xs font-bold px-3 py-2 rounded-full flex items-center gap-1 shadow-lg">
-                                <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse mr-1" />
-                                {video.views}
+                            <div className="absolute top-5 right-5 bg-black/40 backdrop-blur-md text-white text-[9px] font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-lg border border-white/10">
+                                <span className="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse" />
+                                <span className="font-inter uppercase">{video.views}</span>
                             </div>
 
                             <div className="absolute bottom-8 left-6 right-6 text-left">
-                                <p className="text-white font-black text-lg mb-2 leading-tight drop-shadow-lg tracking-tighter">
+                                <p className="text-white font-bold text-lg mb-3 leading-tight tracking-tight">
                                     {video.title}
                                 </p>
                                 <div className="flex items-center gap-2">
-                                    <div className="w-5 h-5 bg-white/30 backdrop-blur-sm rounded-full" />
-                                    <p className="text-white font-bold text-xs uppercase tracking-widest opacity-80">
+                                    <div className="w-5 h-5 bg-white/20 backdrop-blur-sm rounded-full border border-white/10" />
+                                    <p className="text-white/80 font-bold text-[9px] uppercase tracking-widest">
                                         {video.user}
                                     </p>
                                 </div>

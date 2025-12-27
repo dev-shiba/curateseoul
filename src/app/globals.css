@@ -1,72 +1,54 @@
 @import "tailwindcss";
-@import 'pretendard/dist/web/static/pretendard.css';
 
-:root {
+@theme {
+  /* Reference Palette */
   --color-brand-cream: #FFFDF8;
   --color-brand-warm: #FBF8F3;
+  --color-brand-soft: #F7F4EE;
+  
+  /* Gold Accents */
   --color-brand-gold: #C8A97E;
-  --color-brand-gold-dark: #B8956A;
-  --color-brand-wine: #5D0E0E;
-  --color-text-dark: #2C2C2C;
-  --color-text-medium: #5A5A5A;
-  --color-text-light: #8A8A8A;
+  --color-brand-gold-light: #D4B890;
+  --color-brand-gold-soft: #E5D6BE; 
+  --color-brand-gold-dark: #A68A60;
 
-  --font-pretendard: "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  /* Green Accents */
+  --color-brand-green: #2F4F4F;
+  --color-brand-green-light: #4A6E6E;
+  --color-brand-green-soft: #E0E8E8;
 
-  --glass-bg: rgba(255, 255, 255, 0.45);
-  --glass-border: rgba(255, 255, 255, 0.3);
-  --glass-shadow: 0 12px 48px 0 rgba(0, 0, 0, 0.05);
+  /* Text Colors */
+  --color-text-dark: #1A1A1A;
+  --color-text-medium: #4A4A4A;
+  --color-text-light: #808080;
 
-  --background: var(--color-brand-cream);
-  --foreground: var(--color-text-dark);
+  /* Semantic aliases */
+  --color-background: var(--color-brand-cream);
+  --color-foreground: var(--color-text-dark);
+  
+  --font-pretendard: "Pretendard Link", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-inter: "Inter", sans-serif;
+
+  --shadow-warm: 0 4px 20px -2px rgba(200, 169, 126, 0.1);
+  --shadow-warm-lg: 0 10px 40px -4px rgba(200, 169, 126, 0.15);
+  
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-fade-in-up: fadeInUp 0.8s ease-out forwards;
 }
 
-body {
-  background: var(--color-brand-cream);
-  color: var(--color-text-dark);
-  font-family: var(--font-pretendard);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-pretendard);
-  font-weight: 700;
-  color: var(--color-text-dark);
-  letter-spacing: -0.02em;
-}
-
-.glass-card {
-  background: var(--glass-bg);
-  backdrop-filter: blur(40px) saturate(180%);
-  -webkit-backdrop-filter: blur(40px) saturate(180%);
-  border: 1px solid var(--glass-border);
-  box-shadow: var(--glass-shadow);
-}
-
-@keyframes liquid-move {
-  0% {
-    transform: translate(0, 0) scale(1) rotate(0deg);
-  }
-
-  33% {
-    transform: translate(50px, -80px) scale(1.2) rotate(10deg);
-  }
-
-  66% {
-    transform: translate(-40px, 40px) scale(0.8) rotate(-10deg);
-  }
-
-  100% {
-    transform: translate(0, 0) scale(1) rotate(0deg);
+@layer utilities {
+  .text-size-adjust-none {
+    text-size-adjust: none;
+    -webkit-text-size-adjust: none;
   }
 }
 
-.animate-liquid {
-  animation: liquid-move 30s infinite ease-in-out;
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }

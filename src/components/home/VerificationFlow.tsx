@@ -1,76 +1,112 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import MotionSection from "../common/MotionSection";
 
-const steps = [
-    {
-        step: "STEP 1",
-        icon: "📱",
-        title: "항공권/숙소 캡처",
-    },
-    {
-        step: "STEP 2",
-        icon: "💬",
-        title: "카톡으로 전송",
-    },
-    {
-        step: "STEP 3",
-        icon: "🎁",
-        title: "맞춤 혜택 받기",
-    },
-];
-
-const benefits = [
-    { icon: "🍖", title: "로컬 맛집", desc: "관광객 모르는 찐맛집" },
-    { icon: "💆", title: "K-Beauty", desc: "피부관리·헤어·메이크업" },
-    { icon: "🏥", title: "병원·클리닉", desc: "검증된 의료 서비스" },
-    { icon: "🎪", title: "체험·팝업", desc: "핫플 우선 입장" },
-];
-
 export default function VerificationFlow() {
+    const t = useTranslations("experiencePage.howItWorksSection");
+
+    const steps = [
+        {
+            key: "step1",
+            icon: "✈️",
+            isSpecial: true,
+        },
+        {
+            key: "step2",
+            icon: "💆‍♀️", // Using woman getting massage/haircut emoji or similar
+            isSpecial: false,
+        },
+        {
+            key: "step3",
+            icon: "🎫", // Ticket/Pass
+            isSpecial: false,
+        },
+        {
+            key: "step4",
+            icon: "🎁",
+            isSpecial: false,
+        },
+    ];
+
     return (
-        <section id="verify" className="py-24 bg-brand-cream/50 relative overflow-hidden">
-            <div className="absolute top-[10%] right-[-10%] w-[300px] h-[300px] bg-brand-wine/5 rounded-full blur-[80px]" />
-            <div className="container mx-auto px-6 max-w-6xl">
+        <section id="verify" className="py-24 bg-brand-cream relative overflow-hidden font-pretendard">
+            <div className="container mx-auto px-6 max-w-7xl">
                 <MotionSection>
-                    <div className="glass-card p-12 md:p-20 rounded-[48px] relative z-10">
-                        <div className="text-center mb-16">
-                            <div className="w-20 h-20 bg-brand-gold/10 rounded-full flex items-center justify-center text-4xl mx-auto mb-8">✈️</div>
-                            <h2 className="text-3xl lg:text-5xl font-black mb-6 tracking-tighter text-zinc-900">항공권 or 숙소 인증하면</h2>
-                            <p className="text-zinc-600 text-lg lg:text-xl leading-relaxed max-w-2xl mx-auto font-medium opacity-80">
-                                여행 일정을 인증해주시면<br />
-                                <strong>한국인만 아는 로컬 정보</strong>와 <strong>회원 전용 혜택</strong>을 제안해드려요
-                            </p>
+                    <div className="text-center mb-16">
+                        <div className="inline-flex items-center gap-2 bg-brand-gold/10 px-4 py-1.5 rounded-full mb-6">
+                            <span className="text-xs font-bold text-brand-gold-dark tracking-wider uppercase">
+                                ✨ {t("eyebrow")}
+                            </span>
                         </div>
+                        <h2 className="text-4xl md:text-5xl font-black text-zinc-900 mb-4 tracking-tight">
+                            {t("title")}
+                        </h2>
+                        <p className="text-lg text-zinc-400 font-medium">
+                            {t("subtitle")}
+                        </p>
+                    </div>
 
-                        <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-20">
-                            {steps.map((step, index) => (
-                                <div key={index} className="flex flex-col md:flex-row items-center gap-8">
-                                    <div className="bg-white/40 backdrop-blur-md border border-white/60 p-8 text-center min-w-[240px] rounded-3xl shadow-sm">
-                                        <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">{step.icon}</div>
-                                        <div className="text-sm font-black text-brand-gold uppercase tracking-[0.2em] mb-2">{step.step}</div>
-                                        <div className="text-2xl font-black text-zinc-900 tracking-tighter">{step.title}</div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 xl:gap-12">
+                        {steps.map((step, index) => (
+                            <div
+                                key={step.key}
+                                className={`relative rounded-[32px] p-6 xl:p-8 min-h-[300px] flex flex-col items-center text-center transition-all duration-300 group
+                  ${step.isSpecial
+                                        ? "bg-brand-warm border-2 border-brand-gold shadow-warm"
+                                        : "bg-white border border-transparent hover:border-brand-gold/20 shadow-sm hover:shadow-warm"
+                                    }
+                `}
+                            >
+                                {step.isSpecial && (
+                                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#E5503C] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-md z-10">
+                                        {t("badge")}
                                     </div>
-                                    {index < steps.length - 1 && (
-                                        <div className="text-brand-gold hidden md:block">
-                                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                                                <path d="M10 20H30M30 20L22 12M30 20L22 28" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                            </svg>
-                                        </div>
-                                    )}
-                                </div>
-                            ))}
-                        </div>
+                                )}
 
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-4">
-                            {benefits.map((benefit, index) => (
-                                <div key={index} className="bg-zinc-50 p-8 text-center hover:bg-white hover:shadow-xl transition-all border border-transparent hover:border-brand-gold/20 flex flex-col items-center">
-                                    <div className="text-4xl mb-6">{benefit.icon}</div>
-                                    <h4 className="text-lg font-black mb-2 text-zinc-900">{benefit.title}</h4>
-                                    <p className="text-sm text-text-light font-bold opacity-70">{benefit.desc}</p>
+                                <span className={`absolute top-6 right-6 text-lg font-black font-inter
+                  ${step.isSpecial ? "text-brand-gold-dark" : "text-brand-gold/60"}
+                `}>
+                                    0{index + 1}
+                                </span>
+
+                                <div className="flex-1 flex flex-col items-center justify-center w-full pt-6">
+                                    <div className={`w-20 h-20 rounded-[24px] flex items-center justify-center text-4xl mb-6 shadow-inner
+                    ${step.isSpecial ? "bg-white" : "bg-brand-soft"}
+                  `}>
+                                        {step.icon}
+                                    </div>
+
+                                    <h3 className="text-xl font-bold text-zinc-900 mb-3 whitespace-nowrap">
+                                        {t(`steps.${step.key}.title`)}
+                                    </h3>
+
+                                    <p className="text-sm text-zinc-500 font-medium leading-relaxed px-1 break-keep">
+                                        {t.rich(`steps.${step.key}.description`, {
+                                            br: () => <br />
+                                        })}
+                                    </p>
                                 </div>
-                            ))}
+
+                                {/* Arrow between steps (Desktop only) */}
+                                {index < steps.length - 1 && (
+                                    <div className="hidden lg:flex absolute top-1/2 -right-5 xl:-right-7 transform -translate-y-1/2 translate-x-1/2 z-20 text-brand-gold/30">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+                                    </div>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="mt-16 bg-[#F5F5F0] rounded-[24px] p-5 flex flex-col md:flex-row items-center justify-center gap-3 text-center md:text-left border border-[#E5E0D8] max-w-3xl mx-auto shadow-sm">
+                        <div className="bg-[#8C8170] text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold shrink-0">
+                            i
                         </div>
+                        <p className="text-[#5D5545] font-medium text-sm md:text-[15px] tracking-tight">
+                            {t("footerInfo")}
+                        </p>
                     </div>
                 </MotionSection>
             </div>
