@@ -14,12 +14,15 @@ export default function RibbonBadge({ text }: { text: string }) {
         <rect x="24" y="10" width="312" height="44" fill="#FFFDF8" stroke="#D4B890" strokeWidth="1.5" />
       </svg>
 
-      <div className="relative z-10 flex items-center gap-2 pb-1">
-        <span className="text-sm">✨</span>
-        <span className="text-brand-gold-dark font-bold text-base tracking-widest uppercase">
+      <div className="relative z-10 flex items-center justify-center gap-2 pb-1 w-full px-8">
+        <span className="text-sm shrink-0">✨</span>
+        <span className={`text-brand-gold-dark font-bold uppercase transition-all whitespace-nowrap truncate ${text.length > 25 ? "text-[10px] tracking-normal" :
+            text.length > 15 ? "text-xs tracking-wider" :
+              "text-base tracking-widest"
+          }`}>
           {text}
         </span>
-        <span className="text-sm">✨</span>
+        <span className="text-sm shrink-0">✨</span>
       </div>
     </div>
   );
