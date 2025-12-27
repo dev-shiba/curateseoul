@@ -14,7 +14,7 @@ export default function StructuredData() {
     "@type": "LocalBusiness",
     "name": "Curate Seoul",
     "image": `${baseUrl}/logo.png`,
-    "description": t("description"),
+    "description": t("home.description"),
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Seoul",

@@ -18,9 +18,19 @@ export default function FAQ() {
     ];
 
     return (
-        <section id="faq" className="py-10 bg-brand-cream font-pretendard">
-            <div className="container mx-auto px-4 max-w-3xl">
-                <div className="space-y-4">
+        <section id="faq" className="py-24 bg-brand-cream font-pretendard">
+            <div className="container mx-auto px-6 max-w-4xl relative z-10">
+                <MotionSection>
+                    <div className="text-center mb-20">
+                        <div className="inline-flex items-center gap-2 bg-[#F5F5F0] text-[#BFA07A] font-bold text-sm px-5 py-2 rounded-full mb-6">
+                            <span>❓</span> {t("eyebrow")}
+                        </div>
+                        <h2 className="text-4xl lg:text-5xl font-black mb-4 text-zinc-900 tracking-tight">{t("title")}</h2>
+                        <p className="text-zinc-500 text-lg font-medium">{t("subtitle")}</p>
+                    </div>
+                </MotionSection>
+
+                <div className="max-w-3xl mx-auto space-y-4">
                     {faqs.map((faq, index) => (
                         <div
                             key={index}

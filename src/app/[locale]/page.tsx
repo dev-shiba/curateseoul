@@ -5,7 +5,11 @@ import Hero from "@/components/layout/Hero";
 import BenefitsValue from "@/components/home/BenefitsValue";
 import VerificationFlow from "@/components/home/VerificationFlow";
 import TrustSection from "@/components/home/TrustSection";
+import MemberVideos from "@/components/home/MemberVideos";
+import MemberReviews from "@/components/home/MemberReviews";
+import KBeautyMembership from "@/components/home/KBeautyMembership";
 import FinalCTA from "@/components/home/FinalCTA";
+import FAQ from "@/components/home/FAQ";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -30,9 +34,16 @@ export default function Home() {
     <main className="min-h-screen">
       <Hero />
       <BenefitsValue showViewMore={true} />
+
+
+      <MemberVideos />
+      <MemberReviews />
       <VerificationFlow />
+      <KBeautyMembership />
       <TrustSection />
+      <FAQ />
       <FinalCTA />
+
     </main>
   );
 }

@@ -1,6 +1,7 @@
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import MotionSection from "../common/MotionSection";
+import Image from "next/image";
 
 export default function BenefitsValue({ showViewMore }: { showViewMore?: boolean }) {
   const t = useTranslations("benefitsPage.valueSection");
@@ -9,19 +10,19 @@ export default function BenefitsValue({ showViewMore }: { showViewMore?: boolean
   const benefits = [
     {
       key: "dining",
-      icon: "🍽️",
+      image: "/images/benefit/dining.png",
     },
     {
       key: "cafe",
-      icon: "☕",
+      image: "/images/benefit/cafe.png",
     },
     {
       key: "popup",
-      icon: "🎨",
+      image: "/images/benefit/popup.png",
     },
     {
       key: "beauty",
-      icon: "💄",
+      image: "/images/benefit/beauty.png",
     },
   ];
 
@@ -75,8 +76,13 @@ export default function BenefitsValue({ showViewMore }: { showViewMore?: boolean
                   </div>
                 )}
 
-                <div className="w-20 h-20 bg-brand-soft rounded-[24px] flex items-center justify-center text-4xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-inner">
-                  {item.icon}
+                <div className="w-24 h-24 bg-brand-soft rounded-[28px] overflow-hidden mb-6 group-hover:scale-105 transition-transform duration-500 shadow-inner relative">
+                  <Image
+                    src={item.image}
+                    alt={t(`items.${item.key}.title`)}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
 
                 <h4 className="text-xl font-bold text-zinc-900 mb-3">

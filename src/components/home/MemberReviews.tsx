@@ -87,14 +87,15 @@ export default function MemberReviews() {
                             <div className="p-8 flex flex-col flex-1">
                                 {/* User Profile */}
                                 <div className="flex items-center gap-4 mb-6">
-                                    <div className="relative">
-                                        <Image
-                                            src={review.avatar}
-                                            alt={review.name}
-                                            width={48}
-                                            height={48}
-                                            className="rounded-full border border-zinc-100 object-cover"
-                                        />
+                                    <div className="relative w-12 h-12 flex-shrink-0">
+                                        <div className="w-full h-full rounded-full overflow-hidden border border-zinc-100 relative">
+                                            <Image
+                                                src={review.avatar}
+                                                alt={review.name}
+                                                fill
+                                                className="object-cover"
+                                            />
+                                        </div>
                                         <span className="absolute -bottom-1 -right-1 text-sm drop-shadow-sm">{review.flag}</span>
                                     </div>
                                     <div>

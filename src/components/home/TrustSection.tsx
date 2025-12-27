@@ -1,22 +1,23 @@
 import { useTranslations } from "next-intl";
 import MotionSection from "../common/MotionSection";
+import { PiSealCheck, PiChatCircleDots, PiShieldCheck } from "react-icons/pi";
 
 export default function TrustSection() {
     const t = useTranslations("trust");
 
     const trusts = [
         {
-            icon: "✅",
+            icon: <PiSealCheck className="w-10 h-10 text-brand-gold-dark" />,
             titleKey: "items.verification.title",
             descKey: "items.verification.description",
         },
         {
-            icon: "💬",
+            icon: <PiChatCircleDots className="w-10 h-10 text-brand-gold-dark" />,
             titleKey: "items.consultation.title",
             descKey: "items.consultation.description",
         },
         {
-            icon: "🛡️",
+            icon: <PiShieldCheck className="w-10 h-10 text-brand-gold-dark" />,
             titleKey: "items.transparency.title",
             descKey: "items.transparency.description",
         },

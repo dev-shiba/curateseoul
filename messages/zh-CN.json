@@ -5,10 +5,30 @@
     "learnMore": "了解更多"
   },
   "metadata": {
-    "title": "Curate Seoul | 让首尔之旅更明智",
-    "description": "Curate Seoul 通过专业的本地策展和医疗旅游服务，让您的首尔之旅更加智能。只需验证机票或酒店行程，即可开启高端本地福利。",
-    "ogTitle": "Curate Seoul - 智能首尔之旅",
-    "ogDescription": "一次认证，开启高端本地福利。从地道美食到 K-Beauty，尽情探索首尔的真实魅力。"
+    "home": {
+      "title": "Curate Seoul | 让首尔之旅更明智",
+      "description": "Curate Seoul 通过专业的本地策展和医疗旅游服务，让您的首尔之旅更加智能。只需验证机票或酒店行程，即可开启高端本地福利。",
+      "ogTitle": "Curate Seoul - 智能首尔之旅",
+      "ogDescription": "一次认证，开启高端本地福利。从地道美食到 K-Beauty，尽情探索首尔的真实魅力。"
+    },
+    "benefits": {
+      "title": "会员专属权益 | Curate Seoul",
+      "description": "仅限认证旅行者享有的特别本地福利。查看价值 45 万韩元的美食、K-Beauty、快闪店体验。",
+      "ogTitle": "Curate Seoul 权益指南 - 最智能的首尔游玩方式",
+      "ogDescription": "从经过验证的本地美食到高端 K-Beauty 预约。介绍 Curate Seoul 独有的特别会员权益。"
+    },
+    "experience": {
+      "title": "会员真实后记 | Curate Seoul",
+      "description": "真实会员体验的首尔魅力。通过短视频和详细后记确认 Curate Seoul 的特别之处。",
+      "ogTitle": "Curate Seoul 生动后记 - 会员眼中的真实首尔",
+      "ogDescription": "拒绝广告，真实后记。查看与 Curate Seoul 同行的旅行者们的生动视频。"
+    },
+    "faq": {
+      "title": "常见问题 | Curate Seoul",
+      "description": "为您解决关于 Curate Seoul 使用方法、权益、认证流程等所有疑问。",
+      "ogTitle": "Curate Seoul 帮助中心 - 有问必答",
+      "ogDescription": "从机票认证到权益使用，汇总了关于 Curate Seoul 的最常问问题。"
+    }
   },
   "header": {
     "verification": "行程认证",
