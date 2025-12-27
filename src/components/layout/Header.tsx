@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Link, usePathname } from "@/i18n/routing";
 import { useTranslations, useLocale } from "next-intl";
 import LocaleSwitcher from "../common/LocaleSwitcher";
-import { SiWechat } from "react-icons/si";
+import { SiWechat, SiWhatsapp, SiLine } from "react-icons/si";
 
 export default function Header() {
     const t = useTranslations("header");
@@ -62,10 +62,26 @@ export default function Header() {
                     <LocaleSwitcher />
                     {locale === "zh-CN" ? (
                         <Link
-                            href="#wechat" // Anchor to WeChat section
+                            href="#wechat"
                             className="bg-[#07C160] text-white px-6 py-3 rounded-full text-sm font-bold shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all flex items-center gap-2 hover:bg-[#06ad56]"
                         >
                             <SiWechat size={20} />
+                            {t("cta")}
+                        </Link>
+                    ) : locale === "en" ? (
+                        <Link
+                            href="#" // URL to be added later
+                            className="bg-[#25D366] text-white px-6 py-3 rounded-full text-sm font-bold shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all flex items-center gap-2 hover:bg-[#20bd5c]"
+                        >
+                            <SiWhatsapp size={20} />
+                            {t("cta")}
+                        </Link>
+                    ) : locale === "ja" ? (
+                        <Link
+                            href="#" // URL to be added later
+                            className="bg-[#06C755] text-white px-6 py-3 rounded-full text-sm font-bold shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all flex items-center gap-2 hover:bg-[#05b34c]"
+                        >
+                            <SiLine size={20} />
                             {t("cta")}
                         </Link>
                     ) : (

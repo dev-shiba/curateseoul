@@ -5,13 +5,21 @@ import { motion } from "framer-motion";
 import { useTranslations, useLocale } from "next-intl";
 import RibbonBadge from "@/components/common/RibbonBadge";
 import { useState } from "react";
-import { SiWechat } from "react-icons/si";
+import { SiWechat, SiWhatsapp, SiLine } from "react-icons/si";
 
 export default function Hero() {
     const t = useTranslations("hero");
     const tc = useTranslations("contactCard");
     const locale = useLocale();
     const isChinese = locale === "zh-CN";
+    const isEnglish = locale === "en";
+    const isJapanese = locale === "ja";
+    const usePremiumLayout = isChinese || isEnglish || isJapanese;
+
+    const brandColor = isChinese ? "#07C160" : isEnglish ? "#25D366" : isJapanese ? "#06C755" : "#FEE500";
+    const BrandIcon = isChinese ? SiWechat : isEnglish ? SiWhatsapp : isJapanese ? SiLine : null;
+    const buttonKey = isChinese ? "wechatButton" : isEnglish ? "whatsappButton" : isJapanese ? "lineButton" : "kakaoButton";
+
     const [copied, setCopied] = useState(false);
 
     const handleCopy = () => {
@@ -44,7 +52,8 @@ export default function Hero() {
                 >
                     <h1 className="text-3xl lg:text-[48px] font-extrabold leading-[1.1] tracking-tight text-zinc-900">
                         {t.rich("title", {
-                            shrink: (chunks) => <span className="text-xl lg:text-2xl font-semibold text-zinc-400 align-middle ml-2">{chunks}</span>
+                            shrink: (chunks) => <span className="text-xl lg:text-2xl font-semibold text-zinc-400 align-middle ml-2">{chunks}</span>,
+                            br: () => <br />
                         })}
                         <br />
                         <span className="relative inline-block bg-gradient-to-r from-brand-gold to-brand-green bg-clip-text text-transparent pb-4 mt-1">
@@ -128,15 +137,15 @@ export default function Hero() {
 
                         {/* Actions */}
                         <div className="w-full max-w-md space-y-4">
-                            {isChinese ? (
-                                // WeChat specific layout
+                            {usePremiumLayout ? (
+                                // Premium specific layout (WeChat, WhatsApp, LINE)
                                 <>
                                     <div className="flex flex-col items-center gap-6 w-full">
                                         {/* QR Code Placeholder */}
                                         <div className="bg-brand-soft rounded-[24px] p-8 w-[200px] h-[200px] flex items-center justify-center relative">
                                             <div className="bg-white rounded-xl w-[140px] h-[140px] shadow-sm flex flex-col items-center justify-center gap-2 border border-zinc-100">
-                                                <SiWechat className="w-12 h-12 text-[#07C160]" />
-                                                <span className="text-xs text-zinc-400 font-medium">{tc("scanCode")}</span>
+                                                {BrandIcon && <BrandIcon className="w-12 h-12" style={{ color: brandColor }} />}
+                                                <span className="text-xs text-zinc-400 font-medium">{tc("scanCode") || "Scan QR Code"}</span>
                                             </div>
                                         </div>
 
@@ -144,14 +153,12 @@ export default function Hero() {
                                         <div className="bg-brand-soft rounded-xl p-3 pl-6 pr-3 w-full flex items-center justify-between gap-4">
                                             <div className="flex items-center gap-2 overflow-hidden">
                                                 <span className="text-xs font-bold text-zinc-400 whitespace-nowrap">{tc("idLabel")}</span>
-                                                <span className="text-lg font-bold text-[#07C160] font-inter truncate">{tc("idValue")}</span>
+                                                <span className="text-lg font-bold font-inter truncate" style={{ color: brandColor }}>{tc("idValue")}</span>
                                             </div>
                                             <button
                                                 onClick={handleCopy}
-                                                className={`px-6 py-2.5 rounded-lg font-bold text-sm transition-all whitespace-nowrap shadow-sm ${copied
-                                                    ? "bg-zinc-800 text-white"
-                                                    : "bg-[#07C160] text-white hover:bg-[#06ad56] hover:-translate-y-0.5"
-                                                    }`}
+                                                className={`px-6 py-2.5 rounded-lg font-bold text-sm transition-all whitespace-nowrap shadow-sm text-white`}
+                                                style={{ backgroundColor: copied ? "#27272a" : brandColor }}
                                             >
                                                 {copied ? "Copied!" : tc("copyButton")}
                                             </button>
@@ -168,31 +175,37 @@ export default function Hero() {
                                     </div>
 
                                     <div className="flex flex-col gap-3 w-full">
-                                        <div className="bg-brand-soft rounded-xl px-4 py-4 flex items-center border border-transparent focus-within:border-[#07C160] transition-colors">
+                                        <div className="bg-brand-soft rounded-xl px-4 py-4 flex items-center border border-transparent transition-colors" style={{ outlineColor: brandColor }}>
                                             <input
                                                 type="text"
                                                 placeholder={tc("formPlaceholder")}
                                                 className="bg-transparent text-sm font-medium w-full focus:outline-none placeholder:text-zinc-400"
                                             />
                                         </div>
-                                        <button className="w-full bg-[#07C160] hover:bg-[#06ad56] text-white px-6 py-4 rounded-xl text-md font-bold transition-all shadow-md hover:-translate-y-0.5 hover:shadow-lg">
+                                        <button
+                                            className="w-full text-white px-6 py-4 rounded-xl text-md font-bold transition-all shadow-md hover:-translate-y-0.5 hover:shadow-lg"
+                                            style={{ backgroundColor: brandColor }}
+                                        >
                                             {tc("formButton")}
                                         </button>
                                     </div>
                                 </>
                             ) : (
-                                // Kakao specific layout
+                                // Kakao/WhatsApp/LINE specific layout (Button based)
                                 <>
                                     <Link
-                                        href="https://pf.kakao.com/_curateseoul"
+                                        href="#" // URL to be added later
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center justify-center gap-2 w-full bg-[#FEE500] hover:bg-[#FADC00] hover:-translate-y-0.5 text-[#191919] py-4 rounded-xl font-bold text-lg shadow-md transition-all group"
+                                        className="flex items-center justify-center gap-2 w-full hover:-translate-y-0.5 text-white py-4 rounded-xl font-bold text-lg shadow-md transition-all group"
+                                        style={{ backgroundColor: brandColor, color: isJapanese || isEnglish ? "white" : "#191919" }}
                                     >
-                                        <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-                                            <path d="M12 3C6.48 3 2 6.58 2 11c0 2.83 1.89 5.31 4.68 6.68-.15.54-.97 3.49-1 3.64 0 .11.04.22.12.29.08.07.18.1.28.08.14-.02 3.29-2.15 3.82-2.53.7.1 1.41.15 2.1.15 5.52 0 10-3.58 10-8s-4.48-8-10-8z" />
-                                        </svg>
-                                        {tc("kakaoButton")}
+                                        {BrandIcon ? <BrandIcon className="w-6 h-6" /> : (
+                                            <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                                                <path d="M12 3C6.48 3 2 6.58 2 11c0 2.83 1.89 5.31 4.68 6.68-.15.54-.97 3.49-1 3.64 0 .11.04.22.12.29.08.07.18.1.28.08.14-.02 3.29-2.15 3.82-2.53.7.1 1.41.15 2.1.15 5.52 0 10-3.58 10-8s-4.48-8-10-8z" />
+                                            </svg>
+                                        )}
+                                        {tc(buttonKey)}
                                     </Link>
 
                                     <div className="bg-[#FDFBF7] rounded-xl p-3 pl-6 pr-3 w-full flex items-center justify-between gap-4 border border-[#F2EFE9] mt-6">

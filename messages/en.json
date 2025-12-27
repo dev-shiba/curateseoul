@@ -61,9 +61,10 @@
     },
     "contactCard": {
         "badge": "🔥 12 slots left this month",
-        "title": "Consult First",
+        "title": "Consult via WhatsApp",
         "subtitle": "Send \"Traveler\" to get the benefit guide",
-        "kakaoButton": "KakaoTalk Consult",
+        "whatsappButton": "Consult via WhatsApp",
+        "scanCode": "Scan QR Code",
         "idLabel": "ID",
         "idValue": "@CurateSeoul",
         "copyButton": "Copy",
@@ -134,7 +135,7 @@
                 "label": "Partners"
             },
             "benefitValue": {
-                "value": "₩450k+",
+                "value": "₩450,000+",
                 "label": "Benefit Value"
             },
             "limit": {
@@ -211,22 +212,22 @@
             "items": {
                 "dining": {
                     "title": "Premium Dining",
-                    "value": "₩150k+",
+                    "value": "₩150,000+",
                     "description": "Hanwoo Omakase, Michelin-level, hard-to-book hot spots"
                 },
                 "cafe": {
                     "title": "Instagram Hot Cafes",
-                    "value": "₩50k+",
+                    "value": "₩50,000+",
                     "description": "Seongsu-dong cafes, London Bagel Museum, Onion, etc."
                 },
                 "popup": {
                     "title": "Brand Pop-ups/Exhibitions",
-                    "value": "₩100k+",
+                    "value": "₩100,000+",
                     "description": "Priority entry to limited events, skip the line"
                 },
                 "beauty": {
                     "title": "K-Beauty Discount",
-                    "value": "₩150k+",
+                    "value": "₩150,000+",
                     "description": "Skincare, Hair, Makeup member prices"
                 }
             }

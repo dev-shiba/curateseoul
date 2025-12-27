@@ -39,7 +39,7 @@
     },
     "hero": {
         "eyebrow": "ソウル旅行者専用特典",
-        "title": "特典が戻ってくる旅行、失敗のないキュレーション",
+        "title": "特典が戻ってくる旅行、<br></br>失敗のないキュレーション",
         "titleHighlight": "<emphasis>ソウルを楽しもう</emphasis>",
         "description": {
             "combined": "K-Beauty予約者専用に<highlight>「Seouler Pass」</highlight>を発行。パーソナライズされたローカルリスト + 提携体験団特典 + 予約/動線ガイドを楽しめます。"
@@ -48,7 +48,7 @@
             "partners": "提携会社",
             "partnersAmount": "50+",
             "value": "特典価値",
-            "valueAmount": "¥33万+",
+            "valueAmount": "¥330,000+",
             "monthly": "月间限定",
             "limitAmount": "30名"
         },
@@ -61,9 +61,10 @@
     },
     "contactCard": {
         "badge": "🔥 今月は残り12枠です",
-        "title": "まずは相談",
+        "title": "LINEで相談",
         "subtitle": "「旅行者」と送ると特典ガイドをお送りします",
-        "kakaoButton": "KakaoTalk相談",
+        "lineButton": "LINEで相談",
+        "scanCode": "QRコードをスキャン",
         "idLabel": "ID",
         "idValue": "@CurateSeoul",
         "copyButton": "コピー",
@@ -134,7 +135,7 @@
                 "label": "提携店"
             },
             "benefitValue": {
-                "value": "₩45万+",
+                "value": "₩450,000+",
                 "label": "特典価値"
             },
             "limit": {
@@ -200,8 +201,8 @@
             "title": "これだけの特典があります",
             "subtitle": "K-Beauty予約時に提供される特別な体験特典",
             "totalEstimatedValueLabel": "推定総価値",
-            "totalEstimatedValue": "最大 50万ウォン + 特典",
-            "footerTitle": "総特典価値 最大 50万ウォン+",
+            "totalEstimatedValue": "最大 500,000ウォン + 特典",
+            "footerTitle": "総特典価値 最大 500,000ウォン+",
             "footerSubtitle": "今日から始めて特典を楽しもう",
             "popularBadge": "人気",
             "footerNote": "毎月30名様限定",
@@ -216,12 +217,12 @@
                 },
                 "cafe": {
                     "title": "話題のカフェ",
-                    "value": "5万ウォン+",
+                    "value": "50,000ウォン+",
                     "description": "聖水洞カフェ、ロンドンベーグル、Onionなど"
                 },
                 "popup": {
                     "title": "ブランド、展示会",
-                    "value": "10万ウォン+",
+                    "value": "100,000ウォン+",
                     "description": "限定イベント優先入場、待ち時間なし"
                 },
                 "beauty": {
