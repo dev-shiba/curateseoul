@@ -12,7 +12,7 @@ export const routing = defineRouting({
   localePrefix: 'always'
 });
 
-export type Locale = (typeof routing.locales)[number];
+export type Locale = 'zh-CN' | 'ja' | 'en';
 
 // Lightweight wrappers around Next.js' navigation APIs
 // that will consider the routing configuration

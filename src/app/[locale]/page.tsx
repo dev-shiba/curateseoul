@@ -14,7 +14,7 @@ import PartnerLogos from "@/components/home/PartnerLogos";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale: locale as Locale, namespace: 'metadata.home' });
+  const t = await getTranslations({ locale: locale as any, namespace: 'metadata.home' });
 
   return {
     title: t('title'),

@@ -5,9 +5,9 @@ import { getTranslations } from "next-intl/server";
 import { Metadata } from "next";
 import { Locale } from "@/i18n/routing";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'metadata.benefits' });
+  const t = await getTranslations({ locale: locale as any, namespace: 'metadata.benefits' });
 
   return {
     title: t('title'),

@@ -6,7 +6,7 @@ import { Locale } from "@/i18n/routing";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale: locale as Locale, namespace: 'metadata.experience' });
+  const t = await getTranslations({ locale: locale as any, namespace: 'metadata.experience' });
 
   return {
     title: t('title'),
