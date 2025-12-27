@@ -10,6 +10,7 @@ import MemberReviews from "@/components/home/MemberReviews";
 import KBeautyMembership from "@/components/home/KBeautyMembership";
 import FinalCTA from "@/components/home/FinalCTA";
 import FAQ from "@/components/home/FAQ";
+import PartnerLogos from "@/components/home/PartnerLogos";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -34,6 +35,7 @@ export default function Home() {
     <main className="min-h-screen">
       <Hero />
       <BenefitsValue showViewMore={true} />
+      <PartnerLogos />
 
 
       <MemberVideos />

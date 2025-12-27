@@ -7,9 +7,9 @@
   "metadata": {
     "home": {
       "title": "Curate Seoul | 让首尔之旅更明智",
-      "description": "Curate Seoul 通过专业的本地策展和医疗旅游服务，让您的首尔之旅更加智能。只需验证机票或酒店行程，即可开启高端本地福利。",
+      "description": "Curate Seoul 通过专业的本地策展和 K-Beauty 服务，让您的首尔之旅更加智能。预约 K-Beauty，开启 \"Seouler Pass\" 会员权益。",
       "ogTitle": "Curate Seoul - 智能首尔之旅",
-      "ogDescription": "一次认证，开启高端本地福利。从地道美食到 K-Beauty，尽情探索首尔的真实魅力。"
+      "ogDescription": "K-Beauty 预约客户专属 \"Seouler Pass\"。从定制本地清单到合作体验团福利，尽情探索首尔的真实魅力。"
     },
     "benefits": {
       "title": "会员专属权益 | Curate Seoul",
@@ -36,14 +36,14 @@
     "experience": "真实体验",
     "reviews": "用户评价",
     "faq": "常见问题",
-    "cta": "立即咨询"
+    "cta": "3分钟问卷获取权益 PASS"
   },
   "hero": {
     "eyebrow": "首尔旅行者专属福利",
-    "title": "旅行开支减半",
-    "titleHighlight": "体验翻倍",
+    "title": "回馈福利的旅行，<shrink>无失败策展</shrink>",
+    "titleHighlight": "<emphasis>尽享首尔</emphasis>",
     "description": {
-      "combined": "只需认证<highlight>机票或酒店行程</highlight><br></br>即可享受地道美食、K-Beauty及热门打卡点<br></br>的<highlight>会员专属优惠价</highlight>"
+      "combined": "K-Beauty 预约客户专属<highlight>“Seouler Pass\"</highlight>已发放<br></br>享受定制本地清单 + 合作体验团福利 + 预约/路径指南福利。"
     },
     "stats": {
       "partners": "合作商家",
@@ -71,15 +71,15 @@
     "note": "2小时内回复 · 不打扰"
   },
   "verification": {
-    "icon": "✈️",
-    "title": "验证机票或酒店行程",
-    "subtitle": "只需验证您的行程<br></br>即可获得<strong>地道信息</strong>和<strong>会员专属福利</strong>",
+    "icon": "✨",
+    "title": "K-Beauty 预约后",
+    "subtitle": "预约 K-Beauty 后<br></br>即可获得<strong>定制本地策展</strong>和<strong>合作体验团福利</strong>",
     "steps": {
       "step1": {
-        "value": "截图机票/酒店"
+        "value": "K-Beauty 咨询/预约"
       },
       "step2": {
-        "value": "发送至微信"
+        "value": "定制策划提案"
       },
       "step3": {
         "value": "获取定制福利"
@@ -110,8 +110,8 @@
     "description": "厌倦了无数的广告信息？<br></br>通过验证的本地策展，遇见真正的首尔。",
     "items": {
       "verification": {
-        "title": "严格验证",
-        "description": "仅推荐亲自访问并验证过的场所。<br></br>保证服务品质。"
+        "title": "严选商家筛选",
+        "description": "仅推荐亲自访问并验证过的医院、美容、<br></br>美食等严选场所。提供专属福利。"
       },
       "consultation": {
         "title": "实时咨询",
@@ -126,15 +126,28 @@
   "finalCTA": {
     "eyebrow": "BECOME A MEMBER",
     "title": "立即成为 <highlight>首尔的主角</highlight>",
-    "description": "一次认证，开启高端本地福利，<br></br>让您的首尔之旅与众不同。",
-    "button": "立即微信咨询",
+    "description": "Seouler Pass 一卡开启高端本地福利，<br></br>让您的首尔之旅与众不同。",
+    "button": "咨询并免费申请最高 50 万韩元福利",
     "note": "发送\"旅行者\"即可获取福利指南"
+  },
+  "partnerLogos": {
+    "title": "合作类别及伙伴",
+    "subtitle": "与 Curate Seoul 同行的严选本地合作伙伴",
+    "categories": {
+      "skin": "皮肤",
+      "plastic": "整形",
+      "wellness": "康养",
+      "dining": "美食",
+      "cafe": "咖啡",
+      "popup": "快闪",
+      "shopping": "购物"
+    }
   },
   "footer": {
     "description": "我们提供只有本地人才知道的高端信息<br></br>以及经过验证的 K-Beauty 专属福利。",
     "quickLinks": {
       "title": "快速链接",
-      "verify": "行程验证",
+      "verify": "K-Beauty 预约福利",
       "benefits": "会员权益指南",
       "reviews": "会员真实评价",
       "membership": "K-Beauty 会员资格"
@@ -164,12 +177,13 @@
     "valueSection": {
       "eyebrow": "MEMBERSHIP BENEFIT",
       "title": "会员权益价值",
-      "subtitle": "提供比单独支付更具优势的价格方案",
+      "subtitle": "预约 K-Beauty 时共同提供的特别体验福利",
       "totalEstimatedValueLabel": "Total Estimated Value",
-      "totalEstimatedValue": "¥2300 + 权益",
-      "footerTitle": "总权益价值 ¥2300+",
+      "totalEstimatedValue": "最高 ¥2600 + 权益",
+      "footerTitle": "总权益价值 最高 ¥2600+",
       "footerSubtitle": "立即开启您的专属之旅",
       "footerNote": "每月仅限30名会员",
+      "disclosureNote": "体验团福利合计标准 / 根据日程·预约情况而异 / 非现金发放",
       "valueLabel": "权益价值",
       "viewMore": "查看全部福利详情",
       "items": {
@@ -198,7 +212,7 @@
     "membershipSection": {
       "eyebrow": "EXCLUSIVE ACCESS",
       "title": "K-Beauty 会员计划",
-      "subtitle": "选择最适合您的权益方案",
+      "subtitle": "预约 1 项即可激活 Seouler Pass!",
       "tiers": {
         "essential": {
           "name": "基础型 (Essential)",
@@ -311,34 +325,38 @@
         },
         "review3": {
           "text": "原本需要排队2小时的快闪店，直接优先入场！节省时间，体验更多。性价比超高 👍",
-          "tags": ["快闪优先入场", "美食"]
+          "tags": [
+            "快闪优先入场",
+            "美食"
+          ]
         }
       }
     },
     "howItWorksSection": {
       "eyebrow": "使用流程",
       "title": "简单的4步曲",
-      "subtitle": "认证 → K-Beauty 预约 → 获取通行证 → 体验",
+      "subtitle": "咨询 → 定制提案 → 说明福利 → 评价任务",
       "steps": {
         "step1": {
-          "title": "行程认证",
-          "description": "将机票或酒店预订截图发送至微信"
+          "title": "K-Beauty 咨询",
+          "description": "进行 K-Beauty 咨询及 <br></br> 预约"
         },
         "step2": {
-          "title": "K-Beauty 预约",
-          "description": "选择您心仪的皮肤管理、美发等服务"
+          "title": "定制提案",
+          "description": "通过3分钟问卷提供定制提案<br></br>(区域/兴趣/预算/同行)"
         },
         "step3": {
-          "title": "Reviewer Pass",
-          "description": "获取美食、咖啡馆、快闪店的体验权限"
+          "title": "福利提供",
+          "description": "提供严选的本地商家及 <br></br> 体验团福利"
         },
         "step4": {
-          "title": "体验与分享",
-          "description": "尽情享受并分享您的真实后记"
+          "title": "评价任务",
+          "description": "体验结束后 <br></br> 完成评价任务"
         }
       },
       "badge": "推荐",
-      "footerInfo": "分享后记将使您获得下一次优惠的优先权。请留下您的真实意见！"
+      "footerInfo": "保证金(定金)说明：咨询后告知的保证金在完成评价任务后全额退还。",
+      "footerDetail": "核心条件摘要：体验后48小时内提交评价链接 → 确认后2个工作日内退还(不包括未到店/当日取消)"
     },
     "rulesSection": {
       "eyebrow": "IMPORTANT RULES",
@@ -347,20 +365,20 @@
       "participateEyebrow": "参与方式如下",
       "rules": {
         "verification": {
-          "label": "行程认证",
-          "text": "将机票 or 酒店预订截图通过微信发送"
+          "label": "K-Beauty 预约",
+          "text": "通过 Curate Seoul 预约 K-Beauty"
         },
         "booking": {
-          "label": "K-Beauty",
-          "text": "通过 Curate Seoul 预约至少 1 项 K-Beauty 体验"
+          "label": "定制问卷",
+          "text": "通过3分钟问卷了解您的旅行偏好"
         },
         "pass": {
-          "label": "Pass 发放",
-          "text": "预约确认后，通过 Reviewer Pass 获取体验优惠"
+          "label": "福利提供",
+          "text": "提供严选的本地商家及体验团福利"
         },
         "sharing": {
-          "label": "分享后记",
-          "text": "体验结束后在社交平台分享真实后记（可选，非常欢迎！）"
+          "label": "评价任务",
+          "text": "体验后 48 小时内完成评价任务"
         }
       },
       "note": "分享后记将使您获得下一次优惠的优先权。请留下您的真实意见！"
@@ -371,33 +389,25 @@
       "subtitle": "关于 Curate Seoul 的常见问题解答",
       "items": {
         "q1": {
-          "question": "为什么需要提供机票/酒店认证？",
-          "answer": "我们的服务是专门为真实的首尔旅行者提供。通过认证，我们能确保这些优质优惠提供给真正来访的游客。您的个人信息仅用于身份核实。"
+          "question": "为什么包含评价任务？",
+          "answer": "因为合作福利是作为“基于内容的计划”运营的，通过撰写真实评价，可以向更多旅行者分享信息。"
         },
         "q2": {
-          "question": "为什么要预约 K-Beauty 项目？",
-          "answer": "预约 K-Beauty 项目是激活会员资格的必要条件。只有这样，我们才能为合作商家争取到专属的体验名额。在享受首尔旅行亮点 K-Beauty 的同时，还能解锁更多额外礼遇！"
+          "question": "如何撰写评价？",
+          "answer": "请拍摄能体现体验场所氛围的照片（5张以上）或短视频，并撰写真实后记。用心的评价将成为您下次访问首尔时获得更大福利的“VIP等级”晋升条件！"
         },
         "q3": {
-          "question": "如何获取体验优惠？",
-          "answer": "当您的 K-Beauty 预约确认后，我们将为您发放 Reviewer Pass。凭此卡，您可以以会员身份体验当地的美食和咖啡馆，总价值约 45 万韩元！"
+          "question": "如何进行 K-Beauty 预约？",
+          "answer": "通过微信(@CurateSeoul_helper)或咨询渠道进行 1:1 咨询，我们将为您严选商家并提供定制提案。确认后 'Seouler Pass' 立即激活，并为您发送符合行程和偏好的本地清单。"
         },
         "q4": {
-          "question": "我可以获得多少次体验机会？",
-          "answer": "这取决于您的 K-Beauty 等级和旅行时长。通常会提供 2~4 次美食/咖啡馆体验机会。行程越长，您可以享受的累积福利就越多。"
-        },
-        "q5": {
-          "question": "必须撰写后记吗？",
-          "answer": "分享后记是自愿的。不过，我们会为分享后记的会员提供下一次活动的优先参与权。您可以在 Instagram 或小红书上留下您的真实体验心得。"
-        },
-        "q6": {
-          "question": "这是医疗中介服务吗？",
-          "answer": "不是。我们是一家旅行体验策划服务商。我们仅提供 K-Beauty 预约协助和本地体验推荐，不提供任何医疗咨询或建议。"
+          "question": "保证金(定金)是多少？",
+          "answer": "保证金金额根据预约的 K-Beauty/体验内容而异，咨询后将为您详细说明。完成评价任务后全额退还。"
         }
       }
+    },
+    "faqPage": {
+      "subtitle": "查看有关使用 Curate Seoul 的常见问题。"
     }
-  },
-   "faqPage": {
-    "subtitle": "查看有关使用 Curate Seoul 的常见问题。"
-}
+  }
 }

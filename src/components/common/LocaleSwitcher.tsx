@@ -10,26 +10,33 @@ export default function LocaleSwitcher() {
   const pathname = usePathname();
   const [isPending, startTransition] = useTransition();
 
-  const toggleLocale = () => {
-    const nextLocale = locale === "ko" ? "zh-CN" : "ko";
+  const locales = [
+    { code: "zh-CN", label: "ZH" },
+    { code: "ja", label: "JA" },
+    { code: "en", label: "EN" },
+  ];
+
+  const onLocaleChange = (newLocale: string) => {
     startTransition(() => {
-      router.replace(pathname, { locale: nextLocale });
+      router.replace(pathname, { locale: newLocale as any });
     });
   };
 
   return (
-    <button
-      onClick={toggleLocale}
-      disabled={isPending}
-      className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 transition-all group"
-    >
-      <span className={`text-[10px] font-black tracking-widest ${locale === "ko" ? "text-brand-gold" : "text-zinc-400 group-hover:text-zinc-200"}`}>
-        KO
-      </span>
-      <div className="w-[1px] h-2.5 bg-white/20" />
-      <span className={`text-[10px] font-black tracking-widest ${locale === "zh-CN" ? "text-brand-gold" : "text-zinc-400 group-hover:text-zinc-200"}`}>
-        ZH
-      </span>
-    </button>
+    <div className="flex items-center gap-1 bg-zinc-100/50 p-1 rounded-full border border-zinc-200/50">
+      {locales.map((l) => (
+        <button
+          key={l.code}
+          onClick={() => onLocaleChange(l.code)}
+          disabled={isPending || locale === l.code}
+          className={`px-3 py-1.5 rounded-full text-[10px] font-black tracking-widest transition-all ${locale === l.code
+              ? "bg-white text-zinc-900 shadow-sm"
+              : "text-zinc-400 hover:text-zinc-600"
+            }`}
+        >
+          {l.label}
+        </button>
+      ))}
+    </div>
   );
 }

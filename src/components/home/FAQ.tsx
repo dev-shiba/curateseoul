@@ -13,8 +13,6 @@ export default function FAQ() {
         { question: t("items.q2.question"), answer: t("items.q2.answer") },
         { question: t("items.q3.question"), answer: t("items.q3.answer") },
         { question: t("items.q4.question"), answer: t("items.q4.answer") },
-        { question: t("items.q5.question"), answer: t("items.q5.answer") },
-        { question: t("items.q6.question"), answer: t("items.q6.answer") },
     ];
 
     return (

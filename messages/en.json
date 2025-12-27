@@ -1,0 +1,429 @@
+{
+    "common": {
+        "brand": "Curate Seoul",
+        "contact": "Contact",
+        "learnMore": "Learn More"
+    },
+    "metadata": {
+        "home": {
+            "title": "Curate Seoul | Smart Choice for Seoul Travel",
+            "description": "Curate Seoul makes your Seoul trip smarter and more special through verified local curation and K-Beauty services. Book K-Beauty and enjoy \"Seouler Pass\" membership benefits.",
+            "ogTitle": "Curate Seoul - Travel Seoul, Smarter",
+            "ogDescription": "Issue \"Seouler Pass\" exclusively for K-Beauty reservation customers. Experience the real charm of Seoul from customized local lists to partner experience group benefits."
+        },
+        "benefits": {
+            "title": "Member Exclusive Benefits | Curate Seoul",
+            "description": "Special local benefits enjoyed only by verified travelers. Check out fine dining, K-Beauty, and pop-up experiences worth 450,000 KRW.",
+            "ogTitle": "Curate Seoul Benefit Guide - The Smartest Way to Enjoy Seoul",
+            "ogDescription": "From verified local restaurants to premium K-Beauty bookings. Introducing Curate Seoul's unique membership benefits."
+        },
+        "experience": {
+            "title": "Member Real Reviews | Curate Seoul",
+            "description": "The real charm of Seoul experienced by actual members. Check out the special features of Curate Seoul through short-form videos and detailed reviews.",
+            "ogTitle": "Curate Seoul Vivid Reviews - Real Seoul as told by members",
+            "ogDescription": "Real reviews, not advertisements. Check out the vivid videos of travelers who have been with Curate Seoul."
+        },
+        "faq": {
+            "title": "Frequently Asked Questions | Curate Seoul",
+            "description": "We will solve all your questions about Curate Seoul usage, benefits, and certification procedures.",
+            "ogTitle": "Curate Seoul Help - Ask Anything",
+            "ogDescription": "From flight certification to benefit usage, we have collected the most frequently asked questions about Curate Seoul."
+        }
+    },
+    "header": {
+        "verification": "Home",
+        "benefits": "Benefits",
+        "reviews": "Reviews",
+        "faq": "FAQ",
+        "cta": "Get Benefit PASS via 3-min Survey"
+    },
+    "hero": {
+        "eyebrow": "Exclusive Benefits for Seoul Travelers",
+        "title": "A Trip Where Benefits Return, <shrink>Failure-Free Curation</shrink>",
+        "titleHighlight": "<emphasis>Enjoy Seoul</emphasis>",
+        "description": {
+            "combined": "Exclusively for K-Beauty reservation customers, get your <highlight>“Seouler Pass\"</highlight> and enjoy benefits like customized local lists + partner experience groups + reservation/route guides."
+        },
+        "stats": {
+            "partners": "Partners",
+            "value": "Benefit Value",
+            "monthly": "Monthly Limit"
+        },
+        "features": {
+            "food": "Local Dining Experience",
+            "beauty": "K-Beauty Discount",
+            "popups": "Pop-up Priority Entry",
+            "guide": "Benefit Guide"
+        }
+    },
+    "contactCard": {
+        "badge": "🔥 12 slots left this month",
+        "title": "Consult First",
+        "subtitle": "Send \"Traveler\" to get the benefit guide",
+        "kakaoButton": "KakaoTalk Consult",
+        "idLabel": "ID",
+        "idValue": "@CurateSeoul",
+        "copyButton": "Copy",
+        "divider": "Or leave your contact info",
+        "formPlaceholder": "Messenger ID",
+        "formButton": "Apply",
+        "note": "Response within 2 hours · Feel free to inquire"
+    },
+    "verification": {
+        "icon": "✨",
+        "title": "After K-Beauty Booking",
+        "subtitle": "If you book K-Beauty, we propose<br></br><strong>customized local curation</strong> and <strong>partner experience group benefits</strong>",
+        "steps": {
+            "step1": {
+                "value": "K-Beauty Consult/Booking"
+            },
+            "step2": {
+                "value": "Customized Curation Proposal"
+            },
+            "step3": {
+                "value": "Receive Custom Benefits"
+            }
+        },
+        "benefits": {
+            "food": {
+                "title": "Local Dining",
+                "description": "Authentic spots tourists don't know"
+            },
+            "beauty": {
+                "title": "K-Beauty",
+                "description": "Skincare·Hair·Makeup"
+            },
+            "medical": {
+                "title": "Medical·Clinic",
+                "description": "Verified medical services"
+            },
+            "popups": {
+                "title": "Exp·Pop-ups",
+                "description": "Priority entry to hot spots"
+            }
+        }
+    },
+    "trust": {
+        "eyebrow": "WHY CURATE SEOUL?",
+        "title": "Curate Seoul's Promise",
+        "description": "Tired of numerous advertising information? <br></br>Meet the real Seoul with verified local curation.",
+        "items": {
+            "verification": {
+                "title": "Strict Selection",
+                "description": "We only select hospitals, beauty shops, <br></br>restaurants, etc., that we have personally visited and verified."
+            },
+            "consultation": {
+                "title": "Real-time Consult",
+                "description": "Real-time communication via KakaoTalk/WeChat, average response within 2 hours."
+            },
+            "transparency": {
+                "title": "Transparent Guidance",
+                "description": "We provide all prices transparently<br></br>without any hidden costs."
+            }
+        }
+    },
+    "finalCTA": {
+        "eyebrow": "BECOME A MEMBER",
+        "title": "The <highlight>Smartest Way</highlight> to <br></br>Enjoy Seoul",
+        "stats": {
+            "partners": {
+                "value": "50+",
+                "label": "Partners"
+            },
+            "benefitValue": {
+                "value": "₩450k+",
+                "label": "Benefit Value"
+            },
+            "limit": {
+                "value": "30",
+                "label": "Monthly Limit"
+            }
+        },
+        "mainText": "Just <strong>book K-Beauty</strong> and<br></br>enjoy local restaurants, K-Beauty, and hot spots at<br></br><strong>special member prices</strong>",
+        "features": {
+            "food": "Local Dining Experience",
+            "beauty": "K-Beauty Discount",
+            "popup": "Pop-up Priority Entry"
+        },
+        "description": "Premium local benefits opened with one Seouler Pass,<br></br>making your Seoul trip special.",
+        "button": "Consult and Apply for Up to 500k KRW Benefits for Free",
+        "note": "Send \"Traveler\" to get the benefit guide"
+    },
+    "partnerLogos": {
+        "title": "Partner Categories",
+        "subtitle": "Selected local partners with Curate Seoul",
+        "categories": {
+            "skin": "Skin",
+            "plastic": "Plastic Surgery",
+            "wellness": "Wellness",
+            "dining": "Dining",
+            "cafe": "Cafe",
+            "popup": "Pop-up",
+            "shopping": "Shopping"
+        }
+    },
+    "footer": {
+        "description": "We propose premium local information known only to Koreans<br></br>and verified K-Beauty benefits.",
+        "quickLinks": {
+            "title": "Quick Links",
+            "verify": "K-Beauty Booking Benefits",
+            "benefits": "Partner Benefit Guide",
+            "reviews": "Member Real Reviews",
+            "membership": "K-Beauty Membership"
+        },
+        "contact": {
+            "title": "Contact Us",
+            "address": {
+                "label": "Address",
+                "value": "6F, 602 Yeongdong-daero, Gangnam-gu, Seoul"
+            },
+            "info": {
+                "label": "Email & Phone"
+            }
+        },
+        "newsletter": {
+            "title": "Newsletter",
+            "description": "Get the latest local updates and secret benefit information.",
+            "placeholder": "Your email",
+            "button": "Join"
+        },
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service",
+        "copyright": "© 2024 CURATE SEOUL. ALL RIGHTS RESERVED."
+    },
+    "benefitsPage": {
+        "valueSection": {
+            "eyebrow": "🎁 Member Exclusive Benefits",
+            "title": "This Much You Can Get",
+            "subtitle": "Special experience benefits provided with K-Beauty reservation",
+            "totalEstimatedValueLabel": "Total Estimated Value",
+            "totalEstimatedValue": "Up to ₩500,000 + Benefits",
+            "footerTitle": "Total Benefit Value Up to ₩500,000+",
+            "footerSubtitle": "Start today and enjoy the benefits",
+            "footerNote": "LIMITED TO 30 MEMBERS MONTHLY",
+            "disclosureNote": "Based on experience group benefits / Varies by schedule/reservation status / Not cash payment",
+            "valueLabel": "Benefit Value",
+            "viewMore": "View All Benefits Details",
+            "items": {
+                "dining": {
+                    "title": "Premium Dining",
+                    "value": "₩150k+",
+                    "description": "Hanwoo Omakase, Michelin-level, hard-to-book hot spots"
+                },
+                "cafe": {
+                    "title": "Instagram Hot Cafes",
+                    "value": "₩50k+",
+                    "description": "Seongsu-dong cafes, London Bagel Museum, Onion, etc."
+                },
+                "popup": {
+                    "title": "Brand Pop-ups/Exhibitions",
+                    "value": "₩100k+",
+                    "description": "Priority entry to limited events, skip the line"
+                },
+                "beauty": {
+                    "title": "K-Beauty Discount",
+                    "value": "₩150k+",
+                    "description": "Skincare, Hair, Makeup member prices"
+                }
+            }
+        },
+        "membershipSection": {
+            "eyebrow": "K-Beauty",
+            "title": "Choose Your Service",
+            "subtitle": "Seouler Pass activated by booking just one service!",
+            "tiers": {
+                "essential": {
+                    "name": "Essential",
+                    "price": "Start Comfortably",
+                    "benefits": [
+                        "Hair Styling",
+                        "Makeup Experience",
+                        "Basic Skincare",
+                        "Scalp Care"
+                    ],
+                    "cta": "Consult Booking →"
+                },
+                "signature": {
+                    "name": "Signature",
+                    "price": "Upgrade Your Journey",
+                    "benefits": [
+                        "Customized Consultation",
+                        "K-Beauty Studio",
+                        "Route & Booking Support",
+                        "Custom Recommendations"
+                    ],
+                    "cta": "Learn More"
+                },
+                "premium": {
+                    "name": "Premium",
+                    "price": "Premium Customization",
+                    "benefits": [
+                        "Private Consultation",
+                        "Priority Booking",
+                        "Dedicated Manager",
+                        "Additional VIP Benefits"
+                    ],
+                    "cta": "Limited Application"
+                }
+            },
+            "badge": "🔥 Popular",
+            "learnMore": "Learn More"
+        },
+        "proceduresSection": {
+            "title": "The Standard",
+            "titleHighlight": "One-Day Beauty Program",
+            "description": "Enjoy professional skincare at a reasonable price in Seoul. Experience the best beauty completed in just one day, from skin boosters to laser treatment proposals.",
+            "items": {
+                "skinBooster": {
+                    "title": "Skin Booster",
+                    "description": "Moisture and glow from within"
+                },
+                "miniLifting": {
+                    "title": "Mini Lifting",
+                    "description": "Instant elasticity and vitality"
+                },
+                "petiteSurgery": {
+                    "title": "Petite Surgery",
+                    "description": "Natural and definitive change"
+                }
+            },
+            "cta": "View Detailed Treatment Guide"
+        },
+        "clinicsSection": {
+            "title": "Partner Clinics",
+            "subtitle": "Trustworthy clinics with verified professional medical teams",
+            "browseAll": "Browse All Clinics",
+            "more": "Learn More"
+        }
+    },
+    "experiencePage": {
+        "videosSection": {
+            "eyebrow": "REAL REVIEW",
+            "title": "Members' Seoul Travel Reviews",
+            "subtitle": "Short-form videos experienced and left by actual members",
+            "vlogs": {
+                "vlog1": {
+                    "tag": "Dining/Cafe",
+                    "title": "Seongsu-dong Hip Place Tour"
+                },
+                "vlog2": {
+                    "tag": "K-Beauty",
+                    "title": "Real Gangnam Skincare Review"
+                },
+                "vlog3": {
+                    "tag": "Hot Spot",
+                    "title": "Hongdae Street Busking"
+                },
+                "vlog4": {
+                    "tag": "Shopping",
+                    "title": "Hannam-dong Luxury Boutique"
+                }
+            }
+        },
+        "reviewsSection": {
+            "eyebrow": "Real Reviews",
+            "title": "Honest Member Reviews",
+            "subtitle": "Stories of those who enjoyed Seoul properly",
+            "items": {
+                "review1": {
+                    "text": "Restaurants I would never have found on my own! It felt like being guided by a Korean friend. Hanwoo Omakase was really the best 🥩",
+                    "tags": [
+                        "Dining Experience",
+                        "K-Beauty"
+                    ]
+                },
+                "review2": {
+                    "text": "From skincare to Seongsu-dong cafe tour! My Instagram photo quality has completely changed. I'll come back next time 💕",
+                    "tags": [
+                        "Skincare",
+                        "Cafe Tour"
+                    ]
+                },
+                "review3": {
+                    "text": "Priority entry to a pop-up store that usually has a 2-hour wait! Saved time and enjoyed more. Best value for money 👍",
+                    "tags": [
+                        "Pop-up Priority Entry",
+                        "Dining"
+                    ]
+                }
+            }
+        },
+        "howItWorksSection": {
+            "eyebrow": "How It Works",
+            "title": "4 Simple Steps",
+            "subtitle": "Consult → Custom Proposal → Provide Benefits → Review Mission",
+            "steps": {
+                "step1": {
+                    "title": "K-Beauty Consult",
+                    "description": "K-Beauty consult and <br></br> booking progress"
+                },
+                "step2": {
+                    "title": "Custom Proposal",
+                    "description": "Customized proposal via 3-min survey<br></br>(Region/Interest/Budget/Companion)"
+                },
+                "step3": {
+                    "title": "Provide Benefits",
+                    "description": "Provide selected local store and <br></br> experience group benefits"
+                },
+                "step4": {
+                    "title": "Review Mission",
+                    "description": "Complete review mission <br></br> after experience"
+                }
+            },
+            "badge": "Core",
+            "footerInfo": "Deposit(Booking fee) Notice: The deposit informed after consultation will be fully refunded upon completion of the review mission.",
+            "footerDetail": "Core Condition Summary: Submit review link within 48 hours after experience → Refund within 2 business days after verification (No-show/same-day cancellation excluded)"
+        },
+        "rulesSection": {
+            "eyebrow": "IMPORTANT RULES",
+            "title": "Please Follow",
+            "subtitle": "Minimum rules needed for a safe and honest community",
+            "participateEyebrow": "How to Participate",
+            "rules": {
+                "verification": {
+                    "label": "K-Beauty Booking",
+                    "text": "Book K-Beauty through Curate Seoul"
+                },
+                "booking": {
+                    "label": "Custom Survey",
+                    "text": "Identify travel preferences with 3-min survey"
+                },
+                "pass": {
+                    "label": "Provide Benefits",
+                    "text": "Provide selected local store and group benefits"
+                },
+                "sharing": {
+                    "label": "Review Mission",
+                    "text": "Complete review mission within 48h after exp"
+                }
+            },
+            "note": "Sharing reviews gives you priority for the next benefit. Please leave your honest opinion!"
+        },
+        "faqSection": {
+            "eyebrow": "FREQUENTLY ASKED",
+            "title": "Got Questions?",
+            "subtitle": "Most frequently asked questions about Curate Seoul",
+            "items": {
+                "q1": {
+                    "question": "Why is a review mission included?",
+                    "answer": "Because partner benefits are operated as a 'content-based program', and it's to share information with more travelers through honest reviews after visiting."
+                },
+                "q2": {
+                    "question": "How do I write a review?",
+                    "answer": "Please write an honest review with photos (5 or more) or short videos that well reveal the atmosphere of the experience place. Passionate reviews will become a condition for promotion to 'VIP level', which allows you to receive even greater benefits on your next visit to Seoul!"
+                },
+                "q3": {
+                    "question": "How do I book K-Beauty?",
+                    "answer": "We provide customized proposals with selected stores through 1:1 consultation via WeChat (@CurateSeoul_helper) or consultation channels. 'Seouler Pass' will be activated immediately upon confirmation, and we will deliver a local list that fits your schedule and taste."
+                },
+                "q4": {
+                    "question": "How much is the deposit (booking fee)?",
+                    "answer": "The deposit amount varies depending on the K-Beauty/experience configuration you book, and we will inform you in detail after consultation. It will be fully refunded upon completion of the review mission."
+                }
+            }
+        },
+        "faqPage": {
+            "subtitle": "Check out the frequently asked questions about using Curate Seoul."
+        }
+    }
+}

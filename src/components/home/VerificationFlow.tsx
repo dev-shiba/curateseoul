@@ -9,7 +9,7 @@ export default function VerificationFlow() {
     const steps = [
         {
             key: "step1",
-            icon: "✈️",
+            icon: "💬", // Changed from airplane to message icon
             isSpecial: true,
         },
         {
@@ -19,12 +19,12 @@ export default function VerificationFlow() {
         },
         {
             key: "step3",
-            icon: "🎫", // Ticket/Pass
+            icon: "🏪", // Curated stores/Benefits
             isSpecial: false,
         },
         {
             key: "step4",
-            icon: "🎁",
+            icon: "📝", // Review mission
             isSpecial: false,
         },
     ];
@@ -100,12 +100,18 @@ export default function VerificationFlow() {
                         ))}
                     </div>
 
-                    <div className="mt-16 bg-[#F5F5F0] rounded-[24px] p-5 flex flex-col md:flex-row items-center justify-center gap-3 text-center md:text-left border border-[#E5E0D8] max-w-3xl mx-auto shadow-sm">
-                        <div className="bg-[#8C8170] text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold shrink-0">
-                            i
+                    <div className="bg-[#F5F5F0] rounded-[24px] p-6 flex flex-col items-center justify-center gap-4 text-center border border-[#E5E0D8] max-w-3xl mx-auto shadow-sm">
+                        <div className="flex flex-col md:flex-row items-center gap-3">
+                            <div className="bg-[#8C8170] text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold shrink-0">
+                                i
+                            </div>
+                            <p className="text-[#5D5545] font-bold text-sm md:text-[15px] tracking-tight">
+                                {t("footerInfo")}
+                            </p>
                         </div>
-                        <p className="text-[#5D5545] font-medium text-sm md:text-[15px] tracking-tight">
-                            {t("footerInfo")}
+                        <div className="w-full h-px bg-[#E5E0D8] hidden md:block" />
+                        <p className="text-[#8C8170] font-medium text-xs md:text-sm tracking-tight leading-relaxed">
+                            {t("footerDetail")}
                         </p>
                     </div>
                 </MotionSection>

@@ -1,0 +1,429 @@
+{
+    "common": {
+        "brand": "Curate Seoul",
+        "contact": "お問い合わせ",
+        "learnMore": "詳細を見る"
+    },
+    "metadata": {
+        "home": {
+            "title": "Curate Seoul | ソウル旅行のスマートな選択",
+            "description": "Curate Seoulは、検証済みのローカルキュレーションとK-Beautyサービスを通じて、あなたのソウル旅行をよりスマートで特別なものにします。K-Beautyを予約して「Seouler Pass」メンバーシップ特典をお楽しみください。",
+            "ogTitle": "Curate Seoul - ソウル旅行をよりスマートに",
+            "ogDescription": "K-Beauty予約者専用の「Seouler Pass」を発行。自分だけのローカルリストから提携体験団特典まで、ソウルの本当の魅力を体験してください。"
+        },
+        "benefits": {
+            "title": "メンバー限定特典 | Curate Seoul",
+            "description": "認証された旅行者だけが楽しめる特別なローカル特典。45万ウォン相当のグルメ、K-Beauty、ポップアップ体験をチェックしてください。",
+            "ogTitle": "Curate Seoul 特典ガイド - ソウルを最もスマートに楽しむ方法",
+            "ogDescription": "検証済みの地元レストランからプレミアムなK-Beauty予約まで。Curate Seoulだけの特別なメンバーシップ特典を紹介します。"
+        },
+        "experience": {
+            "title": "メンバーのリアルな口コミ | Curate Seoul",
+            "description": "実際のメンバーが体験したソウルの本当の魅力。ショート動画や詳細なレビューで、Curate Seoulの特別さを確認してください。",
+            "ogTitle": "Curate Seoul 生動な口コミ - メンバーが語る本当のソウル",
+            "ogDescription": "広告ではない本当の口コミ。Curate Seoulと共に旅した旅行者たちの生動な動画をチェックしてください。"
+        },
+        "faq": {
+            "title": "よくある質問 | Curate Seoul",
+            "description": "Curate Seoulの利用方法、特典、認証手順など、あらゆる疑問にお答えします。",
+            "ogTitle": "Curate Seoul ヘルプ - 何でも聞いてください",
+            "ogDescription": "航空券の認証から特典の利用まで、Curate Seoulについて最も多い質問をまとめました。"
+        }
+    },
+    "header": {
+        "verification": "ホーム",
+        "benefits": "特典案内",
+        "reviews": "お客様の口コミ",
+        "faq": "よくある質問",
+        "cta": "3分アンケートで特典PASSをゲット"
+    },
+    "hero": {
+        "eyebrow": "ソウル旅行者専用特典",
+        "title": "特典が戻ってくる旅行、失敗のないキュレーション",
+        "titleHighlight": "<emphasis>ソウルを楽しもう</emphasis>",
+        "description": {
+            "combined": "K-Beauty予約者専用に<highlight>「Seouler Pass」</highlight>を発行。パーソナライズされたローカルリスト + 提携体験団特典 + 予約/動線ガイドを楽しめます。"
+        },
+        "stats": {
+            "partners": "提携会社",
+            "value": "特典価値",
+            "monthly": "月間限定"
+        },
+        "features": {
+            "food": "地元のグルメ体験",
+            "beauty": "K-Beauty割引",
+            "popups": "ポップアップ優先入場",
+            "guide": "特典ガイド"
+        }
+    },
+    "contactCard": {
+        "badge": "🔥 今月は残り12枠です",
+        "title": "まずは相談",
+        "subtitle": "「旅行者」と送ると特典ガイドをお送りします",
+        "kakaoButton": "KakaoTalk相談",
+        "idLabel": "ID",
+        "idValue": "@CurateSeoul",
+        "copyButton": "コピー",
+        "divider": "または連絡先を残す",
+        "formPlaceholder": "メッセンジャーID",
+        "formButton": "申請",
+        "note": "2時間以内に回答 · お気軽にお問い合わせください"
+    },
+    "verification": {
+        "icon": "✨",
+        "title": "K-Beauty予約後",
+        "subtitle": "K-Beautyを予約すると、<br></br><strong>自分だけのローカルキュレーション</strong>と<strong>提携体験団特典</strong>をご提案します",
+        "steps": {
+            "step1": {
+                "value": "K-Beauty相談/予約"
+            },
+            "step2": {
+                "value": "パーソナライズされた提案"
+            },
+            "step3": {
+                "value": "カスタム特典を受取"
+            }
+        },
+        "benefits": {
+            "food": {
+                "title": "地元グルメ",
+                "description": "観光客が知らない本当の名店"
+            },
+            "beauty": {
+                "title": "K-Beauty",
+                "description": "美肌・ヘア・メイク"
+            },
+            "medical": {
+                "title": "クリニック",
+                "description": "検証済みの医療サービス"
+            },
+            "popups": {
+                "title": "ポップアップ",
+                "description": "話題の場所に優先入場"
+            }
+        }
+    },
+    "trust": {
+        "eyebrow": "WHY CURATE SEOUL?",
+        "title": "Curate Seoulの約束",
+        "description": "大量の広告情報に疲れていませんか？<br></br>検証済みのローカルキュレーションで本当のソウルに出会ってください。",
+        "items": {
+            "verification": {
+                "title": "厳格な店舗選定",
+                "description": "直接訪問し確認したクリニック、美容、<br></br>グルメなど厳選された場所のみを紹介します。"
+            },
+            "consultation": {
+                "title": "リアルタイム相談",
+                "description": "LINEやWeChatでリアルタイムに。平均2時間以内に回答します。"
+            },
+            "transparency": {
+                "title": "透明な案内",
+                "description": "隠れた費用なしにすべての価格を透明<br></br>にご案内します。"
+            }
+        }
+    },
+    "finalCTA": {
+        "eyebrow": "BECOME A MEMBER",
+        "title": "ソウルを楽しむための <br></br> <highlight>最もスマートな方法</highlight>",
+        "stats": {
+            "partners": {
+                "value": "50+",
+                "label": "提携店"
+            },
+            "benefitValue": {
+                "value": "₩45万+",
+                "label": "特典価値"
+            },
+            "limit": {
+                "value": "30名",
+                "label": "月間限定"
+            }
+        },
+        "mainText": "<strong>K-Beautyを予約</strong>するだけで、<br></br>地元のグルメ、K-Beauty、話題の場所を<br></br><strong>会員価格</strong>で楽しめます",
+        "features": {
+            "food": "地元のグルメ体験",
+            "beauty": "K-Beauty割引",
+            "popup": "ポップアップ優先入場"
+        },
+        "description": "Seouler Pass一つで広がるプレミアムなローカル特典。<br></br>あなたのソウル旅行を特別にします。",
+        "button": "相談して最大50万ウォンの特典に無料申請",
+        "note": "「旅行者」と送ると特典ガイドをお送りします"
+    },
+    "partnerLogos": {
+        "title": "提携カテゴリー & パートナー",
+        "subtitle": "Curate Seoulとともに歩む厳選されたローカルパートナー",
+        "categories": {
+            "skin": "美肌",
+            "plastic": "整形",
+            "wellness": "ウェルネス",
+            "dining": "グルメ",
+            "cafe": "カフェ",
+            "popup": "ポップアップ",
+            "shopping": "ショッピング"
+        }
+    },
+    "footer": {
+        "description": "韓国人だけが知っているプレミアムなローカル情報と、<br></br>検証済みのK-Beauty特典を提案します。",
+        "quickLinks": {
+            "title": "クイックリンク",
+            "verify": "K-Beauty予約特典",
+            "benefits": "提携特典ガイド",
+            "reviews": "メンバーのリアルな口コミ",
+            "membership": "K-Beautyメンバーシップ"
+        },
+        "contact": {
+            "title": "お問い合わせ",
+            "address": {
+                "label": "住所",
+                "value": "ソウル市江南区永東大路602、6階"
+            },
+            "info": {
+                "label": "メール・電話"
+            }
+        },
+        "newsletter": {
+            "title": "ニュースレター",
+            "description": "最新のローカル情報と限定特典をお届けします。",
+            "placeholder": "メールアドレス",
+            "button": "登録"
+        },
+        "privacy": "プライバシーポリシー",
+        "terms": "利用規約",
+        "copyright": "© 2024 CURATE SEOUL. ALL RIGHTS RESERVED."
+    },
+    "benefitsPage": {
+        "valueSection": {
+            "eyebrow": "🎁 会員限定特典",
+            "title": "これだけの特典があります",
+            "subtitle": "K-Beauty予約時に提供される特別な体験特典",
+            "totalEstimatedValueLabel": "推定総価値",
+            "totalEstimatedValue": "最大 50万ウォン + 特典",
+            "footerTitle": "総特典価値 最大 50万ウォン+",
+            "footerSubtitle": "今日から始めて特典を楽しもう",
+            "footerNote": "毎月30名様限定",
+            "disclosureNote": "体験団特典合算基準 / 日程・予約状況により異なる / 現金支給ではない",
+            "valueLabel": "特典価値",
+            "viewMore": "全特典の詳細を見る",
+            "items": {
+                "dining": {
+                    "title": "プレミアムグルメ",
+                    "value": "15万ウォン+",
+                    "description": "韓牛オマカセ、ミシュラン級、予約困難店"
+                },
+                "cafe": {
+                    "title": "話題のカフェ",
+                    "value": "5万ウォン+",
+                    "description": "聖水洞カフェ、ロンドンベーグル、Onionなど"
+                },
+                "popup": {
+                    "title": "ブランド、展示会",
+                    "value": "10万ウォン+",
+                    "description": "限定イベント優先入場、待ち時間なし"
+                },
+                "beauty": {
+                    "title": "K-Beauty割引",
+                    "value": "15万ウォン+",
+                    "description": "美肌、ヘア、メイクの会員限定価格"
+                }
+            }
+        },
+        "membershipSection": {
+            "eyebrow": "K-Beauty",
+            "title": "希望のサービスを選択",
+            "subtitle": "1つ予約するだけでSeouler Passが有効化！",
+            "tiers": {
+                "essential": {
+                    "name": "Essential",
+                    "price": "気軽にスタート",
+                    "benefits": [
+                        "ヘアスタイリング",
+                        "メイクアップ体験",
+                        "基本スキンケア",
+                        "スカルプケア"
+                    ],
+                    "cta": "予約相談 →"
+                },
+                "signature": {
+                    "name": "Signature",
+                    "price": "ワンランク上の旅",
+                    "benefits": [
+                        "オーダーメイド相談",
+                        "K-Beautyスタジオ",
+                        "動線&予約サポート",
+                        "おすすめの提案"
+                    ],
+                    "cta": "詳細を見る"
+                },
+                "premium": {
+                    "name": "Premium",
+                    "price": "プレミアムカスタム",
+                    "benefits": [
+                        "プライベート相談",
+                        "最優先予約",
+                        "専任マネージャー",
+                        "追加のVIP特典"
+                    ],
+                    "cta": "限定申し込み"
+                }
+            },
+            "badge": "🔥 人気",
+            "learnMore": "詳細を見る"
+        },
+        "proceduresSection": {
+            "title": "ソウルの定番",
+            "titleHighlight": "ワンデイビューティープログラム",
+            "description": "ソウルでリーズナブルな価格で受ける専門的なスキンケア。スキンブースターからレーザーの提案まで、一日で完成する最高の美しさを体験してください。",
+            "items": {
+                "skinBooster": {
+                    "title": "スキンブースター",
+                    "description": "内側から満たされる潤いと輝き"
+                },
+                "miniLifting": {
+                    "title": "ミニリフト",
+                    "description": "即効性のある弾力と活力"
+                },
+                "petiteSurgery": {
+                    "title": "プチ施術",
+                    "description": "自然で確かな変化"
+                }
+            },
+            "cta": "施術の詳細ガイドを見る"
+        },
+        "clinicsSection": {
+            "title": "提携クリニック",
+            "subtitle": "実績のある専門医がいる信頼できるクリニック",
+            "browseAll": "全クリニックを見る",
+            "more": "詳細を見る"
+        }
+    },
+    "experiencePage": {
+        "videosSection": {
+            "eyebrow": "REAL REVIEW",
+            "title": "メンバーのソウル旅行口コミ",
+            "subtitle": "実際のメンバーが体験した動画レビュー",
+            "vlogs": {
+                "vlog1": {
+                    "tag": "グルメ/カフェ",
+                    "title": "聖水洞の人気スポット巡り"
+                },
+                "vlog2": {
+                    "tag": "K-Beauty",
+                    "title": "江南の人気スキンケア体験談"
+                },
+                "vlog3": {
+                    "tag": "ホットスポット",
+                    "title": "弘大ストリートライブ"
+                },
+                "vlog4": {
+                    "tag": "ショッピング",
+                    "title": "漢南洞のラグジュアリーブティック"
+                }
+            }
+        },
+        "reviewsSection": {
+            "eyebrow": "リアルな口コミ",
+            "title": "メンバーの正直な感想",
+            "subtitle": "ソウルを存分に楽しんだ方々のストーリー",
+            "items": {
+                "review1": {
+                    "text": "一人では絶対に見つけられなかったお店ばかり！韓国人の友人に案内してもらっているような感覚でした。韓牛オマカセは本当に最高でした 🥩",
+                    "tags": [
+                        "グルメ体験",
+                        "K-Beauty"
+                    ]
+                },
+                "review2": {
+                    "text": "スキンケアを受けて聖水洞のカフェ巡りまで！インスタの写真のクオリティが劇的に変わりました。また次回も利用したいです 💕",
+                    "tags": [
+                        "スキンケア",
+                        "カフェ巡り"
+                    ]
+                },
+                "review3": {
+                    "text": "2時間待ちのポップアップに優先入場！時間を節約してたくさん楽しめました。コスパ最高です 👍",
+                    "tags": [
+                        "ポップアップ優先入場",
+                        "グルメ"
+                    ]
+                }
+            }
+        },
+        "howItWorksSection": {
+            "eyebrow": "ご利用方法",
+            "title": "簡単な4ステップ",
+            "subtitle": "相談 → カスタム提案 → 特典提供 → レビューミッション",
+            "steps": {
+                "step1": {
+                    "title": "K-Beauty相談",
+                    "description": "K-Beauty相談および<br></br>予約の進行"
+                },
+                "step2": {
+                    "title": "カスタム提案",
+                    "description": "3分アンケートによる提案<br></br>(地域/興味/予算/同行者)"
+                },
+                "step3": {
+                    "title": "特典提供",
+                    "description": "厳選された地元店舗および<br></br>体験団特典の提供"
+                },
+                "step4": {
+                    "title": "レビューミッション",
+                    "description": "体験後の<br></br>レビューミッション完了"
+                }
+            },
+            "badge": "重要",
+            "footerInfo": "保証金（予約金）案内：相談後に案内される保証金は、レビューミッション完了時に全額返金されます。",
+            "footerDetail": "核心条件要約：体験後48時間以内にレビューリンクを提出 → 確認後2営業日以内に返金（無断キャンセル・当日キャンセルは除く）"
+        },
+        "rulesSection": {
+            "eyebrow": "IMPORTANT RULES",
+            "title": "守っていただきたいこと",
+            "subtitle": "安全で誠実なコミュニティのための最低限のルール",
+            "participateEyebrow": "参加方法",
+            "rules": {
+                "verification": {
+                    "label": "K-Beauty予約",
+                    "text": "Curate Seoulを通じてK-Beautyを予約"
+                },
+                "booking": {
+                    "label": "カスタムアンケート",
+                    "text": "3分アンケートで旅行の好みを把握"
+                },
+                "pass": {
+                    "label": "特典提供",
+                    "text": "厳選された地元店舗および特典を提供"
+                },
+                "sharing": {
+                    "label": "レビューミッション",
+                    "text": "体験後48時間以内にレビューを完了"
+                }
+            },
+            "note": "レビューを共有していただくと、次回の特典優先権が与えられます。"
+        },
+        "faqSection": {
+            "eyebrow": "FREQUENTLY ASKED",
+            "title": "ご不明な点はありますか？",
+            "subtitle": "Curate Seoulについてよくある質問",
+            "items": {
+                "q1": {
+                    "question": "なぜレビューミッションが含まれるのですか？",
+                    "answer": "提携特典が「コンテンツベースのプログラム」として運営されているためであり、訪問後の正直なレビューを通じてより多くの旅行者に情報を共有するためです。"
+                },
+                "q2": {
+                    "question": "レビューはどのように書けばいいですか？",
+                    "answer": "体験場所の雰囲気がよくわかる写真（5枚以上）または短い動画と共に、正直な感想を書いてください。丁寧なレビューは、次回のソウル訪問時により大きな特典を受けられる「VIPレベル」昇格の条件となります！"
+                },
+                "q3": {
+                    "question": "K-Beautyの予約はどうすればいいですか？",
+                    "answer": "WeChat（@CurateSeoul_helper）または相談チャンネルを通じて1:1の相談を行い、厳選された店舗をご提案します。確認後、すぐに「Seouler Pass」が有効化され、スケジュールや好みに合ったローカルリストをお送りします。"
+                },
+                "q4": {
+                    "question": "保証金（予約金）はいくらですか？",
+                    "answer": "保証金の額は予約するK-Beauty/体験の内容によって異なるため、相談後に詳しくご案内します。レビューミッション完了時に全額返金されます。"
+                }
+            }
+        },
+        "faqPage": {
+            "subtitle": "Curate Seoulの利用に関するよくある質問をチェックしてください。"
+        }
+    }
+}

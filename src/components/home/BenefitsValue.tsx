@@ -118,6 +118,12 @@ export default function BenefitsValue({ showViewMore }: { showViewMore?: boolean
               </Link>
             </div>
           )}
+
+          <div className="mt-12 text-center">
+            <p className="text-zinc-400 text-xs font-medium">
+              {t("disclosureNote")}
+            </p>
+          </div>
         </MotionSection>
       </div>
     </section>

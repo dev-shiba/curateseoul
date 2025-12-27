@@ -42,14 +42,14 @@ export default function Hero() {
                     transition={{ duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
                     className="space-y-12 mb-20 w-full flex flex-col items-center"
                 >
-                    <h1 className="text-4xl lg:text-[64px] font-extrabold leading-[1.2] tracking-tight text-zinc-900">
+                    <h1 className="text-3xl lg:text-[48px] font-extrabold leading-[1.1] tracking-tight text-zinc-900">
                         {t.rich("title", {
-                            shrink: (chunks) => <span className="text-2xl lg:text-4xl font-semibold text-zinc-400 align-middle ml-2">{chunks}</span>
+                            shrink: (chunks) => <span className="text-xl lg:text-2xl font-semibold text-zinc-400 align-middle ml-2">{chunks}</span>
                         })}
                         <br />
-                        <span className="relative inline-block bg-gradient-to-r from-brand-gold to-brand-green bg-clip-text text-transparent pb-4 mt-3">
+                        <span className="relative inline-block bg-gradient-to-r from-brand-gold to-brand-green bg-clip-text text-transparent pb-4 mt-1">
                             {t.rich("titleHighlight", {
-                                emphasis: (chunks) => <span className="inline-block font-black italic text-5xl lg:text-[88px] ml-2 tracking-tighter drop-shadow-sm py-2 pr-4 bg-gradient-to-r from-brand-gold to-brand-green bg-clip-text text-transparent">{chunks}</span>
+                                emphasis: (chunks) => <span className="inline-block font-black italic text-4xl lg:text-[64px] ml-1 tracking-tighter drop-shadow-sm py-1 pr-3 bg-gradient-to-r from-brand-gold to-brand-green bg-clip-text text-transparent">{chunks}</span>
                             })}
                             {/* x2 Badge */}
                             <span className="absolute -top-3 -right-8 rotate-12 bg-[#E5503C] text-white text-xs lg:text-sm px-2.5 py-1 rounded-md font-black shadow-md select-none border-2 border-white">
