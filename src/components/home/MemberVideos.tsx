@@ -36,7 +36,7 @@ export default function MemberVideos() {
     ];
 
     return (
-        <section id="videos" className="py-24 bg-white font-pretendard">
+        <section id="videos" className="py-24 bg-brand-cream font-pretendard">
             <div className="container mx-auto px-6 max-w-6xl">
                 <MotionSection>
                     <div className="text-center mb-20">

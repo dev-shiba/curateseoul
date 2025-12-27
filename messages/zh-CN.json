@@ -4,11 +4,18 @@
     "contact": "咨询",
     "learnMore": "了解更多"
   },
+  "metadata": {
+    "title": "Curate Seoul | 让首尔之旅更明智",
+    "description": "Curate Seoul 通过专业的本地策展和医疗旅游服务，让您的首尔之旅更加智能。只需验证机票或酒店行程，即可开启高端本地福利。",
+    "ogTitle": "Curate Seoul - 智能首尔之旅",
+    "ogDescription": "一次认证，开启高端本地福利。从地道美食到 K-Beauty，尽情探索首尔的真实魅力。"
+  },
   "header": {
     "verification": "行程认证",
     "benefits": "会员权益",
     "experience": "真实体验",
     "reviews": "用户评价",
+    "faq": "常见问题",
     "cta": "立即咨询"
   },
   "hero": {
@@ -35,12 +42,13 @@
     "subtitle": "发送\"体验官\"获取福利指南",
     "kakaoButton": "添加微信咨询",
     "idLabel": "微信号",
-    "idValue": "CurateSeoul",
+    "idValue": "@CurateSeoul",
     "copyButton": "复制",
     "divider": "或留下你的联系方式",
     "formPlaceholder": "您的微信号",
     "formButton": "申请",
-    "note": "2시간 이내 답변 · 스팸 없음"
+    "scanCode": "扫码添加",
+    "note": "2小时内回复 · 不打扰"
   },
   "verification": {
     "icon": "✈️",
@@ -77,21 +85,21 @@
     }
   },
   "trust": {
-    "eyebrow": "TRUST & PROMISE",
-    "title": "我们的承诺",
-    "description": "提供值得信赖的信息是我们的使命",
+    "eyebrow": "WHY CURATE SEOUL?",
+    "title": "Curate Seoul 的承诺",
+    "description": "厌倦了无数的广告信息？<br></br>通过验证的本地策展，遇见真正的首尔。",
     "items": {
       "verification": {
-        "title": "严格审核",
+        "title": "严格验证",
         "description": "仅推荐亲自访问并验证过的场所。<br></br>保证服务品质。"
       },
       "consultation": {
         "title": "实时咨询",
-        "description": "微信实时沟通，<br></br>平均2小时内回复."
+        "description": "微信实时沟通，平均2小时内回复。"
       },
       "transparency": {
         "title": "透明引导",
-        "description": "没有任何隐藏费用，<br></br>所有价格公开透明。"
+        "description": "没有任何隐藏费用，所有价格透明<br></br>引导。"
       }
     }
   },
@@ -119,7 +127,8 @@
       },
       "info": {
         "label": "邮箱及电话"
-      }
+      },
+      "wechatButton": "添加微信咨询"
     },
     "newsletter": {
       "title": "新闻资讯",
@@ -141,6 +150,8 @@
       "footerTitle": "总权益价值 ¥2300+",
       "footerSubtitle": "立即开启您的专属之旅",
       "footerNote": "每月仅限30名会员",
+      "valueLabel": "权益价值",
+      "viewMore": "查看全部福利详情",
       "items": {
         "dining": {
           "title": "高端美食/Omakase",
@@ -277,6 +288,10 @@
             "皮肤管理",
             "咖啡馆巡礼"
           ]
+        },
+        "review3": {
+          "text": "原本需要排队2小时的快闪店，直接优先入场！节省时间，体验更多。性价比超高 👍",
+          "tags": ["快闪优先入场", "美食"]
         }
       }
     },
@@ -302,7 +317,8 @@
           "description": "尽情享受并分享您的真实后记"
         }
       },
-      "badge": "推荐"
+      "badge": "推荐",
+      "footerInfo": "分享后记将使您获得下一次优惠的优先权。请留下您的真实意见！"
     },
     "rulesSection": {
       "eyebrow": "IMPORTANT RULES",
@@ -360,5 +376,8 @@
         }
       }
     }
-  }
+  },
+   "faqPage": {
+    "subtitle": "查看有关使用 Curate Seoul 的常见问题。"
+}
 }

@@ -4,17 +4,23 @@
     "contact": "문의하기",
     "learnMore": "자세히 보기"
   },
+  "metadata": {
+    "title": "Curate Seoul | 서울 여행의 스마트한 선택",
+    "description": " Curate Seoul은 검증된 로컬 큐레이션과 의료 관광 서비스를 통해 당신의 서울 여행을 더욱 똑똑하고 특별하게 만듭니다. 항공권/숙소 인증하고 회원 전용 혜택을 누리세요.",
+    "ogTitle": "Curate Seoul - 서울 여행, 더 똑똑하게",
+    "ogDescription": "항공권/숙소 인증 한 번으로 즐기는 프리미엄 로컬 혜택. 로컬 맛집부터 K-Beauty까지 서울의 진짜 매력을 경험하세요."
+  },
   "header": {
-    "verification": "여행 인증",
+    "verification": "홈",
     "benefits": "혜택 안내",
-    "experience": "고객 경험",
-    "reviews": "후기",
+    "reviews": "고객 후기",
+    "faq": "자주 묻는 질문",
     "cta": "상담하기"
   },
   "hero": {
     "eyebrow": "서울 여행자 전용 혜택",
     "title": "여행 경비는 줄어들고",
-    "titleHighlight": "체험은 두 배로",
+    "titleHighlight": "체험은 <emphasis>두 배로</emphasis>",
     "description": {
       "combined": "<highlight>항공권 또는 숙소만 인증</highlight>하면<br></br>로컬 맛집, K-Beauty, 핫플을<br></br><highlight>회원 혜택가</highlight>로 즐길 수 있어요"
     },
@@ -31,17 +37,17 @@
     }
   },
   "contactCard": {
-    "badge": "🔥 이번 달 12명만 남았어요",
-    "title": "카카오톡으로 문의하기",
-    "subtitle": "\"여행자\"를 보내시면 혜택 가이드를 받아보세요",
-    "kakaoButton": "카카오톡으로 문의하기",
+    "badge": "🔥 이번 달 12자리 남음",
+    "title": "일단 상담해보세요",
+    "subtitle": "\"여행자\" 보내시면 혜택 가이드를 보내드려요",
+    "kakaoButton": "카카오톡 상담",
     "idLabel": "카카오톡 ID",
-    "idValue": "CurateSeoul",
+    "idValue": "@CurateSeoul",
     "copyButton": "복사",
-    "divider": "또는 ID를 남겨주세요",
+    "divider": "또는 연락처 남기기",
     "formPlaceholder": "카카오톡 ID",
     "formButton": "신청",
-    "note": "2시간 이내 답변 · 스팸 없음"
+    "note": "2시간 내 응답 · 부담 없이 문의하세요"
   },
   "verification": {
     "icon": "✈️",
@@ -78,27 +84,38 @@
     }
   },
   "trust": {
-    "eyebrow": "TRUST & PROMISE",
-    "title": "함께하는 약속",
-    "description": "신뢰할 수 있는 정보를 제공하는 것이 우리의 사명입니다",
+    "eyebrow": "WHY CURATE SEOUL?",
+    "title": "Curate Seoul의 약속",
+    "description": "수많은 광고성 정보에 지치셨나요? <br></br>검증된 로컬 큐레이션으로 진짜 서울을 만나보세요.",
     "items": {
       "verification": {
         "title": "엄격한 검증",
-        "description": "직접 방문하고 검증한 곳만<br></br>추천해요. 서비스 퀄리티를 보장합니다."
+        "description": "직접 방문하고 검증한 곳만 추천해<br></br>요. 서비스 퀄리티를 보장합니다."
       },
       "consultation": {
         "title": "실시간 상담",
-        "description": "카카오톡으로 실시간 소통,<br></br>평균 2시간 내 응답해드려요."
+        "description": "카카오톡으로 실시간 소통, 평균 2시간 내 응답해드려요."
       },
       "transparency": {
         "title": "투명한 안내",
-        "description": "숨겨진 비용 없이 모든 가격을<br></br>투명하게 안내해드려요."
+        "description": "숨겨진 비용 없이 모든 가격을 투명<br></br>하게 안내해드려요."
       }
     }
   },
   "finalCTA": {
     "eyebrow": "BECOME A MEMBER",
     "title": "서울을 즐기는 <br></br> <highlight>가장 똑똑한 방법</highlight>",
+    "stats": {
+        "partners": { "value": "50+", "label": "협력 업체" },
+        "benefitValue": { "value": "₩45만+", "label": "혜택 가치" },
+        "limit": { "value": "30명", "label": "월간 한정" }
+    },
+    "mainText": "<strong>항공권 또는 숙소만 인증</strong>하면<br></br>로컬 맛집, K-Beauty, 핫플을<br></br><strong>회원 혜택가</strong>로 즐길 수 있어요",
+    "features": {
+        "food": "로컬 맛집 체험",
+        "beauty": "K-뷰티 할인",
+        "popup": "팝업 우선 입장"
+    },
     "description": "인증 한 번으로 열리는 프리미엄 로컬 혜택,<br></br>당신의 서울 여행이 특별해집니다.",
     "button": "카카오톡 상담하기",
     "note": "\"여행자\" 메시지를 보내시면 혜택 가이드를 보내드려요"
@@ -134,62 +151,64 @@
   },
   "benefitsPage": {
     "valueSection": {
-      "eyebrow": "MEMBERSHIP BENEFIT",
-      "title": "멤버십 혜택의 가치",
-      "subtitle": "개별 결제 시보다 압도적으로 저렴한 가격으로 제안합니다",
+      "eyebrow": "🎁 회원 전용 혜택",
+      "title": "이만큼 받을 수 있어요",
+      "subtitle": "K-Beauty 예약 시 함께 제공되는 체험 혜택",
       "totalEstimatedValueLabel": "Total Estimated Value",
       "totalEstimatedValue": "₩450,000 + 혜택",
       "footerTitle": "총 혜택 가치 ₩450,000+",
       "footerSubtitle": "오늘 바로 시작하고 혜택을 누리세요",
       "footerNote": "LIMITED TO 30 MEMBERS MONTHLY",
+      "valueLabel": "혜택 가치",
+      "viewMore": "전체 혜택 자세히 보기",
       "items": {
         "dining": {
-          "title": "프리미엄 맛집/오마카세",
-          "value": "₩150,000 상당",
-          "description": "예약 필수인 로컬 맛집 체험"
+          "title": "프리미엄 맛집",
+          "value": "15만원+",
+          "description": "한우 오마카세, 미슐랭급, 예약 힘든 핫플"
         },
         "cafe": {
-          "title": "인스타 핫플 카페/디저트",
-          "value": "₩50,000 상당",
-          "description": "웨이팅 없는 프리미엄 서비스"
+          "title": "인스타 핫플 카페",
+          "value": "5만원+",
+          "description": "성수동 카페, 런던베이글, 어니언 등"
         },
         "popup": {
-          "title": "브랜드 팝업/전시회",
-          "value": "₩100,000 상당",
-          "description": "VIP 패스트트랙 입장 권한"
+          "title": "브랜드 팝업/전시",
+          "value": "10만원+",
+          "description": "한정 이벤트 우선 입장, 줄서기 스킵"
         },
         "beauty": {
-          "title": "K-Beauty 시술/케어 할인",
-          "value": "₩150,000+ 상당",
-          "description": "회원 전역 시크릿 할인 혜택"
+          "title": "K-Beauty 할인",
+          "value": "15만원+",
+          "description": "피부관리, 헤어, 메이크업 회원가"
         }
       }
     },
     "membershipSection": {
-      "eyebrow": "EXCLUSIVE ACCESS",
-      "title": "K-Beauty 멤버십 프로그램",
-      "subtitle": "당신에게 가장 필요한 혜택을 선택하세요",
+      "eyebrow": "K-Beauty",
+      "title": "원하는 서비스 선택",
+      "subtitle": "1개만 예약해도 Reviewer Pass 활성화!",
       "tiers": {
         "essential": {
           "name": "Essential",
           "price": "부담 없이 시작",
           "benefits": ["헤어 스타일링", "메이크업 체험", "기본 피부 관리", "두피 관리"],
-          "cta": "상담하기"
+          "cta": "상담 예약 →"
         },
         "signature": {
           "name": "Signature",
           "price": "한 단계 업그레이드",
           "benefits": ["개인 맞춤 상담", "K-Beauty 스튜디오", "동선 & 예약 서포트", "맞춤 추천"],
-          "cta": "상담 신청하기 →"
+          "cta": "자세히 보기"
         },
         "premium": {
           "name": "Premium",
           "price": "프리미엄 맞춤",
           "benefits": ["프라이빗 상담", "최우선 예약", "전담 매니저", "추가 VIP 혜택"],
-          "cta": "상담하기"
+          "cta": "한정 신청"
         }
       },
-      "badge": "POPULAR",
+      "badge": "🔥 인기",
       "learnMore": "자세히 보기"
     },
     "proceduresSection": {
@@ -244,17 +263,21 @@
       }
     },
     "reviewsSection": {
-      "eyebrow": "REAL REVIEW",
+      "eyebrow": "실제 후기",
       "title": "회원들의 솔직한 후기",
-      "subtitle": "CURATE SEOUL과 함께한 특별한 경험",
+      "subtitle": "서울을 제대로 즐긴 분들의 이야기",
       "items": {
         "review1": {
-          "text": "서울 여행이 처음이라 걱정이 많았는데, 큐레이트 서울 덕분에 진짜 로컬 핫플들만 골라 갈 수 있었어요. 특히 오마카세 예약 혜택이 최고였습니다!",
-          "tags": ["맛집 체험", "오마카세", "로컬 감성"]
+          "text": "혼자서는 절대 못 찾았을 맛집들! 한국인 친구한테 안내받는 느낌이었어요. 한우 오마카세 진짜 최고 🥩",
+          "tags": ["맛집 체험", "K-Beauty"]
         },
         "review2": {
-          "text": "피부관리 예약을 도와주신 덕분에 한국의 프리미엄 서비스를 편하게 받을 수 있었어요. 제휴된 카페들도 분위기가 너무 좋아서 인생샷 많이 건졌네요.",
-          "tags": ["K-Beauty", "피부관리", "카페 투어"]
+          "text": "피부관리 받고 성수동 카페 투어까지! 인스타 사진 퀄리티가 완전 달라졌어요. 다음에 또 올게요 💕",
+          "tags": ["피부관리", "카페 투어"]
+        },
+        "review3": {
+          "text": "2시간 줄 서야 하는 팝업을 바로 입장! 시간 아끼고 더 많이 즐겼어요. 가성비 최고 👍",
+          "tags": ["팝업 우선입장", "맛집"]
         }
       }
     },
@@ -265,11 +288,11 @@
       "steps": {
         "step1": {
           "title": "여행 인증",
-          "description": "항공권 또는 숙소 예약 캡처를 카톡으로 전송"
+          "description": "항공권 또는 숙소 예약 캡처를 <br></br> 카톡으로 전송"
         },
         "step2": {
           "title": "K-Beauty 예약",
-          "description": "피부관리·헤어 등 원하는 서비스 선택"
+          "description": "피부관리·헤어 등 원하는 K-Beauty 체험 1개 예약"
         },
         "step3": {
           "title": "Reviewer Pass",
@@ -280,7 +303,8 @@
           "description": "즐기고 솔직한 후기 공유"
         }
       },
-      "badge": "추천"
+      "badge": "핵심",
+      "footerInfo": "후기를 공유해주시면 다음 혜택 우선권이 주어져요. 솔직한 의견을 남겨주세요!"
     },
     "rulesSection": {
       "eyebrow": "IMPORTANT RULES",
@@ -336,7 +360,10 @@
           "question": "의료 중개 서비스인가요?",
           "answer": "아니에요. 저희는 여행 체험 기획 서비스예요. K-Beauty 예약 도움과 로컬 체험 추천을 해드리고, 의료 조언은 하지 않아요."
         }
+        }
       }
-    }
+    },
+    "faqPage": {
+    "subtitle": "CurateSeoul 이용에 대해 궁금한 점을 확인해보세요."
   }
 }

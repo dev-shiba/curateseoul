@@ -1,14 +1,17 @@
 import { Link } from "@/i18n/routing";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { SiWechat } from "react-icons/si";
 
 export default function Footer() {
     const t = useTranslations("footer");
+    const th = useTranslations("header");
+    const locale = useLocale();
 
     const quickLinks = [
-        { name: t("quickLinks.verify"), href: "/#verify" },
-        { name: t("quickLinks.benefits"), href: "/benefits" },
-        { name: t("quickLinks.reviews"), href: "/experience#reviews" },
-        { name: t("quickLinks.membership"), href: "/benefits#membership" },
+        { name: th("verification"), href: "/" },
+        { name: th("benefits"), href: "/benefits" },
+        { name: th("reviews"), href: "/experience" },
+        { name: th("faq"), href: "/faq" },
     ];
 
     return (
@@ -53,8 +56,20 @@ export default function Footer() {
                             </li>
                             <li className="flex flex-col gap-1.5">
                                 <span className="text-zinc-400 text-[10px] font-bold uppercase tracking-widest leading-none">{t("contact.info.label")}</span>
-                                <span className="text-zinc-600 text-[13px] font-medium leading-none">curateseoul@gmail.com</span>
-                                <span className="text-zinc-600 text-[13px] font-medium leading-none">010-2557-1506</span>
+                                {locale === "zh-CN" ? (
+                                    <Link
+                                        href="#wechat"
+                                        className="inline-flex items-center justify-center gap-2 bg-[#07C160] hover:bg-[#06ad56] text-white px-4 py-2.5 rounded-lg text-sm font-bold transition-all shadow-sm hover:shadow-md w-fit mt-1"
+                                    >
+                                        <SiWechat size={20} />
+                                        {t("contact.wechatButton")}
+                                    </Link>
+                                ) : (
+                                    <>
+                                        <span className="text-zinc-600 text-[13px] font-medium leading-none">curateseoul@gmail.com</span>
+                                        <span className="text-zinc-600 text-[13px] font-medium leading-none">010-2557-1506</span>
+                                    </>
+                                )}
                             </li>
                         </ul>
                     </div>

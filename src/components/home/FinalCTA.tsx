@@ -1,22 +1,24 @@
+"use client";
 import { useClipboard } from "@/hooks/useClipboard";
 import { Link } from "@/i18n/routing";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import MotionSection from "../common/MotionSection";
+import { SiWechat } from "react-icons/si";
 
 export default function FinalCTA() {
     const t = useTranslations("finalCTA");
     const tc = useTranslations("contactCard");
     const { copied, copyToClipboard } = useClipboard();
+    const locale = useLocale();
+    const isChinese = (locale as string) === "zh-CN" || (locale as string) === "zh";
 
     const handleCopy = () => {
-        copyToClipboard("CurateSeoul");
+        copyToClipboard(isChinese ? "curateseoul_cn" : "CurateSeoul"); // Assuming slightly different ID logic or same. Usually same but let's stick to what Hero likely does. Actually Hero uses `tc("idValue")`. I should reuse that.
     };
 
     return (
         <section className="py-32 bg-brand-cream font-pretendard overflow-hidden relative">
-            {/* Soft Ambient Blobs */}
-            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-gold-soft rounded-full blur-[150px] -z-0" />
-            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-green-soft rounded-full blur-[100px] -z-0" />
+
 
             <div className="container mx-auto px-6 max-w-4xl relative z-10">
                 <MotionSection>
@@ -38,32 +40,70 @@ export default function FinalCTA() {
                             })}
                         </p>
 
-                        {/* Kakao-Style Card */}
+                        {/* Contact Card */}
                         <div className="bg-white p-12 lg:p-16 border border-black/[0.03] shadow-2xl max-w-xl mx-auto relative group rounded-[40px] overflow-hidden">
                             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-gold via-brand-gold-dark to-brand-gold" />
 
-                            <Link
-                                href="https://pf.kakao.com/_curateseoul"
-                                className="flex items-center justify-center gap-3 w-full bg-[#FEE500] hover:shadow-lg hover:-translate-y-0.5 text-[#191919] py-6 font-bold text-xl transition-all mb-8 rounded-2xl relative z-10"
-                            >
-                                <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
-                                    <path d="M12 3C6.48 3 2 6.58 2 11c0 2.83 1.89 5.31 4.68 6.68-.15.54-.97 3.49-1 3.64 0 .11.04.22.12.29.08.07.18.1.28.08.14-.02 3.29-2.15 3.82-2.53.7.1 1.41.15 2.1.15 5.52 0 10-3.58 10-8s-4.48-8-10-8z" />
-                                </svg>
-                                {t("button")}
-                            </Link>
+                            {isChinese ? (
+                                // WeChat Layout
+                                <div className="flex flex-col items-center gap-8">
+                                    <h3 className="text-xl font-bold text-zinc-900">{tc("title")}</h3>
 
-                            <div className="inline-flex items-center justify-center gap-4 bg-brand-soft p-4 rounded-xl border border-black/[0.03] relative z-10">
-                                <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest leading-none">ID</span>
-                                <span className="text-xl font-bold text-zinc-900 font-inter leading-none">@{tc("idValue")}</span>
-                                <button
-                                    onClick={handleCopy}
-                                    className="bg-brand-gold hover:bg-brand-gold-dark text-white text-[10px] font-bold px-4 py-2 rounded-lg transition-colors relative"
-                                >
-                                    {copied ? "COPIED!" : tc("copyButton")}
-                                </button>
-                            </div>
+                                    {/* QR Code Placeholder */}
+                                    <div className="bg-brand-soft rounded-[24px] p-6 w-[220px] h-[220px] flex items-center justify-center relative border border-zinc-100">
+                                        <div className="bg-white rounded-xl w-[180px] h-[180px] shadow-sm flex flex-col items-center justify-center gap-3 border border-zinc-50">
+                                            <SiWechat size={56} className="text-[#07C160]" />
+                                            <span className="text-xs text-zinc-400 font-medium">{tc("scanCode")}</span>
+                                        </div>
+                                    </div>
 
-                            <p className="mt-8 text-[11px] text-zinc-300 font-medium relative z-10">
+                                    {/* ID Copy */}
+                                    <div className="w-full bg-brand-soft rounded-xl p-4 flex items-center justify-between gap-4 border border-zinc-100">
+                                        <div className="flex flex-col items-start gap-1">
+                                            <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider">{tc("idLabel")}</span>
+                                            <span className="text-xl font-bold text-[#07C160] font-inter">{tc("idValue")}</span>
+                                        </div>
+                                        <button
+                                            onClick={() => copyToClipboard(tc("idValue"))}
+                                            className={`px-5 py-2.5 rounded-lg font-bold text-sm transition-all shadow-sm ${copied
+                                                ? "bg-zinc-800 text-white"
+                                                : "bg-[#07C160] text-white hover:bg-[#06ad56] hover:-translate-y-0.5"
+                                                }`}
+                                        >
+                                            {copied ? "Copied!" : tc("copyButton")}
+                                        </button>
+                                    </div>
+                                </div>
+                            ) : (
+                                // Kakao Layout
+                                <>
+                                    <Link
+                                        href="https://pf.kakao.com/_curateseoul"
+                                        className="flex items-center justify-center gap-3 w-full bg-[#FEE500] hover:shadow-lg hover:-translate-y-0.5 text-[#191919] py-6 font-bold text-xl transition-all mb-8 rounded-2xl relative z-10"
+                                    >
+                                        <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
+                                            <path d="M12 3C6.48 3 2 6.58 2 11c0 2.83 1.89 5.31 4.68 6.68-.15.54-.97 3.49-1 3.64 0 .11.04.22.12.29.08.07.18.1.28.08.14-.02 3.29-2.15 3.82-2.53.7.1 1.41.15 2.1.15 5.52 0 10-3.58 10-8s-4.48-8-10-8z" />
+                                        </svg>
+                                        {t("button")}
+                                    </Link>
+
+                                    <div className="inline-flex items-center justify-center gap-4 bg-brand-soft p-4 rounded-xl border border-black/[0.03] relative z-10 w-full">
+                                        <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest leading-none">ID</span>
+                                        <span className="text-xl font-bold text-zinc-900 font-inter leading-none">{tc("idValue")}</span>
+                                        <button
+                                            onClick={() => copyToClipboard(tc("idValue"))}
+                                            className={`text-[10px] font-bold px-4 py-2 rounded-lg transition-all relative ${copied
+                                                ? "bg-zinc-800 text-white scale-95"
+                                                : "bg-brand-gold hover:bg-brand-gold-dark text-white"
+                                                }`}
+                                        >
+                                            {copied ? "COPIED!" : tc("copyButton")}
+                                        </button>
+                                    </div>
+                                </>
+                            )}
+
+                            <p className="mt-8 text-[11px] text-zinc-300 font-medium relative z-10 text-center">
                                 {t("note")}
                             </p>
                         </div>

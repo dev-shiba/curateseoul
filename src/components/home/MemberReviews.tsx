@@ -6,43 +6,59 @@ export default function MemberReviews() {
 
     const reviews = [
         {
-            avatar: "https://i.pravatar.cc/150?u=yuki",
+            avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80",
             name: "Yuki S.",
-            from: "Japan",
+            from: "도쿄에서 방문 · 3일 전",
+            flag: "🇯🇵",
             rating: 5,
             text: t("items.review1.text"),
             tags: t.raw("items.review1.tags"),
             images: [
-                "https://images.unsplash.com/photo-1590301157890-4810ed352733?w=300&h=300&fit=crop",
-                "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=300&h=300&fit=crop",
-                "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=300&h=300&fit=crop",
+                "https://images.unsplash.com/photo-1467003909585-2f8a7270028d?auto=format&fit=crop&w=300&q=80", // Salmon/Food
+                "https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=300&q=80", // Terrace/View
+                "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=300&q=80", // Restaurant Interior
             ],
         },
         {
-            avatar: "https://i.pravatar.cc/150?u=sakura",
+            avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80",
             name: "Sakura M.",
-            from: "Japan",
+            from: "오사카에서 방문 · 1주 전",
+            flag: "🇯🇵",
             rating: 5,
             text: t("items.review2.text"),
             tags: t.raw("items.review2.tags"),
             images: [
-                "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=300&h=300&fit=crop",
-                "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=300&h=300&fit=crop",
-                "https://images.unsplash.com/photo-1528605248644-14dd04cb11c7?w=300&h=300&fit=crop",
+                "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=300&q=80", // Hot stone Spa
+                "https://images.unsplash.com/photo-1507643179173-61bba6959c51?auto=format&fit=crop&w=300&q=80", // Modern Interior/Gallery
+                "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=300&q=80", // Cafe/Coffee
+            ],
+        },
+        {
+            avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80",
+            name: "Hana K.",
+            from: "후쿠오카에서 방문 · 2주 전",
+            flag: "🇯🇵",
+            rating: 4.5, // Visual variety? Or just 5. Reference shows 4.5.
+            text: t("items.review3.text"),
+            tags: t.raw("items.review3.tags"),
+            images: [
+                "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=300&q=80", // Fashion Shopping
+                "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=300&q=80", // Chocolate Cake
+                "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=300&q=80", // Dessert
             ],
         },
     ];
 
     return (
-        <section id="reviews" className="py-24 bg-brand-warm font-pretendard relative overflow-hidden">
-            <div className="container mx-auto px-6 max-w-6xl relative z-10">
+        <section id="reviews" className="py-24 bg-brand-cream font-pretendard relative overflow-hidden">
+            <div className="container mx-auto px-6 max-w-7xl relative z-10">
                 <MotionSection>
                     <div className="text-center mb-20">
-                        <div className="inline-flex items-center gap-2 bg-brand-gold-soft text-brand-gold-dark font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full mb-6">
-                            <span>💬</span> {t("eyebrow")}
+                        <div className="inline-flex items-center gap-2 bg-[#F5F1E8] text-[#8C7B65] font-bold text-sm px-5 py-2 rounded-full mb-6">
+                            <span>★</span> {t("eyebrow")}
                         </div>
-                        <h2 className="text-3xl lg:text-4xl font-extrabold mb-6 text-zinc-900 tracking-tight">{t("title")}</h2>
-                        <p className="text-zinc-500 text-lg lg:text-xl font-medium max-w-xl mx-auto italic border-b-2 border-brand-gold/10 inline-block pb-1">{t("subtitle")}</p>
+                        <h2 className="text-4xl lg:text-5xl font-black mb-4 text-zinc-900 tracking-tight">{t("title")}</h2>
+                        <p className="text-zinc-500 text-lg font-medium">{t("subtitle")}</p>
                     </div>
                 </MotionSection>
 
@@ -50,50 +66,66 @@ export default function MemberReviews() {
                     {reviews.map((review, index) => (
                         <div
                             key={index}
-                            className="bg-white p-10 md:p-12 flex flex-col rounded-[40px] shadow-lg transition-all duration-700 hover:-translate-y-2 border border-black/[0.03]"
+                            className="bg-white flex flex-col rounded-[32px] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-zinc-100 group"
                         >
-                            <div className="flex items-center gap-5 mb-8">
-                                <img
-                                    src={review.avatar}
-                                    alt={review.name}
-                                    className="w-14 h-14 rounded-full border-2 border-white shadow-sm"
-                                />
-                                <div>
-                                    <h4 className="font-bold text-zinc-900 text-base leading-none mb-1.5">{review.name}</h4>
-                                    <p className="text-[10px] font-bold text-brand-gold-dark uppercase tracking-widest leading-none">{review.from}</p>
-                                </div>
-                                <div className="ml-auto flex gap-0.5">
-                                    {[...Array(review.rating)].map((_, i) => (
-                                        <span key={i} className="text-brand-gold text-xs">★</span>
-                                    ))}
-                                </div>
-                            </div>
-
-                            <p className="text-zinc-500 mb-10 leading-relaxed font-medium italic text-[15px]">
-                                &quot;{review.text}&quot;
-                            </p>
-
-                            <div className="flex flex-wrap gap-2 mb-10">
-                                {Array.isArray(review.tags) && review.tags.map((tag, i) => (
-                                    <span
-                                        key={i}
-                                        className="bg-brand-soft border border-black/[0.03] text-[10px] font-bold px-4 py-2 rounded-full text-zinc-600 uppercase tracking-widest"
-                                    >
-                                        #{tag}
-                                    </span>
-                                ))}
-                            </div>
-
-                            <div className="grid grid-cols-3 gap-3">
+                            {/* Top Image Collage */}
+                            <div className="grid grid-cols-3 gap-0.5 h-48">
                                 {review.images.map((img, i) => (
-                                    <div key={i} className="aspect-square overflow-hidden rounded-2xl group/img bg-zinc-50 border border-black/[0.03]">
+                                    <div key={i} className="relative overflow-hidden h-full">
                                         <img
                                             src={img}
-                                            alt="review image"
-                                            className="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-110"
+                                            alt="review"
+                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                         />
                                     </div>
                                 ))}
+                            </div>
+
+                            {/* Content */}
+                            <div className="p-8 flex flex-col flex-1">
+                                {/* User Profile */}
+                                <div className="flex items-center gap-4 mb-6">
+                                    <div className="relative">
+                                        <img
+                                            src={review.avatar}
+                                            alt={review.name}
+                                            className="w-12 h-12 rounded-full border border-zinc-100 object-cover"
+                                        />
+                                        <span className="absolute -bottom-1 -right-1 text-sm drop-shadow-sm">{review.flag}</span>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-zinc-900 text-[17px] leading-tight mb-1">{review.name}</h4>
+                                        <p className="text-xs text-zinc-400 font-medium">{review.from}</p>
+                                    </div>
+                                </div>
+
+                                {/* Rating */}
+                                <div className="flex gap-1 mb-5">
+                                    {[...Array(5)].map((_, i) => (
+                                        <span key={i} className={`text-sm ${i < Math.floor(review.rating) ? "text-[#C8A97E]" : i < review.rating ? "text-[#C8A97E]/50" : "text-zinc-200"}`}>
+                                            ★
+                                        </span>
+                                    ))}
+                                    {/* Handle half star manually if needed, or simple logic */}
+                                    {review.rating % 1 !== 0 && (
+                                        <span className="text-sm text-[#C8A97E] absolute ml-[72px] invisible">★</span> // Just simplistic for now
+                                    )}
+                                </div>
+
+                                <p className="text-zinc-600 mb-8 leading-relaxed font-medium text-[15px] line-clamp-3">
+                                    &quot;{review.text}&quot;
+                                </p>
+
+                                <div className="mt-auto flex flex-wrap gap-2">
+                                    {Array.isArray(review.tags) && review.tags.map((tag, i) => (
+                                        <span
+                                            key={i}
+                                            className="bg-[#F5F1E8] text-[#8C7B65] text-[11px] font-bold px-3 py-1.5 rounded-lg"
+                                        >
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     ))}

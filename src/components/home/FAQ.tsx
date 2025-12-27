@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import MotionSection from "../common/MotionSection";
@@ -16,18 +18,8 @@ export default function FAQ() {
     ];
 
     return (
-        <section id="faq" className="py-24 bg-white font-pretendard">
-            <div className="container mx-auto px-6 max-w-3xl">
-                <MotionSection>
-                    <div className="text-center mb-20">
-                        <div className="inline-flex items-center gap-2 bg-brand-gold-soft text-brand-gold-dark font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full mb-6">
-                            <span>❓</span> {t("eyebrow")}
-                        </div>
-                        <h2 className="text-3xl lg:text-4xl font-extrabold mb-6 text-zinc-900 tracking-tight">{t("title")}</h2>
-                        <p className="text-zinc-500 text-lg lg:text-xl font-medium max-w-xl mx-auto italic border-b-2 border-brand-gold/10 inline-block pb-1">{t("subtitle")}</p>
-                    </div>
-                </MotionSection>
-
+        <section id="faq" className="py-10 bg-brand-cream font-pretendard">
+            <div className="container mx-auto px-4 max-w-3xl">
                 <div className="space-y-4">
                     {faqs.map((faq, index) => (
                         <div
@@ -49,7 +41,7 @@ export default function FAQ() {
                                 className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                                     }`}
                             >
-                                <div className="px-8 pb-8 text-zinc-500 leading-relaxed font-medium">
+                                <div className="p-8 pb-8 text-zinc-500 leading-relaxed font-medium">
                                     {faq.answer}
                                 </div>
                             </div>

@@ -27,7 +27,7 @@ export default function FeaturedClinics() {
     const t = useTranslations("benefitsPage.clinicsSection");
 
     return (
-        <section id="clinics" className="py-32 bg-white font-pretendard relative overflow-hidden">
+        <section id="clinics" className="py-32 bg-brand-cream font-pretendard relative overflow-hidden">
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-gold-soft rounded-full blur-[150px] -z-0 opacity-30" />
 
             <div className="container mx-auto px-6 max-w-6xl relative z-10">
