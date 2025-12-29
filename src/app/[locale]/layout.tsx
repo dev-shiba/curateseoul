@@ -19,7 +19,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://curateseoul.com";
 
   return {
-    title: t('home.title'),
+    title: {
+      template: `%s | ${t('home.title')}`,
+      default: t('home.title'),
+    },
     description: t('home.description'),
     metadataBase: new URL(baseUrl),
     openGraph: {
@@ -30,7 +33,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       siteName: 'Curate Seoul',
       images: [
         {
-          url: '/og-image.png',
+          url: '/og_image_premium.webp',
           width: 1200,
           height: 630,
           alt: 'Curate Seoul - Premium K-Beauty & Seoul Travel'
@@ -41,15 +44,20 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: 'summary_large_image',
       title: t('home.ogTitle'),
       description: t('home.ogDescription'),
-      images: ['/og-image.png'],
+      images: ['/og_image_premium.webp'],
     },
     alternates: {
-      canonical: `/${locale}`,
+      canonical: `${baseUrl}/${locale}`,
       languages: {
-        'zh-CN': '/zh-CN',
-        'ja-JP': '/ja',
-        'en-US': '/en'
+        'zh-CN': `${baseUrl}/zh-CN`,
+        'ja': `${baseUrl}/ja`,
+        'en': `${baseUrl}/en`,
+        'ko': `${baseUrl}/ko`,
       },
+    },
+    robots: {
+      index: true,
+      follow: true,
     },
   };
 }

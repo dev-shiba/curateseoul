@@ -7,19 +7,19 @@ const clinics = [
         id: 1,
         name: "Dream Plastic Surgery",
         location: "Apgujeong, Seoul",
-        image: "/images/clinic_1.png",
+        image: "/images/clinic_1.webp",
     },
     {
         id: 2,
         name: "Urban Plastic Surgery",
         location: "Gangnam, Seoul",
-        image: "/images/clinic_2.png",
+        image: "/images/clinic_2.webp",
     },
     {
         id: 3,
         name: "Lienjang Plastic Surgery",
         location: "Gangnam, Seoul",
-        image: "/images/clinic_3.png",
+        image: "/images/clinic_3.webp",
     },
 ];
 

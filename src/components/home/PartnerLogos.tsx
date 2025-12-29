@@ -44,19 +44,36 @@ export default function PartnerLogos() {
                         </p>
                     </div>
 
-                    {/* Categories */}
-                    <div className="flex flex-wrap justify-center gap-4 mb-20">
-                        {categories.map((cat) => (
-                            <div
-                                key={cat.key}
-                                className="flex items-center gap-3 px-6 py-3 rounded-2xl border border-zinc-100 shadow-sm bg-white hover:shadow-md transition-all group cursor-default"
-                            >
-                                <div className={`p-2 rounded-xl ${cat.color} group-hover:scale-110 transition-transform`}>
-                                    {cat.icon}
+                    {/* Categories - Split into two rows */}
+                    <div className="flex flex-col gap-4 mb-20">
+                        {/* First Row: 4 items */}
+                        <div className="flex flex-wrap justify-center gap-4">
+                            {categories.slice(0, 4).map((cat) => (
+                                <div
+                                    key={cat.key}
+                                    className="flex items-center gap-3 px-6 py-3 rounded-2xl border border-zinc-100 shadow-sm bg-white hover:shadow-md transition-all group cursor-default min-w-[160px]"
+                                >
+                                    <div className={`p-2 rounded-xl ${cat.color} group-hover:scale-110 transition-transform`}>
+                                        {cat.icon}
+                                    </div>
+                                    <span className="font-bold text-zinc-700 whitespace-nowrap">{t(`categories.${cat.key}`)}</span>
                                 </div>
-                                <span className="font-bold text-zinc-700">{t(`categories.${cat.key}`)}</span>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
+                        {/* Second Row: 3 items */}
+                        <div className="flex flex-wrap justify-center gap-4">
+                            {categories.slice(4).map((cat) => (
+                                <div
+                                    key={cat.key}
+                                    className="flex items-center gap-3 px-6 py-3 rounded-2xl border border-zinc-100 shadow-sm bg-white hover:shadow-md transition-all group cursor-default min-w-[160px]"
+                                >
+                                    <div className={`p-2 rounded-xl ${cat.color} group-hover:scale-110 transition-transform`}>
+                                        {cat.icon}
+                                    </div>
+                                    <span className="font-bold text-zinc-700 whitespace-nowrap">{t(`categories.${cat.key}`)}</span>
+                                </div>
+                            ))}
+                        </div>
                     </div>
 
                     {/* Logos Grids - Simple Placeholder Style */}

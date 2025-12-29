@@ -10,19 +10,19 @@ export default function BenefitsValue({ showViewMore }: { showViewMore?: boolean
   const benefits = [
     {
       key: "dining",
-      image: "/images/benefit/dining.png",
+      image: "/images/benefit/dining.webp",
     },
     {
       key: "cafe",
-      image: "/images/benefit/cafe.png",
+      image: "/images/benefit/cafe.webp",
     },
     {
       key: "popup",
-      image: "/images/benefit/popup.png",
+      image: "/images/benefit/popup.webp",
     },
     {
       key: "beauty",
-      image: "/images/benefit/beauty.png",
+      image: "/images/benefit/beauty.webp",
     },
   ];
 

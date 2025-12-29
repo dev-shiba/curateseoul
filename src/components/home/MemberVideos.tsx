@@ -7,28 +7,28 @@ export default function MemberVideos() {
 
     const videos = [
         {
-            thumbnail: "/images/vlogs/vlog1.png",
+            thumbnail: "/images/vlogs/vlog1.webp",
             tag: t("vlogs.vlog1.tag"),
             views: "1.2k",
             title: t("vlogs.vlog1.title"),
             user: "@SeoulSearcher",
         },
         {
-            thumbnail: "/images/vlogs/vlog2.png",
+            thumbnail: "/images/vlogs/vlog2.webp",
             tag: t("vlogs.vlog2.tag"),
             views: "3.5k",
             title: t("vlogs.vlog2.title"),
             user: "@GlowGuide",
         },
         {
-            thumbnail: "/images/vlogs/vlog3.png",
+            thumbnail: "/images/vlogs/vlog3.webp",
             tag: t("vlogs.vlog3.tag"),
             views: "2.8k",
             title: t("vlogs.vlog3.title"),
             user: "@UrbanVibe",
         },
         {
-            thumbnail: "/images/vlogs/vlog4.png",
+            thumbnail: "/images/vlogs/vlog4.webp",
             tag: t("vlogs.vlog4.tag"),
             views: "1.9k",
             title: t("vlogs.vlog4.title"),

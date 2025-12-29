@@ -14,7 +14,7 @@ export default function BeautyProcedures() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                     <div className="relative aspect-[4/5] md:aspect-square overflow-hidden shadow-2xl rounded-[40px] border border-white/50">
                         <Image
-                            src="/images/hero.png" // Using the hero image as a placeholder for consistency
+                            src="/images/hero.webp" // Using the hero image as a placeholder for consistency
                             alt="Beauty Procedure"
                             fill
                             className="object-cover object-center"
